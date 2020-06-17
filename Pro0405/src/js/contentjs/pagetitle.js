@@ -12,21 +12,13 @@ $(function () {
         $("#SysTitle").html("默认系统名称");
     }
 
-    $(".user-icon ,.more-icon").click(function () {
-        if ($(".dropmenu").is(':hidden')) {
-            $(".dropmenu").fadeIn(100);
-        } else {
-            $(".dropmenu").fadeOut(100);
+    /*$(".user-icon ,.more-icon").click(function () {
+        if ($("#opt_dropmenu").is(':hidden')) {
+            $("#opt_dropmenu").fadeIn(100);
         }
-    });
+    });*/
+
     startShowTime();
-    var iTop = window.screen.height + 70; //获得窗口的垂直位置;
-    var iLeft = window.screen.width; //获得窗口的水平位置;
-    var sfbl = CustumCommonUtil.detectZoom();
-    debugger;
-    $(".panelbox").css("height", iTop);
-    $(".xjkzcontent, .xjyacontent, .xtpzcontent").css("height", iTop - 50);
-    $("#xjkzpanelbox").css("height", iTop - 50);
 });
 
 //绑定事件

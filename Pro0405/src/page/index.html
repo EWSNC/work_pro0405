@@ -12,12 +12,21 @@
     <link rel="stylesheet" href="../css/pagetitle.css">
     <script src="../js/common/jquery/jquery.js"></script>
     <script src="../layui/layui.all.js"></script>
-    <script src="../js/common/bootstrap-3.3.7/bootstrap.min.js"></script>
+    <script src="../js/common/bootstrap-3.3.7/bootstrap.js"></script>
     <script src="../js/utils/commonutil.js"></script>
     <script src="../js/utils/timeutils.js"></script>
     <script src="../js/common/remote/CommonRemote.js"></script>
     <script src="../js/contentjs/pagetitle.js"></script>
 </head>
+<script>
+    $(function () {
+        var screenParam = CustumCommonUtil.getScreenParam();
+        var iTop = screenParam.height ; //获得窗口的垂直位置;
+        var sfbl = CustumCommonUtil.detectZoom();
+        $(".xjkzcontent, .xjyacontent, .xtpzcontent").css("height", iTop - 50);
+        $("#xjkzpanelbox").css("height", iTop - 50);
+    });
+</script>
 <body>
 <div class="pagetitle">
     <div class="titlelogo">
@@ -30,8 +39,8 @@
     <div id="about" class="about" onclick="about()"></div>
     <div class="loginmsg">
         <div class="user-icon"></div>
-        <span class="more-icon"></span>
-        <div class="dropmenu">
+        <div class="more-icon"></div>
+        <div id="opt_dropmenu" class="dropmenu">
             <div id="changpwd">
                 <div class="changpwd"></div>
                 <span class="menu-text">修改密码</span>
@@ -45,7 +54,7 @@
     </div>
 </div>
 <div class="panelbox">
-    <iframe class="mainbody" frameborder="no" src="indexwithouttitle.html"></iframe>
+    <iframe frameborder="no" src="indexwithouttitle.html"></iframe>
 </div>
 <!--修改密码-->
 <div class="modal fade changepwd-modal-sm" tabindex="-1" role="dialog">

@@ -1,3 +1,21 @@
+//首页头部  登录下拉隐藏
+$(document).bind('click', function (e) {
+    var e = e || window.event; //浏览器兼容性
+    var elem = e.target || e.srcElement;
+    while (elem) { //循环判断至跟节点，防止点击的是div子元素
+        if (elem.className && elem.className == 'loginmsg') {
+            $("#opt_dropmenu").fadeIn(100);
+            return;
+        }
+        if (elem.className && elem.className == 'dropmenu') {
+            $("#opt_dropmenu", window.top.document).fadeOut(100);
+            return;
+        }
+        elem = elem.parentNode;
+    }
+    $("#opt_dropmenu", window.top.document).fadeOut(100); //点击的不是div或其子元素
+});
+
 var CustumCommonUtil = {
     //基路径
     basePath: "http://47.100.77.209/es-s100-web",
@@ -68,7 +86,8 @@ var CustumCommonUtil = {
             width = (width != undefined && width != null && width != "") ? width : "250px";
             height = (height != undefined && height != null && height != "") ? height : '80px';
         }
-        var offset = (offset != undefined && offset != null && offset != "") ? offset : '5%';
+        var offset = (offset != undefined && offset != null && offset != "") ? offset : 't';
+        // var offset = (offset != undefined && offset != null && offset != "") ? offset : '5%';
         var time = (time != undefined && time != null && time != "") ? time : '2000';
         msg = (msg != null && msg.length > 0) ? msg : "未读取到数据";
         msg = "<span style='font-size: 20px'>" + msg + "</span>";
@@ -198,6 +217,13 @@ var CustumCommonUtil = {
         }
         return ratio;
     },
+    getScreenParam: function () {
+        var param = {};
+        param.width = window.screen.width;
+        param.height = window.screen.height;
+        return param;
+    },
+
     //测试方法执行次数函数
     testFuc: function someFunction(fucname) {
         console.count(fucname + ' 已经执行');

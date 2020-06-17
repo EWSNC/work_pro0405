@@ -974,9 +974,9 @@ if (typeof jQuery === 'undefined') {
 
     this.isShown = true
 
-    this.checkScrollbar()
+    /*this.checkScrollbar()
     this.setScrollbar()
-    this.$body.addClass('modal-open')
+    this.$body.addClass('modal-open')*/
 
     this.escape()
     this.resize()
@@ -1086,9 +1086,9 @@ if (typeof jQuery === 'undefined') {
     var that = this
     this.$element.hide()
     this.backdrop(function () {
-      that.$body.removeClass('modal-open')
+      /*that.$body.removeClass('modal-open')
       that.resetAdjustments()
-      that.resetScrollbar()
+      that.resetScrollbar()*/
       that.$element.trigger('hidden.bs.modal')
     })
   }

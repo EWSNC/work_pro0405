@@ -1,11 +1,6 @@
 /*
 页面头CSS样式
 */
-.mainbody {
-    width: 100%;
-    height: 880px;
-}
-
 
 /*  页签按钮等   样式    */
 .tabs {
@@ -42,6 +37,8 @@
 
 /*  页签按钮和页签间分割  样式*/
 .tab-panel-cut {
+    position: absolute;
+    top: 5.3%;
     margin-left: 26px;
     width: 1280px;
     height: 13px;
@@ -58,6 +55,7 @@
 
 .pagetitle {
     width: 100%;
+    position: relative;
     height: 70px;
     background-image: url("../resource/img/title_bg.png");
     background-repeat: no-repeat;
@@ -93,9 +91,8 @@
 
 .timemsg {
     position: absolute;
-    right: 10%;
-    top: 0.5%;
-    width: 15%;
+    right: 13%;
+    top: 1%;
     font-size: 14px;
     font-family: Microsoft YaHei;
     font-weight: 400;
@@ -104,52 +101,58 @@
 
 .about {
     position: absolute;
-    right: 6.6%;
-    top: 2%;
+    right: 6.7%;
+    top: 25%;
     cursor: pointer;
-    width: 33px;
-    height: 33px;
+    width: 1.5%;
+    height: 40%;
     background-image: url("../resource/icon/about.png");
+    background-size: 100% 100%;
 }
 
 
 .loginmsg {
     position: absolute;
-    right: 2.2%;
-    top: 2%;
-    width: 50px;
+    right: 1.9%;
+    top: 24%;
+    width: 3%;
     text-align: center;
 }
 
 .user-icon {
-    width: 27px;
-    height: 29px;
+    position: absolute;
+    width: 60%;
+    height: 30px;
     background-image: url("../resource/icon/news.png");
-    display: inline-block;
+    background-size: 100% 100%;
     cursor: pointer
 }
 
 .more-icon {
-    width: 15px;
-    height: 7px;
+    position: absolute;
+    width: 20%;
+    height: 10px;
+    right: 10%;
+    top: 14px;
     background-image: url("../resource/icon/more02.png");
-    display: inline-block;
-    vertical-align: text-top;
+    background-size: 100% 100%;
     cursor: pointer
 }
 
 .dropmenu {
-    width: 150px;
-    height: 120px;
+    position: absolute;
+    right: -40%;
+    top: 35px;
+    z-index: 99999;
+    width: 130px;
+    height: 100px;
     background: rgba(0, 79, 166, 1);
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25), 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
     border: 1px #3AC5F1 solid;
     border-radius: 8px;
     text-align: center;
-    float: right;
     display: none;
     cursor: pointer;
-    margin-right: -20px
 }
 
 .changpwd {
@@ -169,7 +172,7 @@
 }
 
 #changpwd, #logoutbtn {
-    height: 50px;
+    height: 39%;
 }
 
 #changpwd:hover, #logoutbtn:hover {
@@ -196,23 +199,33 @@
     font-family: Microsoft YaHei;
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
-    line-height: 44px;
+    line-height: 37px;
 }
 
 .xjkzcontent > iframe, .xjyacontent > iframe, .xtpzcontent > iframe {
     width: 100%;
     height: 100%;
     border: medium none;
+    margin-top: 2%;
 }
 
 .panelbox {
     width: 100%;
-    overflow: hidden;
-    /*height: 872px;*/
+    position: fixed;
+    height: 95%;
+}
+
+.panelbox > iframe {
+    width: 100%;
+    height: 100%;
 }
 
 #tabContent {
-    margin-top: 1px;
+    margin-top: 20px;
+}
+
+#tabContent > div {
+    height: 100%;
 }
 
 /*修改密码态框 样式*/

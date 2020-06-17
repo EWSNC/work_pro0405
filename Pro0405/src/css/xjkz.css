@@ -4,7 +4,7 @@ xjkz.html页面CSS
 #xjkzpanelbox {
     width: 96%;
     min-height: 660px;
-    margin: 4% auto;
+    margin: 3% auto;
     background: rgba(7, 46, 116, 1);
     border: 1px solid rgba(102, 178, 255, 1);
 }
@@ -102,7 +102,7 @@ xjkz.html页面CSS
 
 #xjkztoolbar {
     position: absolute;
-    top: 4%;
+    top: 0;
     left: 0;
     width: 100%;
     background-color: rgb(6, 64, 128);;

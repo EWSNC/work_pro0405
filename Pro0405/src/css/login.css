@@ -1,30 +1,34 @@
 /*
 登陆页面CSS样式
 */
-.loginmain {
-    width: 100%;
-    height: 940px;
-    background-image: url("../resource/img/bg.png");
-}
 
 .loginhead {
-    width: 100%;
     position: absolute;
+    width: 100%;
+    height: 20%;
     top: 0;
+}
+.loginmain {
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    top: 15%;
+    background-image: url("../resource/img/bg.png");
+    background-size: 100% 100%;
 }
 
 .loginbody {
     width: 100%;
     height: 680px;
     position: absolute;
-    top: 170px;
 }
 
 .loginbox {
     background-image: url("../resource/img/log_in_bg.png");
+    background-size: 100% 100%;
     width: 799px;
     height: 570px;
-    margin: 53px auto;
+    margin: 2% auto;
 }
 
 .boxhead {
