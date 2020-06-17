@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>流媒体服务器</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap.min.css">
+    <link rel="stylesheet" href="../../datagrid/dist/bootstrap-table.css">
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/lmtfwq.css">
+    <script src="../../js/common/jquery/jquery.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap.min.js"></script>
+    <script src="../../datagrid/dist/bootstrap-table.js"></script>
+    <script src="../../datagrid/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-table-jumpto.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-select.js"></script>
+    <script src="../../layui/layui.all.js"></script>
+    <script src="../../js/utils/commonutil.js"></script>
+    <script src="../../js/utils/timeutils.js"></script>
+    <script src="../../js/common/remote/CommonRemote.js"></script>
+    <script src="../../js/contentjs/lmtfwq.js"></script>
+
+</head>
+<body>
+<div id="lmtfwqcontainer" class="container">
+    <div id="lmtfwqtoolbar" class="btn-toolbar" role="toolbar">
+        <div class="btn-group" role="group" aria-label="pickall" style="margin-left: 50px">
+            <button id="btn-lmtfwq-add" class="btn btn-default-common"><span class="btn-text-1">新建</span></button>
+        </div>
+        <div class="btn-group" role="group" aria-label="pickall" style="margin-left: 50px">
+            <button id="btn-lmtfwq-refresh" class="btn btn-default-common"><span class="btn-text-1">刷新</span></button>
+        </div>
+    </div>
+    <table id="table_lmtfwq">
+    </table>
+</div>
+<!--增加  编辑   通用对话框-->
+<div class="modal fade optdialog-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog optdialog-modal-dialog" role="document">
+        <div class="modal-content common-modal-content optdialog-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span id="common-modal-title-text" class="common-modal-title-text">通用对话框</span>
+                </h4>
+            </div>
+            <div class="modal-body common-modal-body optdialog-modal-body">
+                <input type="hidden" id="opType">
+                <input type="hidden" id="mssId">
+                <div id="mssName_box" class="split">
+                    <label class="text-modal-body-1">名称</label>
+                    <input id="mssName" type="text" class="form-control optdialog-input common-text common-input">
+                </div>
+                <div id="mssIP_box" class="split">
+                    <label class="text-modal-body-1">IP</label>
+                    <input id="mssIP" type="text" class="form-control optdialog-input common-text common-input">
+                </div>
+                <div id="mssUsername_box" class="split">
+                    <label class="text-modal-body-1">用户名</label>
+                    <input id="mssUsername" type="text" class="form-control optdialog-input common-text common-input">
+                </div>
+                <div id="mssPassword_box" class="split">
+                    <label class="text-modal-body-1">密码</label>
+                    <input id="mssPassword" type="password"
+                           class="form-control optdialog-input common-text common-input" maxlength="32">
+                </div>
+                <div id="mssVersion_box" class="split">
+                    <label class="text-modal-body-1">版本</label>
+                    <select id="mssVersion" class="selectpicker btn-text-2">
+                        <option class="btn-text-3" value="-1">请选择</option>
+                        <option class="btn-text-3" value="0">V1.0（MSS流媒体服务器）</option>
+                        <option class="btn-text-3" value="1">V2.0（宣教主机）</option>
+                        <option class="btn-text-3" value="21">V2.1（宣教主机）</option>
+                    </select>
+                </div>
+                <div class="common-btn-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-optdialog-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--删除确认对话框-->
+<div class="modal fade optdialog-delete-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog optdialog-delete-modal-dialog" role="document">
+        <div class="modal-content common-modal-content optdialog-delete-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span class="common-modal-title-text">确认删除</span></h4>
+            </div>
+            <div class="modal-body common-modal-body optdialog-delete-modal-body">
+                <div id="noticemsg-delete-user" class="noticemsg-delete">
+                    您确定要删除吗？
+                </div>
+                <div class="common-btn-area btn-optdialog-delete-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-optdialog-delete-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+</html>

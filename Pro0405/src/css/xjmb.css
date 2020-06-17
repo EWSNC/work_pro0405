@@ -1,0 +1,418 @@
+/*
+xjmb.html页面CSS
+*/
+.container {
+    width: 100%;
+}
+
+/*左侧视频分组样式*/
+.menu {
+    height: 696px;
+    border: 1px solid rgba(102, 178, 255, 1);
+    background: rgba(7, 46, 116, 1);
+}
+
+.menu-top {
+    height: 160px;
+}
+
+.menu-bot {
+    height: 535px;
+    overflow-y: auto;
+}
+
+
+.tmplt-item {
+    width: 100%;
+    min-height: 46px;
+    cursor: pointer;
+}
+
+.tmplt-active {
+    background: rgba(14, 128, 216, 1);
+}
+
+.tmplt-text {
+    font-size: 25px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 28px;
+    margin: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.tmplt-apply-number {
+    width: 47px;
+    height: 23px;
+    font-size: 20px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 50px;
+    float: right;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+/*右侧主体样式*/
+.main {
+    height: 696px;
+    border: 1px solid rgba(102, 178, 255, 1);
+    background: rgba(7, 46, 116, 1);
+}
+
+#plan-main {
+    height: 696px;
+    overflow-y: auto;
+}
+
+.daybox {
+    width: 14%;
+    min-height: 60px;
+    border: 1px solid rgba(102, 178, 255, 1);
+    float: left;
+    margin-left: 3px;
+}
+
+.daytitle {
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 126, 255, 1);
+    text-align: center;
+}
+
+.daynum {
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+
+.dayname-text {
+    text-align: center;
+    width: 58px;
+    height: 17px;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 36px;
+}
+
+.plan-item {
+    cursor: pointer;
+    width: 100%;
+    height: 80px;
+    border: 1px solid rgba(102, 178, 255, 1);
+}
+
+.plan-title {
+    text-align: center;
+}
+
+.plan-title-text {
+    width: 67px;
+    height: 18px;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 36px;
+}
+
+.plan-time {
+    text-align: center;
+}
+
+.plan-time-text {
+    width: 186px;
+    height: 14px;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 36px;
+}
+
+.body-left {
+    position: absolute;
+    left: 1%;
+    width: 25%;
+    height: 572px;
+    background: rgba(7, 46, 116, 1);
+    border: 1px solid rgba(102, 178, 255, 1);
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.body-right {
+    position: absolute;
+    left: 27%;
+    width: 72%;
+    height: 572px;
+    background: rgba(7, 46, 116, 1);
+    border: 1px solid rgba(102, 178, 255, 1);
+    border-radius: 3px;
+    display: inline-block;
+    padding: 15px;
+}
+
+.title-left, .title-right {
+    margin-top: 10px;
+}
+
+.title-left-text, .title-right-text {
+    width: 39px;
+    height: 18px;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(64, 194, 255, 1);
+    line-height: 28px;
+    margin-left: 20px;
+}
+
+.body-left-list {
+    margin-top: 10px;
+    height: 520px;
+    overflow-y: auto;
+}
+
+.list-item {
+    width: 100%;
+    height: 46px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.list-item:hover {
+    background: rgba(14, 128, 216, 1);
+}
+
+.list-item-active {
+    background: rgba(14, 128, 216, 1);
+}
+
+.list-item-text {
+    display: table-cell;
+    height: 20px;
+    font-size: 20px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+.searchInput {
+    width: 30%;
+    display: inline-block;
+    height: 40px;
+    margin-left: 2%;
+}
+
+.vodresource {
+    margin-top: 10px;
+    border: 1px solid rgba(102, 178, 255, 1);
+}
+
+/*节目复制  对话框*/
+.optdialog-copy-modal-sm {
+    /*top: -50px;*/
+}
+
+.optdialog-copy-modal-content {
+    margin: 100px auto;
+    width: 467px;
+    height: 536px;
+}
+
+.optdialog-copy-modal-body {
+    width: 445px;
+    height: 467px;
+    text-align: left;
+}
+
+.btn-optdialog-copy-area {
+    bottom: 20px;
+    left: 5%;
+}
+
+.eachcheck {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.eachcheck > input {
+    margin-left: 20px;
+    vertical-align: text-bottom;
+}
+
+.eachcheck > span {
+    margin-left: 20px;
+}
+
+/*模板复制  对话框*/
+.tmplt-opt-modal-sm {
+    top: -50px;
+}
+
+.tmplt-opt-modal-content {
+    /*background-color: transparent;*/
+    margin: 100px auto;
+    width: 567px;
+    height: 336px;
+}
+
+.tmplt-opt-modal-body {
+    width: 545px;
+    height: 267px;
+    text-align: left;
+}
+
+.btn-tmplt-opt-area {
+    bottom: 20px;
+    left: 10%;
+}
+
+.tmplt-opt-input {
+    width: 274px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 13%;
+}
+
+/*模板应用  对话框*/
+.optdialog-apply-modal-sm {
+    top: -95px;
+}
+
+.optdialog-apply-modal-dialog {
+    width: 767px;
+}
+
+.optdialog-apply-modal-content {
+    margin: 100px auto;
+    width: 767px;
+    height: 590px;
+}
+
+.optdialog-apply-modal-body {
+    width: 745px;
+    height: 520px;
+    text-align: left;
+}
+
+.btn-optdialog-tmplt-copy-area {
+    bottom: 20px;
+    left: 22%;
+}
+
+.apply-type-radio {
+    vertical-align: text-bottom;
+}
+
+.apply-desc {
+    width: 46px;
+    height: 22px;
+    font-size: 22px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: lightgreen;
+    line-height: 28px;
+}
+
+.jq-jy-area {
+    margin: 0 auto;
+    border: 1px solid rgba(102, 178, 255, 1);
+    width: 95%;
+    height: 250px;
+}
+
+.jq-jy-area {
+    overflow-y: auto;
+}
+
+.alljq-tit {
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.alljq-tit-text {
+    width: 94px;
+    height: 22px;
+    font-size: 28px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    margin-left: 5%;
+}
+
+.jq-checkbox, .jy-checkbox, .fg-checkbox {
+    vertical-align: text-bottom;
+    cursor: pointer;
+}
+
+.tree-jq-tips {
+    cursor: pointer;
+}
+
+.jq-item {
+    width: 31%;
+    display: inline-block;
+    margin-left: 2%;
+    margin-top: 3%;
+}
+
+.jq-item > span {
+    margin-left: 10px;
+}
+
+.jq-jy-item {
+    width: 100%;
+}
+
+.jq-title {
+    font-family: Microsoft YaHei;
+    line-height: 50px;
+    font-weight: 400;
+    color: white;
+    margin-left: 20px;
+}
+
+.jy-item {
+    text-align: left;
+    line-height: 50px;
+    display: inline-block;
+    width: 33%;
+    height: 50px;
+}
+
+.apply-active {
+    background: rgba(14, 128, 216, 1);
+}
+
+.jy-item > div {
+    margin-left: 20px;
+}
+
+.jy-item > div > span {
+    margin-left: 10px;
+}
+
+.jq-jy-tree-item {
+    width: 100%;
+}
+
+.jq-jy-tree-title {
+    font-family: Microsoft YaHei;
+    line-height: 50px;
+    font-weight: 400;
+    color: white;
+    margin-left: 20px;
+}
+
+.jq-jy-tree-title > span {
+    margin-left: 10px;
+}

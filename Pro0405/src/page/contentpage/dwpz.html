@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>单位配置</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap.min.css">
+    <link rel="stylesheet" href="../../datagrid/dist/bootstrap-table.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/dwpz.css">
+    <script src="../../js/common/jquery/jquery.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap.min.js"></script>
+    <script src="../../datagrid/dist/bootstrap-table.js"></script>
+    <script src="../../datagrid/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-table-jumpto.js"></script>
+    <script src="../../layui/layui.all.js"></script>
+    <script src="../../js/contentjs/dwpz.js"></script>
+    <script src="../../js/utils/commonutil.js"></script>
+    <script src="../../js/utils/timeutils.js"></script>
+    <script src="../../js/common/remote/CommonRemote.js"></script>
+</head>
+<body>
+<div id="dwpzcontainer" class="container">
+    <div id="dwpztoolbar" class="btn-toolbar" role="toolbar">
+        <div class="btn-group" role="group" aria-label="pickall" style="margin-left: 50px">
+            <button id="btn-dwpz-add" class="btn btn-default-common"><span class="btn-text-1">新建</span></button>
+        </div>
+        <div class="searchbox">
+            <button
+                    id="searchbtn" class="btn btn-default-common searchbtn"><span
+                    class="btn-text-1">搜索</span></button>
+            <input id="searchName" placeholder="输入文字" type="text"
+                   class="form-control searchInput common-input common-text">
+        </div>
+    </div>
+    <table id="table_dwpz">
+    </table>
+</div>
+<!--增加  编辑 对话框-->
+<div class="modal fade dwpz-opt-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog dwpz-opt-modal-dialog" role="document">
+        <div class="modal-content common-modal-content dwpz-opt-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span id="dwpz-opt-text-modal-title"
+                                              class="common-modal-title-text">公用对话框</span>
+                </h4>
+            </div>
+            <div class="modal-body common-modal-body dwpz-opt-modal-body">
+                <input type="hidden" id="opType" value="1">
+                <input type="hidden" id="domainId">
+                <div id="domainName_box" class="split">
+                    <label class="text-modal-body-1">名称</label>
+                    <input type="text" class="common-input common-text dwpz-opt-input form-control" id="domainName">
+                </div>
+                <div class="common-btn-area btn-dwpz-opt-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-dwpz-opt-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--删除确认对话框-->
+<div class="modal fade optdialog-delete-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog optdialog-delete-modal-dialog" role="document">
+        <div class="modal-content common-modal-content optdialog-delete-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span class="common-modal-title-text">确认删除</span></h4>
+            </div>
+            <div class="modal-body common-modal-body optdialog-delete-modal-body">
+                <div id="noticemsg-delete-domain" class="noticemsg-delete">
+                    您确定要删除吗？
+                </div>
+                <div class="common-btn-area btn-optdialog-delete-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-optdialog-delete-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+</html>

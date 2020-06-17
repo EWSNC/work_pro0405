@@ -1,0 +1,118 @@
+/*
+dbsp.html页面CSS
+*/
+.container {
+    width: 100%;
+}
+
+/*左侧视频分组样式*/
+.menu {
+    height: 696px;
+    border: 1px solid rgba(102, 178, 255, 1);
+    background: rgba(7, 46, 116, 1);
+}
+
+
+.menu-bot {
+    height: 535px;
+    overflow-y: auto;
+}
+
+.vodgroup-item {
+    width: 100%;
+    min-height: 46px;
+    cursor: pointer;
+}
+
+.vodgroup-item:hover {
+    background: rgba(14, 128, 216, 1);
+}
+
+.vodgroup-item-active {
+    background: rgba(14, 128, 216, 1);
+}
+
+.vodgroup-text {
+    font-size: 25px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 28px;
+    margin: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/*右侧主体样式*/
+.main {
+    height: 696px;
+    border: 1px solid rgba(102, 178, 255, 1);
+    background: rgba(7, 46, 116, 1);
+}
+
+#vod-main {
+    height: 696px;
+    overflow-y: auto;
+}
+
+.bootstrap-table > .fixed-table-container {
+    height: 551px !important;
+    padding-bottom: 0 !important;
+}
+
+.searchbox, .searchbtn, .searchInput {
+    float: right !important;
+}
+
+.searchInput {
+    width: 50%;
+}
+
+
+/*增加 编辑 分组  对话框*/
+.vgr-opt-modal-sm label {
+    width: 100px;
+}
+
+.vgr-opt-modal-content {
+    margin: 100px auto;
+    width: 567px;
+    height: 436px;
+}
+
+.vgr-opt-modal-body {
+    width: 545px;
+    height: 367px;
+    text-align: left;
+}
+
+/*上传视频  对话框*/
+.upfile-modal-body > form > .split > .bootstrap-select:not(.input-group-btn) {
+    display: block !important;
+    width: 100% !important;
+    margin: 0;
+}
+
+/* 详情 对话框*/
+.optdialog-modal-sm label {
+    width: 90px;
+}
+
+.optdialog-input {
+    width: 350px;
+    height: unset;
+}
+
+.desc {
+    display: inline-block;
+    width: 65%;
+    height: 200px;
+    resize: none;
+    margin-left: 5%;
+
+}
+
+#dlgResourceDetail_urls {
+    overflow: auto;
+}

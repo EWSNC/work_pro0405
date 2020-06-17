@@ -1,0 +1,11 @@
+{
+  "buttons": {
+    "spkz": [
+      "play",
+      "pause",
+      "stop",
+      "mute"
+    ],
+    "dykz": {}
+  }
+}

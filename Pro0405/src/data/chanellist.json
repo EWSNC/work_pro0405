@@ -1,0 +1,55 @@
+{
+    "data": {
+        "rows": [
+            {
+                "icon": null,
+                "id": 1,
+                "inputChannel": null,
+                "name": "电影-拘",
+                "number": 1,
+                "type": 1,
+                "url": "rtsp://38.186.0.152/id=30",
+                "vodserver": null,
+                "vodserverid": null,
+                "vodservername": null
+            },
+            {
+                "icon": null,
+                "id": 9,
+                "inputChannel": null,
+                "name": "电教室",
+                "number": 9,
+                "type": 1,
+                "url": "rtsp://38.186.0.152/id=20",
+                "vodserver": null,
+                "vodserverid": null,
+                "vodservername": null
+            },
+            {
+                "icon": null,
+                "id": 10,
+                "inputChannel": null,
+                "name": "电影-看",
+                "number": 2,
+                "type": 1,
+                "url": "rtsp://38.186.0.153/id=30",
+                "vodserver": null,
+                "vodserverid": null,
+                "vodservername": null
+            },
+            {
+                "icon": null,
+                "id": 11,
+                "inputChannel": null,
+                "name": "电教室2",
+                "number": 11,
+                "type": 1,
+                "url": "rtsp://38.186.0.153/id=20",
+                "vodserver": null,
+                "vodserverid": null,
+                "vodservername": null
+            }
+        ]
+    },
+    "result": "ok"
+}

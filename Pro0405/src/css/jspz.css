@@ -1,0 +1,153 @@
+/*
+jspz.html页面CSS
+*/
+.container {
+    width: 100%;
+}
+
+/*左侧分组样式*/
+.menu {
+    height: 696px;
+    border: 1px solid rgba(102, 178, 255, 1);
+    background: rgba(7, 46, 116, 1);
+}
+
+/*单位选择下拉框样式*/
+.menu-top > .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+
+.menu-middle {
+    height: 70px;
+}
+
+.menu-bot {
+    height: 535px;
+    overflow-y: auto;
+}
+
+.jq-item {
+    width: 100%;
+    min-height: 46px;
+    cursor: pointer;
+}
+
+.jq-jy-active {
+    background: rgba(14, 128, 216, 1);
+}
+
+.jq-text {
+    font-size: 25px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 28px;
+    margin: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.jy-item:hover {
+    background: rgba(14, 128, 216, 1);
+}
+
+
+/*右侧主体样式*/
+.main {
+    height: 696px;
+    border: 1px solid rgba(102, 178, 255, 1);
+    background: rgba(7, 46, 116, 1);
+}
+
+#jy-main {
+    height: 696px;
+    overflow-y: auto;
+}
+
+.bootstrap-table > .fixed-table-container {
+    height: 551px !important;
+    padding-bottom: 0 !important;
+}
+
+.searchbox, .searchbtn, .searchInput {
+    float: right !important;
+}
+
+.searchInput {
+    width: 50%;
+}
+
+
+/*增加 编辑 监区  对话框*/
+.jq-opt-modal-sm {
+    top: -50px;
+}
+
+.jq-opt-modal-content {
+    margin: 100px auto;
+    width: 567px;
+    height: 436px;
+}
+
+.jq-opt-modal-body {
+    width: 545px;
+    height: 367px;
+    text-align: left;
+}
+
+.mark-squera-area {
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.mark-squera-area > input {
+    margin-left: 23px;
+}
+
+.radio-mark, .radio-status {
+    vertical-align: top;
+}
+
+.mark-squera {
+    cursor: pointer;
+    width: 29px;
+    height: 29px;
+    border-radius: 2px;
+    display: inline-block;
+    border: 1px solid white;
+}
+
+.red-squera {
+    background-color: #D50000;
+}
+
+.blue-squera {
+    background-color: #304FFE;
+}
+
+.green-squera {
+    background-color: #00C853;
+}
+
+/*添加  编辑 监室  对话框*/
+.jy-opt-modal-content {
+    width: 650px;
+    height: 652px;
+}
+
+.jy-opt-modal-body {
+    width: 620px;
+    height: 583px;
+}
+
+.jy-optdialog-input {
+
+}
+
+.optdialog-powerPort-input {
+    width: 100px;
+    margin-left: 10px;
+}

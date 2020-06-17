@@ -1,0 +1,334 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>宣教控制</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap.css">
+    <link rel="stylesheet" href="../../datagrid/dist/bootstrap-table.css">
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/common/selectime.css">
+    <link rel="stylesheet" href="../../css/xjkz.css">
+    <script src="../../js/common/jquery/jquery.js"></script>
+    <script src="../../js/common/jquery/jquery.cookie.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap.min.js"></script>
+    <script src="../../datagrid/dist/bootstrap-table.js"></script>
+    <script src="../../datagrid/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-table-jumpto.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-select.js"></script>
+    <script src="../../js/common/selectime.js"></script>
+    <script src="../../layui/layui.all.js"></script>
+    <script src="../../js/utils/commonutil.js"></script>
+    <script src="../../js/common/remote/CommonRemote.js"></script>
+    <script src="../../js/contentjs/xjkz.js"></script>
+    <script src="../../js/common/entry/JyEntry.js"></script>
+</head>
+<body>
+<!--按钮组-->
+<div id="xjkztoolbar" class="btn-toolbar" role="toolbar">
+    <!-- 全选 -->
+    <div class="btn-group" role="group" aria-label="pickall" style="margin-left: 50px">
+        <div id="btn-pickall" type="button" class="btn btn-default-common"><span class="btn-text-1">全选</span></div>
+    </div>
+    <!-- 视频控制 -->
+    <div class="btn-group" role="group" aria-label="spkz">
+        <button type="button" class="btn btn-large btn-default dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false">
+            <span class="btn-text-2">视频控制</span>
+            <div class="icon-more"></div>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#" id="btn-stop" class="btn-text-3">停止</a></li>
+            <li><a href="#" id="btn-pause" class="btn-text-3">暂停</a></li>
+            <li><a href="#" id="btn-play" class="btn-text-3">播放</a></li>
+            <li><a href="#" id="btn-mute" class="btn-text-3">静音</a></li>
+            <li><a href="#" id="btn-volume" class="btn-text-3" data-toggle="modal">音量</a></li>
+        </ul>
+    </div>
+    <!-- 节目控制 -->
+    <div class="btn-group" role="group" aria-label="jmkz">
+        <button type="button" class="btn btn-large btn-default dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false">
+            <span class="btn-text-2">节目控制</span> <span class="icon-more"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#" id="btn-gonggao" class="btn-text-3" data-toggle="modal">发布公告</a></li>
+            <li><a href="#" id="btn-chabo" class="btn-text-3" data-toggle="modal">插播</a></li>
+            <li><a href="#" id="btn-yakz" class="btn-text-3" data-toggle="modal">预案控制</a></li>
+        </ul>
+    </div>
+    <!-- 电源控制 -->
+    <div class="btn-group" role="group" aria-label="dykz">
+        <button type="button" class="btn btn-large btn-default dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false">
+            <span class="btn-text-2">电源控制</span> <span class="icon-more"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#" id="btn-startup" class="btn-text-3">开机</a></li>
+            <li><a href="#" id="btn-shutdown" class="btn-text-3">关机</a></li>
+        </ul>
+    </div>
+    <!-- 恢复 -->
+    <div class="btn-group" role="group" aria-label="hf">
+        <div type="button" id="btn-resume" class="btn btn-default-common btn-hf"><span class="btn-text-1">恢复</span>
+        </div>
+    </div>
+    <!-- 监区 -->
+    <select id="jq" class="selectpicker btn-text-2">
+    </select>
+    <!-- 默认单位 -->
+    <select id="mrdw" class="selectpicker btn-text-2">
+    </select>
+</div>
+<div id="xjkzpanelbox" class="xjkzpanelbox">
+
+</div>
+<!--设置音量-->
+<div class="modal fade volume-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog volume-modal-dialog" role="document">
+        <div class="modal-content common-modal-content volume-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span class="common-modal-title-text">设置音量</span></h4>
+            </div>
+            <div class="modal-body common-modal-body volume-modal-body">
+                <span class="text-modal-body-1">音量</span><input id="volume-input"
+                                                                onkeyup="this.value=this.value.replace(/\D/g,'')"
+                                                                type="text"
+                                                                class="form-control volume-input common-text common-input">
+                <div class="text-modal-body-2">音量:0-100</div>
+                <div class="common-btn-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-volume-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--发布公告-->
+<div class="modal fade gonggao-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog gonggao-modal-dialog" role="document">
+        <div class="modal-content common-modal-content gonggao-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span class="common-modal-title-text">发布公告</span></h4>
+            </div>
+            <div class="modal-body common-modal-body gonggao-modal-body">
+                <div><span class="text-modal-body-1 text-laber-gonggaocontent">公告内容</span><textarea
+                        class="form-control gonggaoConten common-text common-input" name="" id="gonggaoConten" cols="10"
+                        rows="10"></textarea></div>
+                <br>
+                <div><span class="text-modal-body-1">显示时长</span><input id="gonggaotime" type="text"
+                                                                       onkeyup="this.value=this.value.replace(/\D/g,'')"
+                                                                       class="form-control showtime-input common-text common-input"><span
+                        class="text-modal-body-1">分钟</span>
+                </div>
+                <div class="common-btn-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-gonggao-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--插播-->
+<div class="modal fade chabo-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog chabo-modal-dialog" role="document">
+        <div class="modal-content common-modal-content chabo-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span class="common-modal-title-text">插播</span></h4>
+            </div>
+            <div class="modal-body common-modal-body chabo-modal-body">
+                <div class="btn-chabo-area">
+                    <button type="button" id="chabo_zhibo" class="btn btn-chabo btn-default-common"
+                            data-toggle="modal"
+                    ><span class="btn-text">插播直播</span></button>
+                    <button type="button" id="chabo_dianbo" class="btn btn-chabo btn-default-common"
+                            data-toggle="modal"
+                    ><span class="btn-text">插播点播</span></button>
+                    <button id="chabo_cancel" type="button" class="btn btn-chabo btn-default-common"><span
+                            class="btn-text">取消插播</span></button>
+                </div>
+                <div class="noticmsg">
+                    可以对任意监室插播节目
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--插播直播-->
+<div id="chabo-zhibo-modal-lg" class="modal fade chabo-zhibo-modal-lg" tabindex="-1" role="dialog">
+    <div class="modal-dialog chabo-zhibo-modal-dialog" role="document">
+        <div class="modal-content common-modal-content chabo-zhibo-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span class="common-modal-title-text">选择节目</span></h4>
+            </div>
+            <div class="modal-body common-modal-body chabo-zhibo-modal-body">
+                <table id="table_zhibo">
+
+                </table>
+                <input type="hidden" id="channelId">
+                <label class="text-modal-body-1"><span>结束时间</span></label>
+                <input type="text" placeholder="hh:mm:ss" id="zhibo_endtime"
+                       class="selecttime form-control end-time common-text common-input">
+                <div class="common-btn-area chabo-zhibo-btn-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button id="btn-chabo-zhibo-confirm" type="button"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--插播点播 顺序播放-->
+<div id="chabo-dianbo-s1-modal-sm" class="modal fade chabo-dianbo-s1-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog chabo-dianbo-s1-modal-dialog" role="document">
+        <div class="modal-content chabo-dianbo-s1-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span class="common-modal-title-text">插播点播</span></h4>
+            </div>
+            <div class="modal-body common-modal-body chabo-dianbo-s1-modal-body">
+                <input type="hidden" id="vodResourceGroupId">
+                <input type="hidden" id="vodResourceId">
+                <input type="hidden" id="vodResourceName">
+                <div class="select-split">
+                    <span class="text-modal-body-1">播放模式</span>
+                    <select id="playtype" class="selectpicker btn-text-2">
+                        <option value="0" class="btn-text-3">顺序播放</option>
+                        <option value="2" class="btn-text-3">指定播放</option>
+                    </select>
+                </div>
+                <div class="select-split changearea playtype-0">
+                    <span class="text-modal-body-1">点播列表</span>
+                    <select id="vodPlayModel" class="selectpicker btn-text-2">
+                    </select>
+                </div>
+                <div class="select-split changearea playtype-2" style="display: none">
+                    <span class="text-modal-body-1">指定视频</span>
+                    <input id="vodResourceName_alias" type="text"
+                           class="form-control vodselect common-text common-input">
+                    <a id="select-video" class="btn btn-link text-modal-body-1">选择</a>
+                </div>
+                <div class="select-split"><span class="text-modal-body-1">结束时间</span><input type="text"
+                                                                                            placeholder="hh:mm:ss"
+                                                                                            id="dianbo_endtime"
+                                                                                            class="selecttime form-control end-time common-text common-input">
+                </div>
+                <div class="common-btn-area btn-chabo-dianbo-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button id="btn-chabo-dianbo-confirm" type="button"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--插播点播 选择视频-->
+<div id="xzsp-modal-lg" class="modal fade xzsp-modal-lg" tabindex="-1" role="dialog">
+    <div class="modal-dialog xzsp-modal-dialog" role="document">
+        <div class="modal-content common-modal-content xzsp-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span class="common-modal-title-text">选择节目</span></h4>
+            </div>
+            <div class="modal-body">
+                <div class="body-left">
+                    <div class="title-left">
+                        <span class="title-left-text">分组</span>
+                    </div>
+                    <div id="vodresourcegroup-list" class="body-left-list">
+                    </div>
+                </div>
+                <div class="body-right">
+                    <div class="title-right">
+                        <span class="title-right-text">视频</span>
+                    </div>
+                    <div class="searchbox">
+                        <input id="searchName" type="text"
+                               class="form-control searchInput common-text common-input"><span><button
+                            id="searchbtn" class="btn btn-default-common searchbtn"><span
+                            class="btn-text-1">搜索</span></button></span>
+                    </div>
+                    <table id="vodresource" class="vodresource">
+                    </table>
+                    <div class="common-btn-area xzsp-btn-area">
+                        <button type="button" class="btn btn-default-common btn-default-modal"
+                                data-dismiss="modal"><span
+                                class="btn-text">取消</span></button>
+                        <button id="btn-xzsp-confirm" type="button"
+                                class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                                class="btn-text">确认</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--预案控制-->
+<div id="yakz-modal-sm" class="modal fade yakz-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog yakz-modal-dialog" role="document">
+        <div class="modal-content common-modal-content yakz-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span class="common-modal-title-text">预案控制</span></h4>
+            </div>
+            <div class="modal-body common-modal-body yakz-modal-body">
+                <div class="common-btn-area btn-yakz-area">
+                    <button type="button" id="btn-yakz-stop" class="btn  btn-yakz-stop btn-default-common"><span
+                            class="btn-text">停用预案</span></button>
+                    <button type="button" id="btn-yakz-resume" class="btn btn-yakz-resume btn-default-common"><span
+                            class="btn-text">恢复预案</span></button>
+                </div>
+                <div class="noticmsg">
+                    停用预案后，必须手动恢复
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+</html>

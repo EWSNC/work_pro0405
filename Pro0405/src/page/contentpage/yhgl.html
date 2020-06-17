@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>用户管理</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap.min.css">
+    <link rel="stylesheet" href="../../datagrid/dist/bootstrap-table.css">
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/yhgl.css">
+    <script src="../../js/common/jquery/jquery.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap.min.js"></script>
+    <script src="../../datagrid/dist/bootstrap-table.js"></script>
+    <script src="../../datagrid/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-table-jumpto.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-select.js"></script>
+    <script src="../../layui/layui.all.js"></script>
+    <script src="../../js/utils/commonutil.js"></script>
+    <script src="../../js/utils/timeutils.js"></script>
+    <script src="../../js/common/remote/CommonRemote.js"></script>
+    <script src="../../js/contentjs/yhgl.js"></script>
+
+</head>
+<body>
+<div id="yhglcontainer" class="container">
+    <div id="yhgltoolbar" class="btn-toolbar" role="toolbar">
+        <div class="btn-group" role="group" aria-label="pickall" style="margin-left: 50px">
+            <button id="btn-user-add" class="btn btn-default-common"><span class="btn-text-1">增加账户</span></button>
+        </div>
+    </div>
+    <table id="table_yhgl">
+    </table>
+</div>
+<!--增加  编辑用户   通用对话框-->
+<div class="modal fade optdialog-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog optdialog-modal-dialog" role="document">
+        <div class="modal-content common-modal-content optdialog-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span id="common-modal-title-text" class="common-modal-title-text">通用对话框</span>
+                </h4>
+            </div>
+            <div class="modal-body common-modal-body optdialog-modal-body">
+                <div id="dw_box" class="split">
+                    <label class="text-modal-body-1">所属单位</label>
+                    <select id="dw" class="selectpicker btn-text-2">
+                    </select>
+                </div>
+                <div id="jq_box" class="split">
+                    <label class="text-modal-body-1">监&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区</label>
+                    <select id="jq" class="selectpicker btn-text-2" title="" multiple="multiple">
+                    </select>
+                </div>
+                <div id="fullname_box" class="split">
+                    <input type="hidden" id="dlg_opType">
+                    <input type="hidden" id="dlg_id">
+                    <label class="text-modal-body-1">用户名称</label>
+                    <input id="dlg_fullname" type="text" class="form-control optdialog-input common-text common-input">
+                </div>
+                <div id="username_box" class="split">
+                    <label class="text-modal-body-1">登陆账号</label>
+                    <input id="dlg_username" type="text" class="form-control optdialog-input common-text common-input">
+                </div>
+                <div id="password1_box" class="split">
+                    <label class="text-modal-body-1">登陆密码</label>
+                    <input id="dlg_password1" type="password"
+                           class="form-control optdialog-input common-text common-input" maxlength="32">
+                </div>
+                <div id="password2_box" class="split">
+                    <label class="text-modal-body-1">确认密码</label>
+                    <input id="dlg_password2" type="password"
+                           class="form-control optdialog-input common-text common-input">
+                </div>
+                <div class="common-btn-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-optdialog-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--删除确认对话框-->
+<div class="modal fade optdialog-delete-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog optdialog-delete-modal-dialog" role="document">
+        <div class="modal-content common-modal-content optdialog-delete-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span class="common-modal-title-text">确认删除</span></h4>
+            </div>
+            <div class="modal-body common-modal-body optdialog-delete-modal-body">
+                <div id="noticemsg-delete-user" class="noticemsg-delete">
+                    您确定要删除吗？
+                </div>
+                <div class="common-btn-area btn-optdialog-delete-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-optdialog-delete-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+</html>

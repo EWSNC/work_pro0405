@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>参数设置</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap.min.css">
+    <link rel="stylesheet" href="../../datagrid/dist/bootstrap-table.css">
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/cssz.css">
+    <script src="../../js/common/jquery/jquery.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap.min.js"></script>
+    <script src="../../datagrid/dist/bootstrap-table.js"></script>
+    <script src="../../datagrid/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-table-jumpto.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-select.js"></script>
+    <script src="../../layui/layui.all.js"></script>
+    <script src="../../js/utils/commonutil.js"></script>
+    <script src="../../js/utils/timeutils.js"></script>
+    <script src="../../js/common/remote/CommonRemote.js"></script>
+    <script src="../../js/contentjs/cssz.js"></script>
+
+</head>
+<body>
+<div id="csszcontainer" class="container">
+    <div id="cssztoolbar" class="btn-toolbar" role="toolbar">
+        <div class="btn-group" role="group" aria-label="pickall" style="margin-left: 50px">
+            <button id="btn-cssz-refresh" class="btn btn-default-common"><span class="btn-text-1">刷新</span></button>
+        </div>
+    </div>
+    <table id="table_cssz">
+    </table>
+</div>
+<!--编辑   通用对话框-->
+<div class="modal fade optdialog-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog optdialog-modal-dialog" role="document">
+        <div class="modal-content common-modal-content optdialog-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span id="common-modal-title-text" class="common-modal-title-text">通用对话框</span>
+                </h4>
+            </div>
+            <div class="modal-body common-modal-body optdialog-modal-body">
+                <div id="Name_box" class="split">
+                    <label class="text-modal-body-1">属性</label>
+                    <div id="dlg_name" type="text"
+                         class="optdialog-input common-text "></div>
+                </div>
+                <div id="value_box" class="split">
+                    <label class="text-modal-body-1">值</label>
+                    <input id="dlg_value" type="text" class="form-control optdialog-input common-text common-input">
+                </div>
+                <div id="_box" class="split">
+                    <label class="text-modal-body-1">描述</label>
+                    <div id="dlg_desc" class="desc common-text "></div>
+                </div>
+                <div class="common-btn-area optdialog-btn-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal"
+                            data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-optdialog-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+</html>

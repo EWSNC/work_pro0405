@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- 无页面头首页 -->
+<head>
+    <title>首页</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="../css/common/bootstrap-3.3.7/bootstrap.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/pagetitle.css">
+    <script src="../js/common/jquery/jquery.js"></script>
+    <script src="../js/common/bootstrap-3.3.7/bootstrap.min.js"></script>
+    <script src="../js/utils/commonutil.js"></script>
+    <script src="../js/utils/timeutils.js"></script>
+    <script src="../js/common/remote/CommonRemote.js"></script>
+    <script>
+        $(function () {
+            debugger;
+            //无页面头首页  加载一次用户信息，如果没有成功，则跳到登录页
+            CommonRemote.login.userInfo();
+        });
+    </script>
+</head>
+<body>
+<div>
+    <div class="tabs">
+        <!--页签-->
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="tab-li active"><a href="#xjkz" role="tab" id="xjkz-tab" data-toggle="tab"
+                                                             aria-controls="xjkz">宣教控制</a></li>
+            <li role="presentation" class="tab-li "><a href="#xjya" role="tab" id="xjya-tab" data-toggle="tab"
+                                                       aria-controls="xjya">宣教预案</a>
+            </li>
+            <li role="presentation" class="tab-li "><a href="#xtpz" role="tab" id="xtpz-tab" data-toggle="tab"
+                                                       aria-controls="xtpz">系统配置</a>
+            </li>
+        </ul>
+    </div>
+    <!--页签 页签内容 分割-->
+    <div class="tab-panel-cut"></div>
+    <!--页签内容-->
+    <div id="tabContent" class="tab-content">
+        <div role="tabpanel" class="xjkzcontent tab-pane fade in active" id="xjkz">
+            <iframe class="" src="contentpage/xjkz.html" frameborder="no"></iframe>
+        </div>
+        <div role="tabpanel" class="xjyacontent tab-pane fade in " id="xjya">
+            <iframe class="" src="contentpage/xjya.html" frameborder="no"></iframe>
+        </div>
+        <div role="tabpanel" class="xtpzcontent tab-pane fade in " id="xtpz">
+            <iframe class="" src="contentpage/xtpz.html" frameborder="no"></iframe>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,977 @@
+/*
+公用CSS
+*/
+body {
+    background-color: rgb(6, 64, 128);
+}
+
+/*.modal-open {
+    overflow-y: scroll;
+}
+
+.container {
+    padding-right: 15px !important;
+}*/
+
+/*  按钮  样式  */
+.btn-default-common {
+    width: 120px;
+    height: 40px;
+    background: rgba(32, 117, 191, 0.5);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25), 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+}
+
+.btn-default-common:hover {
+    background: rgba(14, 128, 216, 1);
+    box-shadow: 0px 1px 1px 0px rgba(35, 31, 31, 0.56), 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.btn-group .btn-default {
+    text-align: left;
+    width: 164px;
+    height: 40px;
+    background: rgba(7, 46, 116, 1);
+    border: 1px solid rgba(102, 178, 255, 1);
+}
+
+.btn-hf {
+    background: rgba(14, 128, 216, 1);
+}
+
+.bs-caret {
+    color: white;
+}
+
+.btn-optbtn {
+    width: 40px;
+    height: 40px;
+    background: rgba(32, 117, 191, 0.5);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25), 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.btn-optbtn:hover {
+    background: rgba(14, 128, 216, 1);
+    box-shadow: 0px 1px 1px 0px rgba(35, 31, 31, 0.56), 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+}
+
+#yhgltoolbar, #dwpztoolbar, #jspztoolbar, #dbsptoolbar, #gbjmtoolbar, #lmtfwqtoolbar, #cssztoolbar, #sbsstoolbar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* 图标 样式 */
+/* 增加 编辑 删除 应用 复制 图标*/
+.icon-add {
+    width: 26px;
+    height: 26px;
+    background-image: url("../../resource/icon/add.png");
+    display: inline-block;
+    position: relative;
+    left: -5px;
+}
+
+.icon-edit {
+    width: 26px;
+    height: 26px;
+    background-image: url("../../resource/icon/edit.png");
+    display: inline-block;
+    position: relative;
+    left: -5px;
+}
+
+.icon-del {
+    width: 26px;
+    height: 26px;
+    background-image: url("../../resource/icon/delete.png");
+    display: inline-block;
+    position: relative;
+    left: -5px;
+}
+
+.icon-copy {
+    width: 26px;
+    height: 26px;
+    background-image: url("../../resource/icon/copy.png");
+    display: inline-block;
+    position: relative;
+    left: -5px;
+}
+
+.icon-apply {
+    width: 26px;
+    height: 26px;
+    background-image: url("../../resource/icon/application.png");
+    display: inline-block;
+    position: relative;
+    left: -5px;
+}
+
+.icon-more {
+    margin-top: 10px;
+    float: right;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-image: url("../../resource/icon/more01.png");
+}
+
+/*  监室状态logo    样式*/
+/*  默认  */
+.jystatusdefault {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+/*  播放  */
+.jystatusplay {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-image: url("../../resource/icon/play.png");
+}
+
+/*  暂停  */
+.jystatuspause {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-image: url("../../resource/icon/pause.png");
+}
+
+/*  静音  */
+.jystatusmute {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-image: url("../../resource/icon/mute.png");
+}
+
+/*  停止  */
+.jystatusstop {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-image: url("../../resource/icon/stop.png");
+}
+
+/*  关机  */
+.jystatusshutdown {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-image: url("../../resource/icon/Shut_down.png");
+}
+
+/*  禁用  */
+.jystatusdisable {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-image: url("../../resource/icon/disable.png");
+}
+
+/*  插播  */
+.jystatusinsert {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-image: url("../../resource/icon/insert.png");
+}
+
+/*  插播 点播  */
+.jystatusdibbling {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-image: url("../../resource/icon/dibbling.png");
+}
+
+/*  插播 直播  */
+.jystatuslive {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-image: url("../../resource/icon/live_broadcast.png");
+}
+
+.jq-tip {
+    width: 15px;
+    height: 20px;
+    background-image: url("../../resource/icon/unfold.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 5px;
+    margin-top: -1px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.jq-tip-open {
+    width: 20px;
+    height: 10px;
+    background-image: url("../../resource/icon/collapse.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 5px;
+    margin-top: -3px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* 遮罩modal上增加 编辑 删除 复制 按钮样式 */
+.icon-modal-add, .icon-modal-edit, .icon-modal-del, .icon-modal-copy {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 25px;
+}
+
+/* 遮罩操作 样式*/
+.plan-item-modal {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -71px;
+    left: 0;
+    background-color: #16469B;
+    display: none;
+    opacity: 0.8;
+    text-align: center;
+}
+
+/* 对话框  样式*/
+.common-modal-header {
+    border: 0;
+}
+
+.common-modal-content {
+    background: rgba(22, 70, 155, 1);
+    border: 1px solid rgba(136, 195, 255, 1);
+}
+
+.common-modal-body {
+    margin: 0 auto;
+    background: rgba(7, 46, 116, 1);
+    border: 1px solid rgba(102, 178, 255, 1);
+    border-radius: 3px;
+}
+
+.common-btn-area {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+}
+
+.close {
+    width: 30px;
+    height: 30px;
+}
+
+.icon-close {
+    width: 30px;
+    height: 30px;
+}
+
+.split, .select-split {
+    margin-top: 15px;
+}
+
+
+/*删除  确认对话框*/
+.optdialog-delete-modal-content {
+    /*background-color: transparent;*/
+    margin: 100px auto;
+    width: 467px;
+    height: 236px;
+}
+
+.optdialog-delete-modal-body {
+    width: 445px;
+    height: 167px;
+    text-align: left;
+}
+
+.btn-optdialog-delete-area {
+    bottom: 20px;
+    left: 5%;
+}
+
+.noticemsg-delete {
+    width: 252px;
+    height: 22px;
+    font-size: 22px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    margin: 0 auto;
+}
+
+/*增加 编辑 复制 通用对话框样式*/
+.optdialog-modal-sm {
+    top: -80px;
+}
+
+.optdialog-modal-dialog {
+    width: 634px;
+}
+
+.optdialog-modal-content {
+    /*background-color: transparent;*/
+    margin: 100px auto;
+    width: 570px;
+    height: 575px;
+}
+
+
+.optdialog-modal-body {
+    width: 535px;
+    height: 500px;
+    text-align: left;
+}
+
+.vodselect {
+    width: 274px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 23px;
+}
+
+/* 文件上传 通用对话框  样式 */
+.upfile-modal-dialog {
+    width: 870px;
+    top: -80px;
+}
+
+.upfile-modal-content-large {
+    margin: 100px auto;
+    width: 870px;
+    height: 840px;
+}
+
+.upfile-modal-body-large {
+    width: 835px;
+    height: 770px;
+    text-align: left;
+}
+
+.upfile-modal-content-normal {
+    margin: 100px auto;
+    width: 870px;
+    height: 640px;
+}
+
+.upfile-modal-body-normal {
+    width: 835px;
+    height: 570px;
+    text-align: left;
+}
+
+.upfile-modal-content-short {
+    margin: 100px auto;
+    width: 870px;
+    height: 440px;
+}
+
+.upfile-modal-body-short {
+    width: 835px;
+    height: 370px;
+    text-align: left;
+}
+
+/*.upfile-input {
+    width: 500px;
+    display: inline-block !important;
+    margin-left: 50px;
+    height: 40px;
+}*/
+
+/*.input-group {
+    display: inline-flex;
+    margin-left: 50px;
+    width: 380px;
+    vertical-align: bottom;
+}*/
+.kv-zoom-cache > .file-preview-frame {
+    display: none;
+}
+
+.file-preview {
+    border: 1px solid rgba(102, 178, 255, 1);
+}
+
+.file-preview-selfdefine-hide {
+    display: none !important;
+}
+
+.file-caption {
+    background: rgba(7, 46, 116, 1);
+    border: 1px solid rgba(102, 178, 255, 1);
+    color: white;
+    height: 40px;
+}
+
+.file-footer-caption, .file-caption-name {
+    color: white !important;
+}
+
+.file-caption-name {
+    font-size: 20px;
+}
+
+.input-group-btn > .btn {
+    height: 40px;
+}
+
+.upfile-btn-area {
+    left: 25%;
+}
+
+/*选择视频对话框  样式*/
+.xzsp-modal-content {
+    width: 1007px;
+    height: 660px;
+    margin: 30px auto;
+}
+
+.xzsp-modal-dialog {
+    width: 1008px;
+}
+
+.body-left {
+    position: absolute;
+    left: 1%;
+    width: 25%;
+    height: 572px;
+    background: rgba(7, 46, 116, 1);
+    border: 1px solid rgba(102, 178, 255, 1);
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.body-right {
+    position: absolute;
+    left: 27%;
+    width: 72%;
+    height: 572px;
+    background: rgba(7, 46, 116, 1);
+    border: 1px solid rgba(102, 178, 255, 1);
+    border-radius: 3px;
+    display: inline-block;
+    padding: 15px;
+}
+
+.title-left, .title-right {
+    margin-top: 10px;
+}
+
+.title-left-text, .title-right-text {
+    width: 39px;
+    height: 18px;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(64, 194, 255, 1);
+    line-height: 28px;
+    margin-left: 20px;
+}
+
+.list-item {
+    width: 100%;
+    height: 46px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.list-item:hover {
+    background: rgba(14, 128, 216, 1);
+}
+
+.list-item-active {
+    background: rgba(14, 128, 216, 1);
+}
+
+.list-item-text {
+    display: table-cell;
+    height: 20px;
+    font-size: 20px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+.searchInput {
+    width: 30%;
+    display: inline-block;
+    height: 40px;
+    margin-left: 2%;
+    vertical-align: middle;
+}
+
+.searchbtn {
+    margin-left: 10px;
+}
+
+.vodresource {
+    margin-top: 10px;
+}
+
+.xzsp-btn-area {
+    bottom: 30px;
+    left: 25%;
+}
+
+/* 字体  样式*/
+/*模态框   样式*/
+/*模态框标题字体*/
+.common-text {
+    color: white;
+    font-size: 23px;
+    font-family: Microsoft YaHei;
+}
+
+.common-modal-title-text {
+    width: 94px;
+    height: 22px;
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 28px;
+}
+
+.text-modal-body-1 {
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    margin-left: 3%;
+}
+
+.text-modal-body-2 {
+    width: 65%;
+    height: 80px;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(151, 185, 246, 1);
+    text-align: left;
+    margin: 0 auto;
+}
+
+/* 输入框 样式*/
+.common-input {
+    background: rgba(7, 46, 116, 1);
+    border: 1px solid rgba(102, 178, 255, 1);
+}
+
+.optdialog-input {
+    width: 274px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 5%;
+}
+
+
+/* ::-webkit-input-placeholder{}   使用webkit内核的浏览器 */
+/* :-moz-placeholder{}                Firefox版本4-18 */
+/* ::-moz-placeholder{}                  Firefox版本19+ */
+/* :-ms-input-placeholder{}          IE浏览器 */
+input::-webkit-input-placeholder {
+    font-size: 23px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(0, 185, 255, 1) !important;
+    line-height: 39px;
+}
+
+input:-ms-input-placeholder {
+    font-size: 23px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(0, 185, 255, 1) !important;
+    line-height: 20px;
+}
+
+input[type=checkbox] {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none; /*清除复选框默认样式*/
+    width: 22px;
+    height: 22px;
+    background-image: url("../../resource/icon/unselected02.png");
+}
+
+input[type=checkbox][disabled] {
+    background-color: grey;
+}
+
+input[type=checkbox]:checked {
+    width: 22px;
+    height: 22px;
+    background-image: url("../../resource/icon/selected02.png");
+}
+
+input[type=radio] {
+    width: 23px;
+    height: 23px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type=radio]::before {
+    content: "";
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+    background-image: url("../../resource/icon/unselected01.png");
+    background-color: rgba(7, 46, 116, 1);
+}
+
+input[type=radio]:checked::before {
+    content: "";
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+input[type=radio]:checked::after {
+    content: "";
+    text-align: center;
+    width: 23px;
+    height: 23px;
+    background-image: url("../../resource/icon/selected01.png");
+    display: block;
+    position: absolute;
+    top: 0;
+}
+
+/*模态框默认按钮样式*/
+.btn-default-modal {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.btn-default-modal-confirm {
+    background: rgba(14, 128, 216, 1);
+    box-shadow: 0px 1px 1px 0px rgba(35, 31, 31, 0.56), 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+}
+
+/*  按钮上字体   样式*/
+.btn-text {
+    width: 45px;
+    height: 22px;
+    font-size: 22px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 28px;
+}
+
+.btn-text-1 {
+    width: 46px;
+    height: 22px;
+    font-size: 22px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 28px;
+}
+
+.btn-text-2 {
+    width: 93px;
+    height: 22px;
+    font-size: 22px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+.btn-text-3 {
+    font-size: 22px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+.btn-text-4 {
+    width: 66px;
+    height: 13px;
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+.btn-text-5 {
+    width: 34px;
+    height: 16px;
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    color: rgba(64, 194, 255, 1);
+    line-height: 8px;
+}
+
+/*.clearfix {
+    display: none;
+}*/
+
+/*  下拉选项    样式*/
+.dropdown-menu {
+    background: rgba(25, 122, 222, 1);
+    border: 1px solid rgba(157, 237, 254, 1);
+}
+
+.bootstrap-select > .dropdown-toggle {
+    height: 40px;
+    background: rgba(7, 46, 116, 1);
+    border: 1px solid rgba(102, 178, 255, 1);
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus, .btn.focus,
+.btn:active.focus, .btn.active.focus {
+    outline: none;
+    background-color: #072E74;
+    border: 1px solid rgba(136, 195, 255, 1);
+}
+
+
+.bootstrap-select:not(.input-group-btn) {
+    width: 274px !important;
+    height: 40px;
+    margin-left: 27px;
+}
+
+
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+    font-size: 22px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+.open > button {
+    background-color: #072E74 !important;
+}
+
+.btn-group.open > ul > li :hover,
+.bootstrap-select.open > .dropdown-menu.open > .inner.open > ul > li :hover {
+    background-color: rgba(136, 195, 255, 1);
+}
+
+/* 日期选择框 */
+.datetimepicker {
+    width: 295px;
+}
+
+.datetimepicker.datetimepicker-dropdown-bottom-right.dropdown-menu {
+    background-color: #22396c;
+}
+
+.table-condensed {
+    width: 100%;
+}
+
+.table-condensed > tfoot {
+    color: white;
+}
+
+.datetimepicker-years > .table-condensed > tfoot > tr > th:hover, .datetimepicker-years > .table-condensed > thead > tr > th:hover, .datetimepicker-years > .table-condensed > tbody > tr > td > span:hover,
+.datetimepicker-months > .table-condensed > tfoot > tr > th:hover, .datetimepicker-months > .table-condensed > thead > tr > th:hover, .datetimepicker-months > .table-condensed > tbody > tr > td > span:hover,
+.datetimepicker-days > .table-condensed > tfoot > tr > th:hover, .datetimepicker-days > .table-condensed > thead > tr > th:hover, .datetimepicker-days > .table-condensed > tbody > tr > td:hover {
+    background: #007eff !important;
+}
+
+/*修改bootstrap表格默认样式*/
+/*  分页按钮  样式*/
+.pagination-info {
+    display: none;
+}
+
+.page-list > .btn-group > button {
+    width: 60px;
+    color: white;
+}
+
+.page-list > .open > .dropdown-menu {
+    min-width: 60px !important;
+}
+
+.page-list > .open > .dropdown-menu > .menuitem > a {
+    color: white;
+}
+
+.page-pre > .page-link {
+    border: 1px solid rgba(64, 194, 255, 1);
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    color: rgba(64, 194, 255, 1);
+    line-height: 8px;
+}
+
+.page-next > .page-link {
+    border: 1px solid rgba(64, 194, 255, 1);
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    color: rgba(64, 194, 255, 1);
+    line-height: 8px;
+}
+
+.page-first-separator > .page-link, .page-last-separator > .page-link, .page-item > .page-link {
+    margin: 3px;
+    background-color: transparent !important;
+    border: 1px solid rgba(64, 194, 255, 1);
+    border-radius: 5px;
+}
+
+
+.jumpto > input {
+    height: 35px;
+    width: 60px;
+    color: white;
+    border: 1px solid rgba(64, 194, 255, 1);
+    background-color: transparent;
+    margin-left: 30px;
+    margin-right: 5px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+
+.jumpto > button {
+    width: 60px;
+    height: 35px;
+    color: rgba(64, 194, 255, 1);
+    background-color: transparent;
+    border: 1px solid rgba(64, 194, 255, 1);
+}
+
+.jumpto > button:hover {
+    color: rgba(64, 194, 255, 1);
+    background-color: #072E74;
+}
+
+.selected {
+    background-color: rgba(14, 128, 216, 1) !important;
+}
+
+.th-inner {
+    height: 50px;
+    font-size: 20px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(254, 254, 254, 1);
+}
+
+.fixed-table-pagination {
+    color: rgba(254, 254, 254, 1);
+    font-size: 15px;
+}
+
+/*表格样式  #007EFF*/
+.bootstrap-table > .fixed-table-container {
+    height: 350px !important;
+    padding-bottom: 0 !important;
+}
+
+.bootstrap-table > .fixed-table-container > .fixed-table-header thead {
+    background-color: #007EFF;
+}
+
+.bootstrap-table > .fixed-table-container > .fixed-table-body > table > thead {
+    background-color: #007EFF !important;
+}
+
+.bootstrap-table > .fixed-table-container > .fixed-table-body > .fixed-table-border {
+    height: 0 !important;
+}
+
+.bootstrap-table .fixed-table-container.fixed-height:not(.has-footer) {
+    border: 0 !important;
+}
+
+.bootstrap-table > .fixed-table-container > .fixed-table-body {
+    background: #072E74;
+    height: 80% !important;
+    font-size: 18px;
+}
+
+.bootstrap-table > .fixed-table-container > .fixed-table-body > table > thead, table > thead > tr, table > thead > tr > th, table > tbody, table > tbody > tr, table > tbody > tr > td {
+    border: 1px solid rgba(102, 178, 255, 1) !important;
+    color: white !important;
+}
+
+.bootstrap-table > .fixed-table-container > .fixed-table-body > table > tbody :hover {
+    background-color: rgba(14, 128, 216, 1) !important;
+}
+
+/*
+滚动条的设置
+1. ::-webkit-scrollbar 滚动条整体部分，可以设置宽度等
+2. ::-webkit-scrollbar-button 滚动条两端的按钮
+3. ::-webkit-scrollbar-track  外层轨道
+4. ::-webkit-scrollbar-track-piece  内层滚动槽
+5. ::-webkit-scrollbar-thumb 滚动的滑块
+6. ::-webkit-scrollbar-corner 边角
+7. ::-webkit-resizer 定义右下角拖动块的样式
+*/
+#dlgResourceDetail_urls,
+#jy-main,
+.jq-jy-area,
+.menu-bot, #plan-main,
+.body-left-list,
+.bootstrap-table > .fixed-table-container > .fixed-table-body {
+    scrollbar-arrow-color: #072E74 !important; /**//*三角箭头的颜色*/
+    scrollbar-face-color: #0E80D8 !important; /**//*立体滚动条的颜色*/
+    scrollbar-3dlight-color: #072E74 !important; /**//*立体滚动条亮边的颜色*/
+    scrollbar-highlight-color: #072E74 !important; /**//*滚动条空白部分的颜色*/
+    scrollbar-shadow-color: #072E74 !important; /**//*立体滚动条阴影的颜色*/
+    scrollbar-darkshadow-color: #072E74 !important; /**//*立体滚动条强阴影的颜色*/
+    scrollbar-track-color: #072E74 !important; /**//*立体滚动条背景颜色*/
+    scrollbar-base-color: #0E80D8 !important; /**//*滚动条的基本颜色*/
+}
+
+#dlgResourceDetail_urls::-webkit-scrollbar,
+#jy-main::-webkit-scrollbar,
+.jq-jy-area::-webkit-scrollbar,
+.menu-bot::-webkit-scrollbar,
+#plan-main::-webkit-scrollbar,
+.body-left-list::-webkit-scrollbar,
+.bootstrap-table > .fixed-table-container > .fixed-table-body::-webkit-scrollbar {
+    border: 0;
+}
+
+#dlgResourceDetail_urls::-webkit-scrollbar-thumb,
+#jy-main::-webkit-scrollbar-thumb,
+.jq-jy-area::-webkit-scrollbar-thumb,
+.menu-bot::-webkit-scrollbar-thumb,
+#plan-main::-webkit-scrollbar-thumb,
+.body-left-list::-webkit-scrollbar-thumb,
+.bootstrap-table > .fixed-table-container > .fixed-table-body::-webkit-scrollbar-thumb {
+    background: #0E80D8;
+}
+
+#dlgResourceDetail_urls::-webkit-scrollbar-track,
+#jy-main::-webkit-scrollbar-track,
+.jq-jy-area::-webkit-scrollbar-track,
+.menu-bot::-webkit-scrollbar-track,
+#plan-main::-webkit-scrollbar-track,
+.body-left-list::-webkit-scrollbar-track,
+.bootstrap-table > .fixed-table-container > .fixed-table-body::-webkit-scrollbar-track {
+    background: #072E74;
+}

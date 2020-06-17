@@ -1,0 +1,38 @@
+{
+  "data": {
+    "total": 5,
+    "list": [
+      {
+        "createTime": null,
+        "id": 24,
+        "name": "监所行为规范",
+        "sortValue": 0
+      },
+      {
+        "createTime": null,
+        "id": 25,
+        "name": "权利义务",
+        "sortValue": 0
+      },
+      {
+        "createTime": null,
+        "id": 26,
+        "name": "广播操",
+        "sortValue": 0
+      },
+      {
+        "createTime": null,
+        "id": 27,
+        "name": "纪录片",
+        "sortValue": 0
+      },
+      {
+        "createTime": null,
+        "id": 28,
+        "name": "扫黑除恶",
+        "sortValue": 0
+      }
+    ]
+  },
+  "result": "ok"
+}

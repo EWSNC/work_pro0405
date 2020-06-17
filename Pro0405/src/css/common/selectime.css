@@ -1,0 +1,199 @@
+/* CSS Document */
+html, body, div, p, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, textarea, iframe, table, th, td, figure {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+em, i {
+    font-style: normal;
+}
+
+b {
+    font-weight: normal;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+.test {
+    width: 600px;
+    margin: 200px auto;
+    line-height: 38px;
+    text-align: center;
+}
+
+.txt {
+    border: 1px solid #e6e6e6;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 9px;
+    margin: 0 5px;
+}
+
+
+.select_time {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #22396c;
+    z-index: 99999999
+}
+
+.select_time .data {
+    position: relative;
+    height: 40px;
+    line-height: 20px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+#select_time_hms {
+    border: 1px solid #ccc;
+    position: relative;
+    z-index: 1;
+    float: left;
+}
+
+/*#select_time_hms li:first-child {
+    width: 31px;
+    border-right: 1px solid #ccc;
+    background-color: #fff;
+    text-align: center;
+    font-size: 15px;
+}*/
+
+#select_time_hms li {
+    float: left;
+    height: 26px;
+    line-height: 20px;
+    border-right: none;
+    font-weight: 900;
+}
+
+.select_time .data .select_time_btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-right: 1px solid #ccc;
+}
+
+.select_time .data .select_time_btn a {
+    float: left;
+    height: 30px;
+    padding: 0 6px;
+    border: 1px solid #ccc;
+    border-right: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.select_time .data .select_time_btn a, .select_time .data .select_time_btn a:hover {
+    color: #333;
+}
+
+.select_time .data input {
+    float: left;
+    width: 45px;
+    height: 26px;
+    line-height: 20px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.select_time .box {
+    position: relative;
+}
+
+.select_time .box .tit {
+    border-bottom: 1px solid #ccc;
+    height: 30px;
+    line-height: 30px;
+    font-size: 23px;
+    text-align: center;
+    color: white;
+}
+
+.select_time .box .tit span {
+    position: absolute;
+    width: 20px;
+    top: 0;
+    right: 0px;
+    cursor: pointer;
+}
+
+.select_time .box .hours {
+    position: absolute;
+    left: 0;
+    bottom: -200px;
+    width: 290px !important;
+    height: 175px !important;
+    *overflow: hidden;
+    background-color: #22396c;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+}
+
+.select_time .box .hours p {
+    padding: 5px 0 0 5px;
+}
+
+.select_time .box .hours p span {
+    display: block;
+    float: left;
+    width: 25px;
+    font-size: 17px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+}
+
+.select_time .box .hours p span.crently {
+    background-color: #f08300;
+    color: #fff;
+}
+
+.select_time .box .hours.sp2 {
+    width: 226px;
+    height: 173px;
+    background-color: #22396c;
+}
+
+.select_time .box .hours.sp2 p {
+    padding: 6px 0 0 8px;
+    background-color: #22396c;
+}
+
+.select_time .box .hours.sp3 {
+    width: 226px;
+    height: 173px;
+    background-color: #22396c;
+}
+
+.select_time .box .hours.sp3 p {
+    padding: 6px 0 0 8px;
+    background-color: #22396c;
+}
+
+.c {
+    color: red!important;
+}
+
+.t {
+    color: yellow!important;
+}
+
+.o {
+    color: lightgreen!important;
+}

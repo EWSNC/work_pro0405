@@ -1,0 +1,58 @@
+/*
+xjya.html页面CSS
+*/
+
+#xjyatabContent {
+    width: 96%;
+    min-height: 698px;
+    margin: 10px auto;
+}
+
+.xjjhcontent {
+    width: 100%;
+    height: 698px;
+    border: medium none;
+}
+
+/*按钮样式*/
+.btn-text-1 {
+    line-height: 35px;
+}
+
+#xjyatoolbar > .btn > .active {
+    height: 40px;
+    background: rgba(14, 128, 216, 1);
+    box-shadow: 0px 1px 1px 0px rgba(35, 31, 31, 0.56), 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+}
+
+#xjyatoolbar > .nav-tabs {
+    border: 1px solid rgb(6, 64, 128);
+    background-color: rgb(6, 64, 128);
+}
+
+#xjyatoolbar > .nav-tabs > li {
+    margin-left: 60px;
+}
+
+#xjyatoolbar > .nav-tabs > li > a {
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    background: rgba(32, 117, 191, 0.5);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25), 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    padding: 0;
+    border: 1px solid rgba(32, 117, 191, 0.5);
+}
+
+#xjyatoolbar > .nav-tabs > li > a:hover {
+    background: rgba(14, 128, 216, 1);
+    box-shadow: 0px 1px 1px 0px rgba(35, 31, 31, 0.56), 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+}
+
+#xjyatoolbar > .nav-tabs > .active {
+    border-radius: 5px;
+    background: rgba(14, 128, 216, 1);
+}

@@ -1,0 +1,255 @@
+/*
+页面头CSS样式
+*/
+.mainbody {
+    width: 100%;
+    height: 880px;
+}
+
+
+/*  页签按钮等   样式    */
+.tabs {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.nav-tabs {
+    border: 1px solid rgb(6, 64, 128);
+    background-color: rgb(6, 64, 128);
+}
+
+.nav-tabs > li {
+    text-align: center;
+    width: 212px;
+    height: 39px;
+    background-image: url("../resource/img/navigation_off.png");
+}
+
+.nav-tabs > li :hover {
+    background-image: url("../resource/img/navigation_on.png") !important;
+    background-color: #064080 !important;
+    border: 0 !important;
+}
+
+.nav-tabs > li > a {
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(254, 254, 254, 1);
+    line-height: 18px;
+}
+
+/*  页签按钮和页签间分割  样式*/
+.tab-panel-cut {
+    margin-left: 26px;
+    width: 1280px;
+    height: 13px;
+    background-image: url("../resource/img/line.png");
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: white; /*字体颜色*/
+    cursor: unset;
+    background: rgb(6, 64, 128);
+    background-image: url("../resource/img/navigation_on.png");
+    border: 1px solid rgb(6, 64, 128);
+}
+
+.pagetitle {
+    width: 100%;
+    height: 70px;
+    background-image: url("../resource/img/title_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.titlelogo {
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 507px;
+    text-align: center;
+}
+
+.policebadge {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 46px;
+    height: 46px;
+    background-image: url("../resource/img/police_badge.png");
+}
+
+.titletext {
+    min-width: 200px;
+    height: 46px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 46px;
+    display: inline-block;
+}
+
+.timemsg {
+    position: absolute;
+    right: 10%;
+    top: 0.5%;
+    width: 15%;
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+.about {
+    position: absolute;
+    right: 6.6%;
+    top: 2%;
+    cursor: pointer;
+    width: 33px;
+    height: 33px;
+    background-image: url("../resource/icon/about.png");
+}
+
+
+.loginmsg {
+    position: absolute;
+    right: 2.2%;
+    top: 2%;
+    width: 50px;
+    text-align: center;
+}
+
+.user-icon {
+    width: 27px;
+    height: 29px;
+    background-image: url("../resource/icon/news.png");
+    display: inline-block;
+    cursor: pointer
+}
+
+.more-icon {
+    width: 15px;
+    height: 7px;
+    background-image: url("../resource/icon/more02.png");
+    display: inline-block;
+    vertical-align: text-top;
+    cursor: pointer
+}
+
+.dropmenu {
+    width: 150px;
+    height: 120px;
+    background: rgba(0, 79, 166, 1);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25), 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+    border: 1px #3AC5F1 solid;
+    border-radius: 8px;
+    text-align: center;
+    float: right;
+    display: none;
+    cursor: pointer;
+    margin-right: -20px
+}
+
+.changpwd {
+    width: 16px;
+    height: 16px;
+    background-image: url("../resource/icon/password.png");
+}
+
+.logout {
+    width: 16px;
+    height: 16px;
+    background-image: url("../resource/icon/logout.png");
+}
+
+#changpwd {
+    margin-top: 5px;
+}
+
+#changpwd, #logoutbtn {
+    height: 50px;
+}
+
+#changpwd:hover, #logoutbtn:hover {
+    background-color: rgba(14, 128, 216, 1);
+}
+
+.changpwd, .logout {
+    display: inline-block;
+    vertical-align: text-top;
+    cursor: pointer;
+}
+
+.drop-menu-cut {
+    width: 122px;
+    height: 1px;
+    background: rgba(58, 197, 241, 1);
+    margin: 5px auto;
+}
+
+.menu-text {
+    width: 27px;
+    height: 13px;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 44px;
+}
+
+.xjkzcontent > iframe, .xjyacontent > iframe, .xtpzcontent > iframe {
+    width: 100%;
+    height: 100%;
+    border: medium none;
+}
+
+.panelbox {
+    width: 100%;
+    overflow: hidden;
+    /*height: 872px;*/
+}
+
+#tabContent {
+    margin-top: 1px;
+}
+
+/*修改密码态框 样式*/
+.changepwd-modal-dialog {
+    top: 170px;
+}
+
+.changepwd-modal-content {
+    width: 534px;
+    height: 450px;
+    margin: 0 auto;
+}
+
+.changepwd-modal-body {
+    width: 504px;
+    height: 374px;
+    margin: 0 auto;
+}
+
+.changepwdConten {
+    display: inline-block;
+    width: 70%;
+    margin-left: 5%;
+    background-color: transparent;
+    border: 1px solid rgba(102, 178, 255, 1);
+    resize: none;
+}
+
+.pwd-input {
+    width: 274px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 5%;
+}
+
+.text-laber-changepwd {
+    width: 100px;
+    vertical-align: top;
+    color: white;
+}

@@ -1,0 +1,23 @@
+{
+  "data": {
+    "rows": [
+      {
+        "id": 1,
+        "ip": null,
+        "name": "二所",
+        "serial": null,
+        "status": 0,
+        "type": 2
+      },
+      {
+        "id": 4,
+        "ip": null,
+        "name": "三所",
+        "serial": null,
+        "status": 0,
+        "type": 0
+      }
+    ]
+  },
+  "result": "ok"
+}

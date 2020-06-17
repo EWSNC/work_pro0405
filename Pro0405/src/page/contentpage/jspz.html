@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>监室配置</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap.min.css">
+    <link rel="stylesheet" href="../../datagrid/dist/bootstrap-table.css">
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap-datetimepicker.min.css">
+    <!--    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap-datepicker.min.css">-->
+    <link rel="stylesheet" href="../../css/common/selectime.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/jspz.css">
+    <script src="../../js/common/jquery/jquery.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap.min.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-select.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-datetimepicker.min.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-datepicker.min.js"></script>
+    <script src="../../datagrid/dist/bootstrap-table.js"></script>
+    <script src="../../datagrid/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../../js/common/selectime.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-table-jumpto.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script src="../../layui/layui.all.js"></script>
+    <script src="../../js/utils/commonutil.js"></script>
+    <script src="../../js/utils/timeutils.js"></script>
+    <script src="../../js/common/remote/CommonRemote.js"></script>
+    <script src="../../js/contentjs/jspz.js"></script>
+    <script src="../../js/common/entry/JqEntry.js"></script>
+    <script src="../../js/common/entry/JyEntry.js"></script>
+</head>
+<body>
+<div id="jspzcontainer" class="container">
+    <div class="row">
+        <div class="col-md-2 column menu">
+            <div id="menu-top" class="menu-top">
+                <!-- 单位选择 -->
+                <select id="dw" class="selectpicker btn-text-2">
+                </select>
+            </div>
+            <div id="menu-middle" class="menu-middle">
+                <div id="jq-add" type="button" class="btn btn-optbtn">
+                    <div class="icon-add"></div>
+                </div>
+                <div id="jq-edit" type="button" class="btn btn-optbtn">
+                    <div class="icon-edit"></div>
+                </div>
+                <div id="jq-del" type="button" class="btn btn-optbtn">
+                    <div class="icon-del"></div>
+                </div>
+            </div>
+            <div id="menu-bot" class="menu-bot">
+            </div>
+        </div>
+        <div id="jy-main" class="col-md-10 column main">
+            <div id="jspztoolbar" class="btn-toolbar" role="toolbar">
+                <div class="btn-group" role="group" aria-label="pickall" style="margin-left: 50px">
+                    <button id="btn-jspz-add" class="btn btn-default-common"><span class="btn-text-1">新增监室</span>
+                    </button>
+                </div>
+                <div class="searchbox">
+                    <button
+                            id="Servicebtn" class="btn btn-default-common searchbtn"><span
+                            class="btn-text-1">搜索</span></button>
+                    <input id="ServiceName" placeholder="输入文字" type="text"
+                           class="form-control common-input searchInput common-text">
+                </div>
+            </div>
+            <table id="table_jspz">
+            </table>
+        </div>
+    </div>
+</div>
+<!--增加  编辑   通用对话框-->
+<div class="modal fade jy-opt-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog jy-opt-modal-dialog" role="document">
+        <div class="modal-content common-modal-content jy-opt-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span id="jy-opt-text-modal-title" class="common-modal-title-text">通用对话框</span>
+                </h4>
+            </div>
+            <div class="modal-body common-modal-body jy-opt-modal-body">
+                <input type="hidden" id="roomDialog_Mod">
+                <div id="roomNumber_box" class="split">
+                    <label class="text-modal-body-1">监室编号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" class="common-input common-text jy-optdialog-input optdialog-input form-control"
+                           placeholder="编号为数字且最长6位"
+                           onkeyup="this.value=this.value.replace(/\D/g,'')" maxlength="6"
+                           id="roomNumber">
+                </div>
+                <div id="roomName_box" class="split">
+                    <label class="text-modal-body-1">监室名称&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" class="common-input common-text jy-optdialog-input optdialog-input form-control"
+                           placeholder="名称最多为6个字符"
+                           maxlength="6"
+                           id="roomName">
+                </div>
+                <div id="IP_box" class="split">
+                    <label class="text-modal-body-1">电源控制器IP</label>
+                    <input type="text" class="common-input common-text jy-optdialog-input optdialog-input form-control"
+                           maxlength="15"
+                           id="powerIP">
+                    <input type="text"
+                           class="common-input common-text jy-optdialog-input optdialog-powerPort-input optdialog-input form-control"
+                           maxlength="5"
+                           id="powerPort">
+                </div>
+                <div id="powerNumber_box" class="split">
+                    <label class="text-modal-body-1">电源开关编号</label>
+                    <input type="text" class="common-input common-text jy-optdialog-input optdialog-input form-control"
+                           id="powerNumber">
+                </div>
+                <div id="bctID_box" class="split">
+                    <label class="text-modal-body-1">广播终端编号</label>
+                    <input type="text" class="common-input common-text jy-optdialog-input optdialog-input form-control"
+                           maxlength="10"
+                           id="bctID">
+                </div>
+                <div id="mssIP_box" class="split">
+                    <label class="text-modal-body-1">流媒体IP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" class="common-input common-text jy-optdialog-input optdialog-input form-control"
+                           maxlength="15"
+                           id="mssIP">
+                </div>
+                <div class="split">
+                    <label class="text-modal-body-1">状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <div class="mark-squera-area">
+                        <input class="radio-status" value="0" type="radio" name="status" id="status0"/>
+                        <label for="radio1">
+                            <div class="common-text">正常</div>
+                        </label>
+                        <input class="radio-status" value="1" type="radio" name="status" id="status1"/>
+                        <label for="radio2">
+                            <div class="common-text">没人</div>
+                        </label>
+                    </div>
+                </div>
+                <div class="common-btn-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-jy-opt-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--删除确认对话框-->
+<div class="modal fade optdialog-delete-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog optdialog-delete-modal-dialog" role="document">
+        <div class="modal-content common-modal-content optdialog-delete-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span class="common-modal-title-text">确认删除</span></h4>
+            </div>
+            <div class="modal-body common-modal-body optdialog-delete-modal-body">
+                <div class="noticemsg-delete">
+                    您确定要删除吗？
+                </div>
+                <div class="common-btn-area btn-optdialog-delete-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-optdialog-delete-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--增加  编辑  监区对话框-->
+<div class="modal fade jq-opt-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog jq-opt-modal-dialog" role="document">
+        <div class="modal-content common-modal-content jq-opt-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span id="jq-opt-text-modal-title"
+                                              class="common-modal-title-text">监区操作公用对话框</span>
+                </h4>
+            </div>
+            <div class="modal-body common-modal-body jq-opt-modal-body">
+                <input type="hidden" id="groupMod">
+                <input type="hidden" id="jq_groupid">
+
+                <div id="Name_box" class="split">
+                    <label class="text-modal-body-1">监区名称</label>
+                    <input type="text" class="common-input common-text optdialog-input form-control"
+                           id="updateGroupDialog-Name">
+                </div>
+                <div id="Number_box" class="split">
+                    <label class="text-modal-body-1">监区编号</label>
+                    <input type="text" class="common-input common-text optdialog-input form-control"
+                           id="updateGroupDialog-Number">
+                </div>
+                <div id="Notes_box" class="split">
+                    <label class="text-modal-body-1">监区说明</label>
+                    <input type="text" class="common-input common-text optdialog-input form-control"
+                           id="updateGroupDialog-Notes">
+                </div>
+                <div class="split">
+                    <label class="text-modal-body-1">监区标记</label>
+                    <div class="mark-squera-area">
+                        <input class="radio-mark" value="#D50000" type="radio" name="radio-mark" id="radio1"/>
+                        <label for="radio1">
+                            <div class="red-squera mark-squera"></div>
+                        </label>
+                        <input class="radio-mark" value="#304FFE" type="radio" name="radio-mark" id="radio2"/>
+                        <label for="radio2">
+                            <div class="blue-squera mark-squera"></div>
+                        </label>
+                        <input class="radio-mark" value="#00C853" type="radio" name="radio-mark" id="radio3"/>
+                        <label for="radio3">
+                            <div class="green-squera mark-squera"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="common-btn-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-jq-opt-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--应用模板对话框-->
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- 页面头 -->
+<head>
+    <title>首页</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <link rel="stylesheet" href="../css/common/bootstrap-3.3.7/bootstrap.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/pagetitle.css">
+    <script src="../js/common/jquery/jquery.js"></script>
+    <script src="../layui/layui.all.js"></script>
+    <script src="../js/common/bootstrap-3.3.7/bootstrap.min.js"></script>
+    <script src="../js/utils/commonutil.js"></script>
+    <script src="../js/utils/timeutils.js"></script>
+    <script src="../js/common/remote/CommonRemote.js"></script>
+    <script src="../js/contentjs/pagetitle.js"></script>
+</head>
+<body>
+<div class="pagetitle">
+    <div class="titlelogo">
+        <div>
+            <span class="policebadge"></span>
+            <span id="SysTitle" class="titletext"></span>
+        </div>
+    </div>
+    <div id="timemsg" class="timemsg"></div>
+    <div id="about" class="about" onclick="about()"></div>
+    <div class="loginmsg">
+        <div class="user-icon"></div>
+        <span class="more-icon"></span>
+        <div class="dropmenu">
+            <div id="changpwd">
+                <div class="changpwd"></div>
+                <span class="menu-text">修改密码</span>
+            </div>
+            <div class="drop-menu-cut"></div>
+            <div id="logoutbtn">
+                <div class="logout"></div>
+                <span class="menu-text">退出</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panelbox">
+    <iframe class="mainbody" frameborder="no" src="indexwithouttitle.html"></iframe>
+</div>
+<!--修改密码-->
+<div class="modal fade changepwd-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog changepwd-modal-dialog" role="document">
+        <div class="modal-content common-modal-content changepwd-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span class="common-modal-title-text">修改密码</span></h4>
+            </div>
+            <div class="modal-body common-modal-body changepwd-modal-body">
+                <div class="form-group">
+                    <label class="text-modal-body-1 text-laber-changepwd">原密码</label>
+                    <span><input id="oldPassword" type="password" name="oldPassword"
+                                 class="form-control pwd-input common-input common-text"></span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label class="text-modal-body-1 text-laber-changepwd">新密码</label>
+                    <span><input id="password1" name="password1"
+                                 type="password"
+                                 class="form-control pwd-input common-input common-text"></span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label class="text-modal-body-1 text-laber-changepwd">确认密码</label>
+                    <span><input id="password2" name="password2"
+                                 type="password"
+                                 class="form-control pwd-input common-input common-text"></span>
+                </div>
+                <div class="common-btn-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-changepwd-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+</html>

@@ -1,0 +1,289 @@
+/*
+xjkz.html页面CSS
+*/
+#xjkzpanelbox {
+    width: 96%;
+    min-height: 660px;
+    margin: 4% auto;
+    background: rgba(7, 46, 116, 1);
+    border: 1px solid rgba(102, 178, 255, 1);
+}
+
+/*  页签内监室   样式*/
+.jycontent {
+    margin: 12px;
+    width: 234px;
+    height: 168px;
+    background: rgba(22, 70, 155, 1);
+    border: 1px solid rgba(136, 195, 255, 1);
+    border-radius: 3px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+/*  页签内监室被点击后   样式  */
+.jycontentactive {
+    border: 4px solid rgba(136, 195, 255, 1);
+}
+
+/*  监室中监室名称区域 样式*/
+.jy-name-area {
+    text-align: center;
+    height: 70px;
+}
+
+/*  监室中logo 样式  */
+.jy-logo {
+    width: 37px;
+    height: 37px;
+    background-image: url("../resource/icon/door_off.png");
+    display: inline-block;
+}
+
+/*  监室中logo 被点击 样式*/
+.jy-logo-active {
+    width: 37px;
+    height: 37px;
+    background-image: url("../resource/icon/door_on.png");
+    display: inline-block;
+}
+
+/*  监室名称    样式  */
+.jy-name {
+    width: 65px;
+    height: 32px;
+    font-size: 40px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(64, 194, 255, 1);
+}
+
+/*  监室名称    被点击     样式*/
+.jy-name-active {
+    width: 65px;
+    height: 32px;
+    font-size: 40px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(64, 194, 255, 1);
+}
+
+/*  监室状态logo区域  样式  */
+.jy-status-logo {
+    text-align: center;
+    height: 48px;
+}
+
+.jy-status {
+    text-align: center;
+}
+
+.jystatus {
+    height: 30px;
+    font-size: 20px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    display: inline-block;
+}
+
+/*按钮组 下拉按钮 样式*/
+#xjkztoolbar > .bootstrap-select > .dropdown-toggle {
+    float: right;
+}
+
+#xjkztoolbar > .bootstrap-select:not(.input-group-btn) {
+    float: right;
+    width: 180px !important;
+    margin-left: 0;
+    margin-right: 50px;
+}
+
+#xjkztoolbar {
+    position: absolute;
+    top: 4%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(6, 64, 128);;
+}
+
+#jq {
+    float: right;
+    margin-right: 50px;
+}
+
+/*音量模态框 样式*/
+.volume-modal-content {
+    /*background-color: transparent;*/
+    margin: 100px auto;
+    width: 534px;
+    height: 285px;
+}
+
+
+.volume-modal-body {
+    width: 504px;
+    height: 210px;
+    text-align: left;
+}
+
+.volume-input, .showtime-input {
+    width: 274px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 5%;
+}
+
+/*公告模态框 样式*/
+.gonggao-modal-content {
+    width: 534px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.gonggao-modal-body {
+    width: 504px;
+    height: 524px;
+}
+
+.gonggaoConten {
+    display: inline-block;
+    width: 70%;
+    margin-left: 5%;
+    resize: none;
+}
+
+.text-laber-gonggaocontent {
+    vertical-align: top;
+}
+
+/*插播模态框 样式*/
+.chabo-modal-content {
+    width: 534px;
+    height: 225px;
+    margin: 30px auto;
+}
+
+.chabo-modal-body {
+    width: 504px;
+    height: 150px;
+}
+
+/*插播模态框按钮   样式*/
+.btn-chabo-dianbo-area {
+    bottom: 20px;
+    left: 20%;
+}
+
+.btn-chabo-area {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.noticmsg {
+    width: 220px;
+    height: 17px;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(151, 185, 246, 1);
+}
+
+/*插播直播  样式*/
+.chabo-zhibo-modal-dialog {
+    width: 770px;
+}
+
+.chabo-zhibo-modal-content {
+    width: 762px;
+    height: 655px;
+    margin: 30px auto;
+}
+
+.chabo-zhibo-modal-body {
+    width: 740px;
+    height: 580px;
+}
+
+.chabo-zhibo-btn-area {
+    bottom: 20px;
+    left: 20%;
+}
+
+
+.chabo-dianbo-s1-modal-dialog {
+    width: 770px;
+}
+
+.chabo-dianbo-s1-modal-content {
+    width: 762px;
+    height: 384px;
+    background: rgba(22, 70, 155, 1);
+    border: 1px solid rgba(136, 195, 255, 1);
+    margin: 30px auto;
+}
+
+.chabo-dianbo-s1-modal-body {
+    width: 740px;
+    height: 315px;
+    background: rgba(7, 46, 116, 1);
+    border: 1px solid rgba(102, 178, 255, 1);
+    border-radius: 3px;
+}
+
+.dianbo-liebiao {
+    width: 334px;
+    height: 40px;
+    background: rgba(7, 46, 116, 1);
+    border: 1px solid rgba(102, 178, 255, 1);
+}
+
+.dianbo-liebiao-dropdown-menu {
+    position: absolute;
+    top: 30%;
+    left: 17%;
+    z-index: 1000;
+    float: left;
+    min-width: 339px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+.end-time {
+    width: 274px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+/*预案控制  样式*/
+.yakz-modal-content {
+    width: 383px;
+    height: 220px;
+    margin: 30px auto;
+}
+
+.yakz-modal-body {
+    width: 362px;
+    height: 150px;
+}
+
+.btn-yakz-area {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.btn-yakz-resume, .btn-yakz-stop {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.btn-chabo {
+    margin-left: 6px;
+    margin-right: 6px;
+}

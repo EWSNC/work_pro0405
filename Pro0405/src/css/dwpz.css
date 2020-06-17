@@ -1,0 +1,49 @@
+.container {
+    width: 96.2%;
+    height: 719px;
+    background: rgba(7, 46, 116, 1);
+    border: 1px solid rgba(102, 178, 255, 1);
+}
+
+#dwpztoolbar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.searchbox, .searchbtn, .searchInput {
+    float: right !important;
+}
+
+.searchInput {
+    width: 50%;
+}
+
+/*增加  编辑  对话框*/
+.dwpz-opt-modal-sm {
+    top: -50px;
+}
+
+.dwpz-opt-modal-content {
+    /*background-color: transparent;*/
+    margin: 100px auto;
+    width: 567px;
+    height: 336px;
+}
+
+.dwpz-opt-modal-body {
+    width: 545px;
+    height: 267px;
+    text-align: left;
+}
+
+.btn-dwpz-opt-area {
+    bottom: 20px;
+    left: 10%;
+}
+
+.dwpz-opt-input {
+    width: 274px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 13%;
+}

@@ -1,0 +1,42 @@
+.container {
+    width: 96.2%;
+    height: 719px;
+    background: rgba(7, 46, 116, 1);
+    border: 1px solid rgba(102, 178, 255, 1);
+}
+
+#dspdtoolbar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.searchbox {
+    width: 60%;
+}
+
+.searchInput {
+    width: 25%;
+}
+
+.searchbox, .searchbtn, .searchInput {
+    float: right !important;
+}
+
+/*对话框   样式*/
+.ds-opt-modal-sm label {
+    width: 150px;
+}
+
+.ds-opt-modal-content {
+    width: 602px;
+    height: 480px;
+}
+
+.jy-opt-modal-body {
+    width: 573px;
+    height: 406px;
+}
+
+.type, .server {
+    width: 60px !important;
+}

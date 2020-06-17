@@ -1,0 +1,98 @@
+{
+  "parent": "-1",
+  "jy_code": "root",
+  "jy_name": "根节点",
+  "jy_status": null,
+  "jy_statusalias": null,
+  "level": 0,
+  "children": [
+    {
+      "parent": "root",
+      "jy_code": "01",
+      "jy_name": "拘留所一监区",
+      "jy_status": null,
+      "jy_statusalias": null,
+      "level": 1,
+      "children": [
+        {
+          "parent": "01",
+          "jy_code": "001",
+          "jy_name": "101拘",
+          "jy_status": "btn-status-stop",
+          "jy_statusalias": "停止",
+          "level": 2,
+          "children": null
+        },
+        {
+          "parent": "01",
+          "jy_code": "002",
+          "jy_name": "102拘",
+          "jy_status": "btn-status-mute",
+          "jy_statusalias": "静音",
+          "level": 2,
+          "children": null
+        },{
+          "parent": "01",
+          "jy_code": "003",
+          "jy_name": "103拘",
+          "jy_status": "btn-status-mute",
+          "jy_statusalias": "静音",
+          "level": 2,
+          "children": null
+        },
+        {
+          "parent": "01",
+          "jy_code": "004",
+          "jy_name": "104拘",
+          "jy_status": "btn-status-pause",
+          "jy_statusalias": "暂停",
+          "level": 2,
+          "children": null
+        },{
+          "parent": "01",
+          "jy_code": "005",
+          "jy_name": "105拘",
+          "jy_status": "btn-status-stop",
+          "jy_statusalias": "停止",
+          "level": 2,
+          "children": null
+        },{
+          "parent": "01",
+          "jy_code": "005",
+          "jy_name": "105拘",
+          "jy_status": "btn-status-stop",
+          "jy_statusalias": "停止",
+          "level": 2,
+          "children": null
+        },{
+          "parent": "01",
+          "jy_code": "005",
+          "jy_name": "105拘",
+          "jy_status": "btn-status-stop",
+          "jy_statusalias": "停止",
+          "level": 2,
+          "children": null
+        }
+      ]
+    },
+    {
+      "parent": "root",
+      "jy_code": "02",
+      "jy_name": "拘留所二监区",
+      "jy_status": null,
+      "jy_statusalias": null,
+      "level": 1,
+      "children": [
+        {
+          "parent": "02",
+          "jy_code": "001",
+          "jy_name": "201拘",
+          "jy_status": "btn-status-pause",
+          "jy_statusalias": "暂停",
+          "level": 2,
+          "children": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2353 @@
+{
+  "data": {
+    "list": [
+      {
+        "createTime": "2019-05-09T15:13:20",
+        "createTimeString": "2019-05-09 15:13:20",
+        "firstVodResourceVideo": {
+          "id": 56,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019050915125800/00001.mp4",
+          "starttime": 1557385978,
+          "times": 802,
+          "vodId": 4,
+          "vodResourceId": 34
+        },
+        "id": 34,
+        "name": "在押人员行为规范.VOB.mp4",
+        "number": "d1a77b39f43948e9905dc3a48f5511d9",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 56,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019050915125800/00001.mp4",
+            "starttime": 1557385978,
+            "times": 802,
+            "vodId": 4,
+            "vodResourceId": 34
+          },
+          {
+            "id": 55,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019050915125100/00001.mp4",
+            "starttime": 1557385971,
+            "times": 802,
+            "vodId": 4,
+            "vodResourceId": 34
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 24
+      },
+      {
+        "createTime": "2019-05-09T15:27:45",
+        "createTimeString": "2019-05-09 15:27:45",
+        "firstVodResourceVideo": {
+          "id": 58,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019050915272500/00001.mp4",
+          "starttime": 1557386845,
+          "times": 1378,
+          "vodId": 5,
+          "vodResourceId": 35
+        },
+        "id": 35,
+        "name": "权利义务.mp4",
+        "number": "7cf2d34cec044d9ea88d8578448247dd",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 58,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019050915272500/00001.mp4",
+            "starttime": 1557386845,
+            "times": 1378,
+            "vodId": 5,
+            "vodResourceId": 35
+          },
+          {
+            "id": 57,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019050915271700/00001.mp4",
+            "starttime": 1557386837,
+            "times": 1378,
+            "vodId": 5,
+            "vodResourceId": 35
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 25
+      },
+      {
+        "createTime": "2019-05-09T15:28:16",
+        "createTimeString": "2019-05-09 15:28:16",
+        "firstVodResourceVideo": {
+          "id": 59,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019050915274900/00001.mp4",
+          "starttime": 1557386869,
+          "times": 1768,
+          "vodId": 6,
+          "vodResourceId": 36
+        },
+        "id": 36,
+        "name": "第9套广播体操.mp4",
+        "number": "d30b34f5249c4055afcfd8cd9ed4acaf",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 59,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019050915274900/00001.mp4",
+            "starttime": 1557386869,
+            "times": 1768,
+            "vodId": 6,
+            "vodResourceId": 36
+          },
+          {
+            "id": 60,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019050915275900/00001.mp4",
+            "starttime": 1557386879,
+            "times": 1768,
+            "vodId": 6,
+            "vodResourceId": 36
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 26
+      },
+      {
+        "createTime": "2019-05-11T18:36:57",
+        "createTimeString": "2019-05-11 18:36:57",
+        "firstVodResourceVideo": {
+          "id": 61,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118363000/00001.mp4",
+          "starttime": 1557570991,
+          "times": 1800,
+          "vodId": 7,
+          "vodResourceId": 37
+        },
+        "id": 37,
+        "name": "1.第一集 浴血军旗(Av6870275,P1).Flv.mp4",
+        "number": "821939bae6564268874b5f87079183d0",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 61,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118363000/00001.mp4",
+            "starttime": 1557570991,
+            "times": 1800,
+            "vodId": 7,
+            "vodResourceId": 37
+          },
+          {
+            "id": 62,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118364100/00001.mp4",
+            "starttime": 1557571001,
+            "times": 1800,
+            "vodId": 7,
+            "vodResourceId": 37
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:37:23",
+        "createTimeString": "2019-05-11 18:37:23",
+        "firstVodResourceVideo": {
+          "id": 64,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118370800/00001.mp4",
+          "starttime": 1557571028,
+          "times": 1800,
+          "vodId": 8,
+          "vodResourceId": 38
+        },
+        "id": 38,
+        "name": "2.第二集 建军之本(Av6870275,P2).Flv.mp4",
+        "number": "58224f2afe364e4e86f023130d437e29",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 64,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118370800/00001.mp4",
+            "starttime": 1557571028,
+            "times": 1800,
+            "vodId": 8,
+            "vodResourceId": 38
+          },
+          {
+            "id": 63,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118365600/00001.mp4",
+            "starttime": 1557571016,
+            "times": 1800,
+            "vodId": 8,
+            "vodResourceId": 38
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:37:52",
+        "createTimeString": "2019-05-11 18:37:52",
+        "firstVodResourceVideo": {
+          "id": 66,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118373700/00001.mp4",
+          "starttime": 1557571057,
+          "times": 1800,
+          "vodId": 9,
+          "vodResourceId": 39
+        },
+        "id": 39,
+        "name": "3.第三集 信念之光(Av6870275,P3).Flv.mp4",
+        "number": "5262794210154cb593de46cfdedf95a3",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 66,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118373700/00001.mp4",
+            "starttime": 1557571057,
+            "times": 1800,
+            "vodId": 9,
+            "vodResourceId": 39
+          },
+          {
+            "id": 65,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118372400/00001.mp4",
+            "starttime": 1557571044,
+            "times": 1800,
+            "vodId": 9,
+            "vodResourceId": 39
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:38:19",
+        "createTimeString": "2019-05-11 18:38:19",
+        "firstVodResourceVideo": {
+          "id": 68,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118380300/00001.mp4",
+          "starttime": 1557571083,
+          "times": 1800,
+          "vodId": 10,
+          "vodResourceId": 40
+        },
+        "id": 40,
+        "name": "4.第四集 红心永恒(Av6870275,P4).Flv.mp4",
+        "number": "f82677fa54d942a59594368b183c261a",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 68,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118380300/00001.mp4",
+            "starttime": 1557571083,
+            "times": 1800,
+            "vodId": 10,
+            "vodResourceId": 40
+          },
+          {
+            "id": 67,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118375200/00001.mp4",
+            "starttime": 1557571072,
+            "times": 1800,
+            "vodId": 10,
+            "vodResourceId": 40
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:38:47",
+        "createTimeString": "2019-05-11 18:38:47",
+        "firstVodResourceVideo": {
+          "id": 69,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118382000/00001.mp4",
+          "starttime": 1557571100,
+          "times": 1799,
+          "vodId": 11,
+          "vodResourceId": 41
+        },
+        "id": 41,
+        "name": "5.第五集 制胜之道(Av6870275,P5).Flv.mp4",
+        "number": "0234c4ba27d54bdb982ea97e4fc84e1b",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 69,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118382000/00001.mp4",
+            "starttime": 1557571100,
+            "times": 1799,
+            "vodId": 11,
+            "vodResourceId": 41
+          },
+          {
+            "id": 70,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118383100/00001.mp4",
+            "starttime": 1557571111,
+            "times": 1799,
+            "vodId": 11,
+            "vodResourceId": 41
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:39:20",
+        "createTimeString": "2019-05-11 18:39:20",
+        "firstVodResourceVideo": {
+          "id": 71,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118385300/00001.mp4",
+          "starttime": 1557571133,
+          "times": 1451,
+          "vodId": 12,
+          "vodResourceId": 42
+        },
+        "id": 42,
+        "name": "1.第一集(Av15306541,P1).Flv.mp4",
+        "number": "cfb6c7232f034084bc760964fe6b968e",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 71,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118385300/00001.mp4",
+            "starttime": 1557571133,
+            "times": 1451,
+            "vodId": 12,
+            "vodResourceId": 42
+          },
+          {
+            "id": 72,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118390700/00001.mp4",
+            "starttime": 1557571148,
+            "times": 1451,
+            "vodId": 12,
+            "vodResourceId": 42
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:39:52",
+        "createTimeString": "2019-05-11 18:39:52",
+        "firstVodResourceVideo": {
+          "id": 73,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118392400/00001.mp4",
+          "starttime": 1557571165,
+          "times": 1388,
+          "vodId": 13,
+          "vodResourceId": 43
+        },
+        "id": 43,
+        "name": "2.第二集(Av15306541,P2).Flv.mp4",
+        "number": "0d811186238c46d8b3e55e3fdb0dfe4c",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 73,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118392400/00001.mp4",
+            "starttime": 1557571165,
+            "times": 1388,
+            "vodId": 13,
+            "vodResourceId": 43
+          },
+          {
+            "id": 74,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118393800/00001.mp4",
+            "starttime": 1557571178,
+            "times": 1388,
+            "vodId": 13,
+            "vodResourceId": 43
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:40:21",
+        "createTimeString": "2019-05-11 18:40:21",
+        "firstVodResourceVideo": {
+          "id": 76,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118400800/00001.mp4",
+          "starttime": 1557571208,
+          "times": 1388,
+          "vodId": 14,
+          "vodResourceId": 44
+        },
+        "id": 44,
+        "name": "3.第三集(Av15306541,P3).Flv.mp4",
+        "number": "cb6db90d40fb4f2cbcd9cda2fed33ee2",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 76,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118400800/00001.mp4",
+            "starttime": 1557571208,
+            "times": 1388,
+            "vodId": 14,
+            "vodResourceId": 44
+          },
+          {
+            "id": 75,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118395400/00001.mp4",
+            "starttime": 1557571194,
+            "times": 1388,
+            "vodId": 14,
+            "vodResourceId": 44
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:40:52",
+        "createTimeString": "2019-05-11 18:40:52",
+        "firstVodResourceVideo": {
+          "id": 78,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118403800/00001.mp4",
+          "starttime": 1557571238,
+          "times": 1352,
+          "vodId": 15,
+          "vodResourceId": 45
+        },
+        "id": 45,
+        "name": "4.第四集(Av15306541,P4).Flv.mp4",
+        "number": "998a03a2df1046449b5d6ae816a510ba",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 78,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118403800/00001.mp4",
+            "starttime": 1557571238,
+            "times": 1352,
+            "vodId": 15,
+            "vodResourceId": 45
+          },
+          {
+            "id": 77,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118402500/00001.mp4",
+            "starttime": 1557571225,
+            "times": 1352,
+            "vodId": 15,
+            "vodResourceId": 45
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:41:24",
+        "createTimeString": "2019-05-11 18:41:24",
+        "firstVodResourceVideo": {
+          "id": 80,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118411100/00001.mp4",
+          "starttime": 1557571271,
+          "times": 1442,
+          "vodId": 16,
+          "vodResourceId": 46
+        },
+        "id": 46,
+        "name": "5.第五集(Av15306541,P5).Flv.mp4",
+        "number": "1728d6911a1f46138629757ebf7b5445",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 80,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118411100/00001.mp4",
+            "starttime": 1557571271,
+            "times": 1442,
+            "vodId": 16,
+            "vodResourceId": 46
+          },
+          {
+            "id": 79,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118405700/00001.mp4",
+            "starttime": 1557571257,
+            "times": 1442,
+            "vodId": 16,
+            "vodResourceId": 46
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:42:11",
+        "createTimeString": "2019-05-11 18:42:11",
+        "firstVodResourceVideo": {
+          "id": 82,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118420900/00001.mp4",
+          "starttime": 1557571329,
+          "times": 2996,
+          "vodId": 17,
+          "vodResourceId": 47
+        },
+        "id": 47,
+        "name": "2.第一集再造家园(Av15420112,P2).Flv.mp4",
+        "number": "0db39ed9c31c4e448a4cb887e7a02ac9",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 82,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118420900/00001.mp4",
+            "starttime": 1557571329,
+            "times": 2996,
+            "vodId": 17,
+            "vodResourceId": 47
+          },
+          {
+            "id": 81,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118414400/00001.mp4",
+            "starttime": 1557571304,
+            "times": 2996,
+            "vodId": 17,
+            "vodResourceId": 47
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:43:06",
+        "createTimeString": "2019-05-11 18:43:06",
+        "firstVodResourceVideo": {
+          "id": 84,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118430500/00001.mp4",
+          "starttime": 1557571385,
+          "times": 2998,
+          "vodId": 18,
+          "vodResourceId": 48
+        },
+        "id": 48,
+        "name": "3.第二集择高处立(Av15420112,P3).Flv.mp4",
+        "number": "2a338327f4e34f43a848d5bce0bbd4e7",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 84,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118430500/00001.mp4",
+            "starttime": 1557571385,
+            "times": 2998,
+            "vodId": 18,
+            "vodResourceId": 48
+          },
+          {
+            "id": 83,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118423900/00001.mp4",
+            "starttime": 1557571359,
+            "times": 2998,
+            "vodId": 18,
+            "vodResourceId": 48
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:44:02",
+        "createTimeString": "2019-05-11 18:44:02",
+        "firstVodResourceVideo": {
+          "id": 86,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118440100/00001.mp4",
+          "starttime": 1557571441,
+          "times": 2993,
+          "vodId": 19,
+          "vodResourceId": 49
+        },
+        "id": 49,
+        "name": "4.第三集青春无价(Av15420112,P4).Flv.mp4",
+        "number": "dd004c4e08ad4f41af1c417cd5b0bf54",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 86,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118440100/00001.mp4",
+            "starttime": 1557571441,
+            "times": 2993,
+            "vodId": 19,
+            "vodResourceId": 49
+          },
+          {
+            "id": 85,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118433600/00001.mp4",
+            "starttime": 1557571416,
+            "times": 2993,
+            "vodId": 19,
+            "vodResourceId": 49
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:44:57",
+        "createTimeString": "2019-05-11 18:44:57",
+        "firstVodResourceVideo": {
+          "id": 88,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118445500/00001.mp4",
+          "starttime": 1557571495,
+          "times": 2997,
+          "vodId": 20,
+          "vodResourceId": 50
+        },
+        "id": 50,
+        "name": "5.第四集心安之处(Av15420112,P5).Flv.mp4",
+        "number": "5ddc28c7d0d24182a6a3284055e75d0f",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 88,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118445500/00001.mp4",
+            "starttime": 1557571495,
+            "times": 2997,
+            "vodId": 20,
+            "vodResourceId": 50
+          },
+          {
+            "id": 87,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118443000/00001.mp4",
+            "starttime": 1557571470,
+            "times": 2997,
+            "vodId": 20,
+            "vodResourceId": 50
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:45:51",
+        "createTimeString": "2019-05-11 18:45:51",
+        "firstVodResourceVideo": {
+          "id": 89,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118452400/00001.mp4",
+          "starttime": 1557571524,
+          "times": 2997,
+          "vodId": 21,
+          "vodResourceId": 51
+        },
+        "id": 51,
+        "name": "6.第五集在此守候(Av15420112,P6).Flv.mp4",
+        "number": "eec8c3efe3e043a7b0ea77ce0f1a14fe",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 89,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118452400/00001.mp4",
+            "starttime": 1557571524,
+            "times": 2997,
+            "vodId": 21,
+            "vodResourceId": 51
+          },
+          {
+            "id": 90,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118454900/00001.mp4",
+            "starttime": 1557571549,
+            "times": 2997,
+            "vodId": 21,
+            "vodResourceId": 51
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:46:49",
+        "createTimeString": "2019-05-11 18:46:49",
+        "firstVodResourceVideo": {
+          "id": 91,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118462200/00001.mp4",
+          "starttime": 1557571582,
+          "times": 2760,
+          "vodId": 22,
+          "vodResourceId": 52
+        },
+        "id": 52,
+        "name": "1.1(Av13931908,P1).Flv.mp4",
+        "number": "a90918a67d3d4e3e900957ed24c360f6",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 91,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118462200/00001.mp4",
+            "starttime": 1557571582,
+            "times": 2760,
+            "vodId": 22,
+            "vodResourceId": 52
+          },
+          {
+            "id": 92,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118464600/00001.mp4",
+            "starttime": 1557571606,
+            "times": 2760,
+            "vodId": 22,
+            "vodResourceId": 52
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:47:46",
+        "createTimeString": "2019-05-11 18:47:46",
+        "firstVodResourceVideo": {
+          "id": 93,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118471900/00001.mp4",
+          "starttime": 1557571639,
+          "times": 2700,
+          "vodId": 23,
+          "vodResourceId": 53
+        },
+        "id": 53,
+        "name": "1.1(Av13989970,P1).Flv.mp4",
+        "number": "4ae2bee1f44c4054b2807f89fba595ec",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 93,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118471900/00001.mp4",
+            "starttime": 1557571639,
+            "times": 2700,
+            "vodId": 23,
+            "vodResourceId": 53
+          },
+          {
+            "id": 94,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118474300/00001.mp4",
+            "starttime": 1557571663,
+            "times": 2700,
+            "vodId": 23,
+            "vodResourceId": 53
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:48:42",
+        "createTimeString": "2019-05-11 18:48:42",
+        "firstVodResourceVideo": {
+          "id": 96,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118483800/00001.mp4",
+          "starttime": 1557571718,
+          "times": 2701,
+          "vodId": 24,
+          "vodResourceId": 54
+        },
+        "id": 54,
+        "name": "1.1(Av14020589,P1).Flv.mp4",
+        "number": "bdf4daf7dd6346bfa170bc9033370e7d",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 96,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118483800/00001.mp4",
+            "starttime": 1557571718,
+            "times": 2701,
+            "vodId": 24,
+            "vodResourceId": 54
+          },
+          {
+            "id": 95,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118481500/00001.mp4",
+            "starttime": 1557571695,
+            "times": 2701,
+            "vodId": 24,
+            "vodResourceId": 54
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:49:35",
+        "createTimeString": "2019-05-11 18:49:35",
+        "firstVodResourceVideo": {
+          "id": 98,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118493100/00001.mp4",
+          "starttime": 1557571771,
+          "times": 2700,
+          "vodId": 25,
+          "vodResourceId": 55
+        },
+        "id": 55,
+        "name": "1.1(Av14051032,P1).Flv.mp4",
+        "number": "c9fffca81a8d4fe49921115045477c91",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 98,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118493100/00001.mp4",
+            "starttime": 1557571771,
+            "times": 2700,
+            "vodId": 25,
+            "vodResourceId": 55
+          },
+          {
+            "id": 97,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118490800/00001.mp4",
+            "starttime": 1557571748,
+            "times": 2700,
+            "vodId": 25,
+            "vodResourceId": 55
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:50:29",
+        "createTimeString": "2019-05-11 18:50:29",
+        "firstVodResourceVideo": {
+          "id": 99,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118500200/00001.mp4",
+          "starttime": 1557571802,
+          "times": 2701,
+          "vodId": 26,
+          "vodResourceId": 56
+        },
+        "id": 56,
+        "name": "1.1(Av14093985,P1).Flv.mp4",
+        "number": "06374a8b03f8488588eaed0780ea5507",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 99,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118500200/00001.mp4",
+            "starttime": 1557571802,
+            "times": 2701,
+            "vodId": 26,
+            "vodResourceId": 56
+          },
+          {
+            "id": 100,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118502500/00001.mp4",
+            "starttime": 1557571825,
+            "times": 2701,
+            "vodId": 26,
+            "vodResourceId": 56
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:51:19",
+        "createTimeString": "2019-05-11 18:51:19",
+        "firstVodResourceVideo": {
+          "id": 101,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118505200/00001.mp4",
+          "starttime": 1557571852,
+          "times": 2699,
+          "vodId": 27,
+          "vodResourceId": 57
+        },
+        "id": 57,
+        "name": "1.1(Av14129354,P1).Flv.mp4",
+        "number": "270f8d5cb3f3452f9701e53d0f638acc",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 101,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118505200/00001.mp4",
+            "starttime": 1557571852,
+            "times": 2699,
+            "vodId": 27,
+            "vodResourceId": 57
+          },
+          {
+            "id": 102,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118511200/00001.mp4",
+            "starttime": 1557571872,
+            "times": 2699,
+            "vodId": 27,
+            "vodResourceId": 57
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:52:14",
+        "createTimeString": "2019-05-11 18:52:14",
+        "firstVodResourceVideo": {
+          "id": 104,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118521000/00001.mp4",
+          "starttime": 1557571930,
+          "times": 2641,
+          "vodId": 28,
+          "vodResourceId": 58
+        },
+        "id": 58,
+        "name": "1.《法治中国》第一集_重播_25M_x264(Av13562813,P1).Flv.mp4",
+        "number": "23332c224b244e8fa7fd4068aff8d828",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 104,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118521000/00001.mp4",
+            "starttime": 1557571930,
+            "times": 2641,
+            "vodId": 28,
+            "vodResourceId": 58
+          },
+          {
+            "id": 103,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118514700/00001.mp4",
+            "starttime": 1557571907,
+            "times": 2641,
+            "vodId": 28,
+            "vodResourceId": 58
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:53:07",
+        "createTimeString": "2019-05-11 18:53:07",
+        "firstVodResourceVideo": {
+          "id": 105,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118524000/00001.mp4",
+          "starttime": 1557571960,
+          "times": 2697,
+          "vodId": 29,
+          "vodResourceId": 59
+        },
+        "id": 59,
+        "name": "1.《法治中国》 第二集：大智立法(Av13610750,P1).Flv.mp4",
+        "number": "b969e1fe6b5b48c0815531136368a3e0",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 105,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118524000/00001.mp4",
+            "starttime": 1557571960,
+            "times": 2697,
+            "vodId": 29,
+            "vodResourceId": 59
+          },
+          {
+            "id": 106,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118530200/00001.mp4",
+            "starttime": 1557571982,
+            "times": 2697,
+            "vodId": 29,
+            "vodResourceId": 59
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:54:01",
+        "createTimeString": "2019-05-11 18:54:01",
+        "firstVodResourceVideo": {
+          "id": 107,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118533400/00001.mp4",
+          "starttime": 1557572014,
+          "times": 2699,
+          "vodId": 30,
+          "vodResourceId": 60
+        },
+        "id": 60,
+        "name": "1.《法治中国》 第三集(Av13621221,P1).Flv.mp4",
+        "number": "c3be3ce5156c48f69d37565dc13a1d42",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 107,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118533400/00001.mp4",
+            "starttime": 1557572014,
+            "times": 2699,
+            "vodId": 30,
+            "vodResourceId": 60
+          },
+          {
+            "id": 108,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118535700/00001.mp4",
+            "starttime": 1557572037,
+            "times": 2699,
+            "vodId": 30,
+            "vodResourceId": 60
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:54:55",
+        "createTimeString": "2019-05-11 18:54:55",
+        "firstVodResourceVideo": {
+          "id": 110,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118545200/00001.mp4",
+          "starttime": 1557572092,
+          "times": 2699,
+          "vodId": 31,
+          "vodResourceId": 61
+        },
+        "id": 61,
+        "name": "1.法治中国(Av13681956,P1).Flv.mp4",
+        "number": "fe3314596a1c4430b68cb10310925840",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 110,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118545200/00001.mp4",
+            "starttime": 1557572092,
+            "times": 2699,
+            "vodId": 31,
+            "vodResourceId": 61
+          },
+          {
+            "id": 109,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118542800/00001.mp4",
+            "starttime": 1557572069,
+            "times": 2699,
+            "vodId": 31,
+            "vodResourceId": 61
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:55:50",
+        "createTimeString": "2019-05-11 18:55:50",
+        "firstVodResourceVideo": {
+          "id": 112,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118554600/00001.mp4",
+          "starttime": 1557572146,
+          "times": 2700,
+          "vodId": 32,
+          "vodResourceId": 62
+        },
+        "id": 62,
+        "name": "1.《法治中国》 第五集 公正司法（下）(Av13710741,P1).Flv.mp4",
+        "number": "bfe13b870e3a4afeaa8279ee3579625b",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 112,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118554600/00001.mp4",
+            "starttime": 1557572146,
+            "times": 2700,
+            "vodId": 32,
+            "vodResourceId": 62
+          },
+          {
+            "id": 111,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118552300/00001.mp4",
+            "starttime": 1557572123,
+            "times": 2700,
+            "vodId": 32,
+            "vodResourceId": 62
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:56:53",
+        "createTimeString": "2019-05-11 18:56:53",
+        "firstVodResourceVideo": {
+          "id": 113,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118562700/00001.mp4",
+          "starttime": 1557572187,
+          "times": 2998,
+          "vodId": 33,
+          "vodResourceId": 63
+        },
+        "id": 63,
+        "name": "1.1(Av14635675,P1).Flv.mp4",
+        "number": "a7aad82b790c4950a971c8d76ae43d56",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 113,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118562700/00001.mp4",
+            "starttime": 1557572187,
+            "times": 2998,
+            "vodId": 33,
+            "vodResourceId": 63
+          },
+          {
+            "id": 114,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118565200/00001.mp4",
+            "starttime": 1557572212,
+            "times": 2998,
+            "vodId": 33,
+            "vodResourceId": 63
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:57:55",
+        "createTimeString": "2019-05-11 18:57:55",
+        "firstVodResourceVideo": {
+          "id": 116,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118575400/00001.mp4",
+          "starttime": 1557572274,
+          "times": 2999,
+          "vodId": 34,
+          "vodResourceId": 64
+        },
+        "id": 64,
+        "name": "1.1(Av14663184,P1).Flv.mp4",
+        "number": "0c99bddd2c0a491094e72b2bf08ec52b",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 116,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118575400/00001.mp4",
+            "starttime": 1557572274,
+            "times": 2999,
+            "vodId": 34,
+            "vodResourceId": 64
+          },
+          {
+            "id": 115,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118572800/00001.mp4",
+            "starttime": 1557572248,
+            "times": 2999,
+            "vodId": 34,
+            "vodResourceId": 64
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:58:54",
+        "createTimeString": "2019-05-11 18:58:54",
+        "firstVodResourceVideo": {
+          "id": 117,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118582700/00001.mp4",
+          "starttime": 1557572307,
+          "times": 2999,
+          "vodId": 35,
+          "vodResourceId": 65
+        },
+        "id": 65,
+        "name": "1.1(Av14686721,P1).Flv.mp4",
+        "number": "d3cea6cc9c824166afcda0589afeadae",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 117,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118582700/00001.mp4",
+            "starttime": 1557572307,
+            "times": 2999,
+            "vodId": 35,
+            "vodResourceId": 65
+          },
+          {
+            "id": 118,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118585200/00001.mp4",
+            "starttime": 1557572332,
+            "times": 2999,
+            "vodId": 35,
+            "vodResourceId": 65
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T18:59:52",
+        "createTimeString": "2019-05-11 18:59:52",
+        "firstVodResourceVideo": {
+          "id": 120,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118595000/00001.mp4",
+          "starttime": 1557572390,
+          "times": 2998,
+          "vodId": 36,
+          "vodResourceId": 66
+        },
+        "id": 66,
+        "name": "1.1(Av14726613,P1).Flv.mp4",
+        "number": "1c664c5e918844d88f388d166d35369f",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 120,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051118595000/00001.mp4",
+            "starttime": 1557572390,
+            "times": 2998,
+            "vodId": 36,
+            "vodResourceId": 66
+          },
+          {
+            "id": 119,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051118592500/00001.mp4",
+            "starttime": 1557572365,
+            "times": 2998,
+            "vodId": 36,
+            "vodResourceId": 66
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:00:49",
+        "createTimeString": "2019-05-11 19:00:49",
+        "firstVodResourceVideo": {
+          "id": 122,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119004700/00001.mp4",
+          "starttime": 1557572447,
+          "times": 3000,
+          "vodId": 37,
+          "vodResourceId": 67
+        },
+        "id": 67,
+        "name": "1.1(Av14772202,P1).Flv.mp4",
+        "number": "df4fcda14806444ab1b118a646f84594",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 122,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119004700/00001.mp4",
+            "starttime": 1557572447,
+            "times": 3000,
+            "vodId": 37,
+            "vodResourceId": 67
+          },
+          {
+            "id": 121,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119002200/00001.mp4",
+            "starttime": 1557572422,
+            "times": 3000,
+            "vodId": 37,
+            "vodResourceId": 67
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:01:49",
+        "createTimeString": "2019-05-11 19:01:49",
+        "firstVodResourceVideo": {
+          "id": 123,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119012200/00001.mp4",
+          "starttime": 1557572482,
+          "times": 3000,
+          "vodId": 38,
+          "vodResourceId": 68
+        },
+        "id": 68,
+        "name": "1.1(Av14790921,P1).Flv.mp4",
+        "number": "ff9d1344a3c745bf9906cca6267021f6",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 123,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119012200/00001.mp4",
+            "starttime": 1557572482,
+            "times": 3000,
+            "vodId": 38,
+            "vodResourceId": 68
+          },
+          {
+            "id": 124,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119014800/00001.mp4",
+            "starttime": 1557572509,
+            "times": 3000,
+            "vodId": 38,
+            "vodResourceId": 68
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:02:53",
+        "createTimeString": "2019-05-11 19:02:53",
+        "firstVodResourceVideo": {
+          "id": 125,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119022500/00001.mp4",
+          "starttime": 1557572545,
+          "times": 2935,
+          "vodId": 39,
+          "vodResourceId": 69
+        },
+        "id": 69,
+        "name": "1.1(Av12318489,P1).Flv.mp4",
+        "number": "27dcddfa5b5744cb846b589b03630b69",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 125,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119022500/00001.mp4",
+            "starttime": 1557572545,
+            "times": 2935,
+            "vodId": 39,
+            "vodResourceId": 69
+          },
+          {
+            "id": 126,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119025000/00001.mp4",
+            "starttime": 1557572570,
+            "times": 2935,
+            "vodId": 39,
+            "vodResourceId": 69
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:03:51",
+        "createTimeString": "2019-05-11 19:03:51",
+        "firstVodResourceVideo": {
+          "id": 128,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119034900/00001.mp4",
+          "starttime": 1557572629,
+          "times": 2895,
+          "vodId": 40,
+          "vodResourceId": 70
+        },
+        "id": 70,
+        "name": "1.1(Av12354996,P1).Flv.mp4",
+        "number": "3e8ef6d5893d436893f95e80498d4715",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 128,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119034900/00001.mp4",
+            "starttime": 1557572629,
+            "times": 2895,
+            "vodId": 40,
+            "vodResourceId": 70
+          },
+          {
+            "id": 127,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119032400/00001.mp4",
+            "starttime": 1557572604,
+            "times": 2895,
+            "vodId": 40,
+            "vodResourceId": 70
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:04:45",
+        "createTimeString": "2019-05-11 19:04:45",
+        "firstVodResourceVideo": {
+          "id": 130,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119044100/00001.mp4",
+          "starttime": 1557572681,
+          "times": 2779,
+          "vodId": 41,
+          "vodResourceId": 71
+        },
+        "id": 71,
+        "name": "《将改革进行到底》 第三集 《人民民主新境界》 - 1.1(Av12388271,P1).Flv.mp4",
+        "number": "a22684bb3f1d409699fa1aac26a33fd9",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 130,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119044100/00001.mp4",
+            "starttime": 1557572681,
+            "times": 2779,
+            "vodId": 41,
+            "vodResourceId": 71
+          },
+          {
+            "id": 129,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119041800/00001.mp4",
+            "starttime": 1557572658,
+            "times": 2779,
+            "vodId": 41,
+            "vodResourceId": 71
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:05:35",
+        "createTimeString": "2019-05-11 19:05:35",
+        "firstVodResourceVideo": {
+          "id": 131,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119050800/00001.mp4",
+          "starttime": 1557572708,
+          "times": 2703,
+          "vodId": 42,
+          "vodResourceId": 72
+        },
+        "id": 72,
+        "name": "1.1(Av12410066,P1).Flv.mp4",
+        "number": "1e034c0f94d7492f85d490ac1fbf5e1d",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 131,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119050800/00001.mp4",
+            "starttime": 1557572708,
+            "times": 2703,
+            "vodId": 42,
+            "vodResourceId": 72
+          },
+          {
+            "id": 132,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119052900/00001.mp4",
+            "starttime": 1557572729,
+            "times": 2703,
+            "vodId": 42,
+            "vodResourceId": 72
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:06:20",
+        "createTimeString": "2019-05-11 19:06:20",
+        "firstVodResourceVideo": {
+          "id": 133,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119055300/00001.mp4",
+          "starttime": 1557572754,
+          "times": 2679,
+          "vodId": 43,
+          "vodResourceId": 73
+        },
+        "id": 73,
+        "name": "1.1(Av12473807,P1).Flv.mp4",
+        "number": "c4af669dfc3c453f86a1284d47d39fe8",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 133,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119055300/00001.mp4",
+            "starttime": 1557572754,
+            "times": 2679,
+            "vodId": 43,
+            "vodResourceId": 73
+          },
+          {
+            "id": 134,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119060900/00001.mp4",
+            "starttime": 1557572769,
+            "times": 2679,
+            "vodId": 43,
+            "vodResourceId": 73
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:07:08",
+        "createTimeString": "2019-05-11 19:07:08",
+        "firstVodResourceVideo": {
+          "id": 135,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119064200/00001.mp4",
+          "starttime": 1557572802,
+          "times": 2961,
+          "vodId": 44,
+          "vodResourceId": 74
+        },
+        "id": 74,
+        "name": "1.1(Av12511377,P1).Flv.mp4",
+        "number": "d950b7628b56444ca299a7979b14feea",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 135,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119064200/00001.mp4",
+            "starttime": 1557572802,
+            "times": 2961,
+            "vodId": 44,
+            "vodResourceId": 74
+          },
+          {
+            "id": 136,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119070600/00001.mp4",
+            "starttime": 1557572826,
+            "times": 2961,
+            "vodId": 44,
+            "vodResourceId": 74
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:08:04",
+        "createTimeString": "2019-05-11 19:08:04",
+        "firstVodResourceVideo": {
+          "id": 137,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119073700/00001.mp4",
+          "starttime": 1557572857,
+          "times": 2859,
+          "vodId": 45,
+          "vodResourceId": 75
+        },
+        "id": 75,
+        "name": "1.《将改革进行到底》 第七集 《强军之路》（上）(1)(Av12519038,P1).Flv.mp4",
+        "number": "1665fd391e134d38a49bd18e5751f37c",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 137,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119073700/00001.mp4",
+            "starttime": 1557572857,
+            "times": 2859,
+            "vodId": 45,
+            "vodResourceId": 75
+          },
+          {
+            "id": 138,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119080100/00001.mp4",
+            "starttime": 1557572881,
+            "times": 2859,
+            "vodId": 45,
+            "vodResourceId": 75
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:09:00",
+        "createTimeString": "2019-05-11 19:09:00",
+        "firstVodResourceVideo": {
+          "id": 139,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119083300/00001.mp4",
+          "starttime": 1557572913,
+          "times": 2999,
+          "vodId": 46,
+          "vodResourceId": 76
+        },
+        "id": 76,
+        "name": "1.1(Av12559513,P1).Flv.mp4",
+        "number": "71bf47dbf6684d59afeedc54dbaeca66",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 139,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119083300/00001.mp4",
+            "starttime": 1557572913,
+            "times": 2999,
+            "vodId": 46,
+            "vodResourceId": 76
+          },
+          {
+            "id": 140,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119085700/00001.mp4",
+            "starttime": 1557572937,
+            "times": 2999,
+            "vodId": 46,
+            "vodResourceId": 76
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:09:53",
+        "createTimeString": "2019-05-11 19:09:53",
+        "firstVodResourceVideo": {
+          "id": 141,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119092500/00001.mp4",
+          "starttime": 1557572966,
+          "times": 2959,
+          "vodId": 47,
+          "vodResourceId": 77
+        },
+        "id": 77,
+        "name": "1.1(Av12593422,P1).Flv.mp4",
+        "number": "29f0a355042a40e6885e5a66d1bdd142",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 141,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119092500/00001.mp4",
+            "starttime": 1557572966,
+            "times": 2959,
+            "vodId": 47,
+            "vodResourceId": 77
+          },
+          {
+            "id": 142,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119094800/00001.mp4",
+            "starttime": 1557572988,
+            "times": 2959,
+            "vodId": 47,
+            "vodResourceId": 77
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:10:48",
+        "createTimeString": "2019-05-11 19:10:48",
+        "firstVodResourceVideo": {
+          "id": 144,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119104500/00001.mp4",
+          "starttime": 1557573045,
+          "times": 2913,
+          "vodId": 48,
+          "vodResourceId": 78
+        },
+        "id": 78,
+        "name": "1.1(Av12636592,P1).Flv.mp4",
+        "number": "ac82a6070caf431dbcb0d34e465361e2",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 144,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119104500/00001.mp4",
+            "starttime": 1557573045,
+            "times": 2913,
+            "vodId": 48,
+            "vodResourceId": 78
+          },
+          {
+            "id": 143,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119102100/00001.mp4",
+            "starttime": 1557573021,
+            "times": 2913,
+            "vodId": 48,
+            "vodResourceId": 78
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:11:54",
+        "createTimeString": "2019-05-11 19:11:54",
+        "firstVodResourceVideo": {
+          "id": 146,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119115300/00001.mp4",
+          "starttime": 1557573113,
+          "times": 2995,
+          "vodId": 49,
+          "vodResourceId": 79
+        },
+        "id": 79,
+        "name": "7.第六集壮心不已(Av15420112,P7).Flv.mp4",
+        "number": "1926431442574ac8820e32863709d173",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 146,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119115300/00001.mp4",
+            "starttime": 1557573113,
+            "times": 2995,
+            "vodId": 49,
+            "vodResourceId": 79
+          },
+          {
+            "id": 145,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119112700/00001.mp4",
+            "starttime": 1557573087,
+            "times": 2995,
+            "vodId": 49,
+            "vodResourceId": 79
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:12:49",
+        "createTimeString": "2019-05-11 19:12:49",
+        "firstVodResourceVideo": {
+          "id": 147,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119122200/00001.mp4",
+          "starttime": 1557573142,
+          "times": 2991,
+          "vodId": 50,
+          "vodResourceId": 80
+        },
+        "id": 80,
+        "name": "8.第七集生生不息(Av15420112,P8).Flv.mp4",
+        "number": "f06cef62e0c84558a59c03f1fa2f13d4",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 147,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119122200/00001.mp4",
+            "starttime": 1557573142,
+            "times": 2991,
+            "vodId": 50,
+            "vodResourceId": 80
+          },
+          {
+            "id": 148,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119124600/00001.mp4",
+            "starttime": 1557573166,
+            "times": 2991,
+            "vodId": 50,
+            "vodResourceId": 80
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:14:27",
+        "createTimeString": "2019-05-11 19:14:27",
+        "firstVodResourceVideo": {
+          "id": 150,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119142600/00001.mp4",
+          "starttime": 1557573266,
+          "times": 2994,
+          "vodId": 51,
+          "vodResourceId": 81
+        },
+        "id": 81,
+        "name": "10.第九集创造未来(Av15420112,P10).Flv.mp4",
+        "number": "ec27580b30a04cec9ee07f1fa18d8ea5",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 150,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119142600/00001.mp4",
+            "starttime": 1557573266,
+            "times": 2994,
+            "vodId": 51,
+            "vodResourceId": 81
+          },
+          {
+            "id": 149,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119140000/00001.mp4",
+            "starttime": 1557573240,
+            "times": 2994,
+            "vodId": 51,
+            "vodResourceId": 81
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:15:24",
+        "createTimeString": "2019-05-11 19:15:24",
+        "firstVodResourceVideo": {
+          "id": 152,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119152300/00001.mp4",
+          "starttime": 1557573323,
+          "times": 2996,
+          "vodId": 52,
+          "vodResourceId": 82
+        },
+        "id": 82,
+        "name": "11.第十集世界脚步(Av15420112,P11).Flv.mp4",
+        "number": "85aeeda12f4b4d93b58346ad0edf3a60",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 152,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119152300/00001.mp4",
+            "starttime": 1557573323,
+            "times": 2996,
+            "vodId": 52,
+            "vodResourceId": 82
+          },
+          {
+            "id": 151,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119145700/00001.mp4",
+            "starttime": 1557573297,
+            "times": 2996,
+            "vodId": 52,
+            "vodResourceId": 82
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-11T19:16:49",
+        "createTimeString": "2019-05-11 19:16:49",
+        "firstVodResourceVideo": {
+          "id": 154,
+          "mssId": 9,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119163300/00001.mp4",
+          "starttime": 1557573393,
+          "times": 1800,
+          "vodId": 53,
+          "vodResourceId": 83
+        },
+        "id": 83,
+        "name": "6.第六集 砥励成锋(Av6870275,P6).Flv.mp4",
+        "number": "14d358b83268489ab28a159688d92fca",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 154,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019051119163300/00001.mp4",
+            "starttime": 1557573393,
+            "times": 1800,
+            "vodId": 53,
+            "vodResourceId": 83
+          },
+          {
+            "id": 153,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019051119162200/00001.mp4",
+            "starttime": 1557573382,
+            "times": 1800,
+            "vodId": 53,
+            "vodResourceId": 83
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 27
+      },
+      {
+        "createTime": "2019-05-31T16:52:58",
+        "createTimeString": "2019-05-31 16:52:58",
+        "firstVodResourceVideo": {
+          "id": 155,
+          "mssId": 8,
+          "rtmpUrl": null,
+          "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019053116531200/00001.mp4",
+          "starttime": 1559292792,
+          "times": 140,
+          "vodId": 54,
+          "vodResourceId": 84
+        },
+        "id": 84,
+        "name": "奉贤公安扫黑除恶（动画）.mp4",
+        "number": "bb104bbfe51e4a97bb3c72abe7113415",
+        "rtmpUrl": null,
+        "rtspUrl": null,
+        "sortValue": 0,
+        "starttime": 0,
+        "times": 0,
+        "videoSet": [
+          {
+            "id": 155,
+            "mssId": 8,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.153:554/usr/mp4pt/rec/2019053116531200/00001.mp4",
+            "starttime": 1559292792,
+            "times": 140,
+            "vodId": 54,
+            "vodResourceId": 84
+          },
+          {
+            "id": 156,
+            "mssId": 9,
+            "rtmpUrl": null,
+            "rtspUrl": "rtsp://38.186.0.152:554/usr/mp4pt/rec/2019053116531100/00001.mp4",
+            "starttime": 1559292791,
+            "times": 140,
+            "vodId": 54,
+            "vodResourceId": 84
+          }
+        ],
+        "vodId": null,
+        "vodResourceGroupId": 28
+      }
+    ]
+  },
+  "result": "ok"
+}

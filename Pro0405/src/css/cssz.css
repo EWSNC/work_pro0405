@@ -1,0 +1,45 @@
+.container {
+    width: 96.2%;
+    height: 719px;
+    background: rgba(7, 46, 116, 1);
+    border: 1px solid rgba(102, 178, 255, 1);
+}
+
+.bootstrap-table > .fixed-table-container {
+    height: 600px !important;
+    padding-bottom: 0 !important;
+}
+
+.optdialog-modal-sm label {
+    width: 100px;
+}
+
+.optdialog-modal-dialog {
+    width: 834px;
+}
+
+.optdialog-modal-content {
+    /*background-color: transparent;*/
+    margin: 100px auto;
+    width: 770px;
+    height: 575px;
+}
+
+
+.optdialog-modal-body {
+    width: 735px;
+    height: 500px;
+    text-align: left;
+}
+
+.optdialog-btn-area {
+    left: 22%;
+}
+
+.desc {
+    display: inline-block;
+    width: 55%;
+    height: 200px;
+    margin-left: 5%;
+    resize: none;
+}

@@ -1,0 +1,239 @@
+/*
+xjjh.html页面CSS
+*/
+.container {
+    width: 100%;
+}
+
+/*左侧视频分组样式*/
+.menu {
+    height: 696px;
+    border: 1px solid rgba(102, 178, 255, 1);
+    background: rgba(7, 46, 116, 1);
+}
+
+.menu-top {
+    height: 100px;
+}
+
+.daytime-input {
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    display: inline-block;
+}
+
+.menu-bot {
+    height: 585px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.jq-item {
+    width: 100%;
+    min-height: 46px;
+
+}
+
+.jq-item-title {
+    cursor: pointer;
+    width: 100%;
+    background-color: rgb(6, 64, 128);
+}
+
+.jq-jy-active {
+    background: rgba(14, 128, 216, 1);
+}
+
+.jq-tip {
+    width: 15px;
+    height: 20px;
+    background-image: url("../resource/icon/unfold.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.jq-tip-open {
+    width: 20px;
+    height: 10px;
+    background-image: url("../resource/icon/collapse.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.jq-logo {
+    width: 25px;
+    height: 25px;
+    background-image: url("../resource/icon/door_off.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.jq-text {
+    font-size: 25px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 28px;
+    margin: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.jy-item-list {
+    width: 100%;
+    min-height: 0;
+}
+
+.jy-item > div {
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 28px;
+    display: inline-block;
+}
+
+.jy-item {
+    cursor: pointer;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.jy-item:hover, .jq-item-title:hover {
+    background: rgba(14, 128, 216, 1);
+}
+
+/*单位选择下拉框样式*/
+.menu-top > .bootstrap-select:not(.input-group-btn) {
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+/*右侧主体样式*/
+.main {
+    height: 696px;
+    border: 1px solid rgba(102, 178, 255, 1);
+    background: rgba(7, 46, 116, 1);
+}
+
+#plan-main {
+    height: 696px;
+    overflow-y: auto;
+}
+
+.daybox {
+    width: 14%;
+    min-height: 60px;
+    border: 1px solid rgba(102, 178, 255, 1);
+    float: left;
+    margin-left: 3px;
+}
+
+.daytitle {
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 126, 255, 1);
+    text-align: center;
+}
+
+.daynum {
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+
+.dayname-text {
+    text-align: center;
+    width: 58px;
+    height: 17px;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 36px;
+}
+
+.plan-item {
+    cursor: pointer;
+    width: 100%;
+    height: 80px;
+    border: 1px solid rgba(102, 178, 255, 1);
+}
+
+.plan-title {
+    text-align: center;
+}
+
+.plan-title-text {
+    width: 67px;
+    height: 18px;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 36px;
+}
+
+.plan-time {
+    text-align: center;
+}
+
+.plan-time-text {
+    width: 186px;
+    height: 14px;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 36px;
+}
+
+/*复制  对话框*/
+.optdialog-copy-modal-sm {
+    /*top: -50px;*/
+}
+
+.optdialog-copy-modal-content {
+    margin: 100px auto;
+    width: 467px;
+    height: 536px;
+}
+
+.optdialog-copy-modal-body {
+    width: 445px;
+    height: 467px;
+    text-align: left;
+}
+
+.btn-optdialog-copy-area {
+    bottom: 20px;
+    left: 5%;
+}
+
+.eachcheck {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.eachcheck > input {
+    margin-left: 20px;
+    vertical-align: text-bottom;
+}
+
+.eachcheck > span {
+    margin-left: 20px;
+}

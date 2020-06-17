@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>点播视频</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap.min.css">
+    <link rel="stylesheet" href="../../datagrid/dist/bootstrap-table.css">
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/fileinput/fileinput.min.css">
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../../css/common/selectime.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/dbsp.css">
+    <script src="../../js/common/jquery/jquery.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap.min.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-select.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/fileinput/fileinput.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/fileinput/locales/zh.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-datetimepicker.min.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-datepicker.min.js"></script>
+    <script src="../../datagrid/dist/bootstrap-table.js"></script>
+    <script src="../../datagrid/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../../js/common/selectime.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-table-jumpto.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script src="../../layui/layui.all.js"></script>
+    <script src="../../js/utils/commonutil.js"></script>
+    <script src="../../js/utils/timeutils.js"></script>
+    <script src="../../js/common/remote/ftphelp.js"></script>
+    <script src="../../js/common/remote/CommonRemote.js"></script>
+    <script src="../../js/contentjs/dbsp.js"></script>
+    <script src="../../js/common/entry/VideoEntry.js"></script>
+</head>
+<body>
+<div id="dbspcontainer" class="container">
+    <div class="row">
+        <div class="col-md-2 column menu">
+            <div id="menu-top" class="menu-top">
+                <div id="vgr-add" type="button" class="btn btn-optbtn">
+                    <div class="icon-add"></div>
+                </div>
+                <div id="vgr-edit" type="button" class="btn btn-optbtn">
+                    <div class="icon-edit"></div>
+                </div>
+                <div id="vgr-del" type="button" class="btn btn-optbtn">
+                    <div class="icon-del"></div>
+                </div>
+            </div>
+            <div id="menu-bot" class="menu-bot">
+            </div>
+        </div>
+        <div id="vod-main" class="col-md-10 column main">
+            <div id="dbsptoolbar" class="btn-toolbar" role="toolbar">
+                <div class="btn-group" role="group" aria-label="pickall" style="margin-left: 50px">
+                    <button id="btn-vod-add" class="btn btn-default-common"><span class="btn-text-1">上传</span>
+                    </button>
+                </div>
+                <div class="searchbox">
+                    <button
+                            id="searchbtn" class="btn btn-default-common searchbtn"><span
+                            class="btn-text-1">搜索</span></button>
+                    <input id="keyword" placeholder="输入文字" type="text"
+                           class="form-control common-input searchInput common-text">
+                </div>
+            </div>
+            <table id="table_dbsp">
+            </table>
+        </div>
+    </div>
+</div>
+<!--上传  编辑   通用对话框-->
+<div class="modal fade upfile-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog upfile-modal-dialog" role="document">
+        <div class="modal-content common-modal-content upfile-modal-content upfile-modal-content-normal">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span id="upfile-modal-title-text" class="common-modal-title-text">通用对话框</span>
+                </h4>
+            </div>
+            <div class="modal-body common-modal-body upfile-modal-body upfile-modal-body-normal">
+                <form id="dlg_form">
+                    <input type="hidden" id="dlg_opType">
+                    <input type="hidden" id="dlg_id">
+                    <input type="hidden" id="dlg_uploadId">
+                    <input type="hidden" id="dlg_vodId" name="id">
+                    <div id="group_box" class="split">
+                        <label class="text-modal-body-1">分组</label>
+                        <select id="dlg_group" title="" class="upfile-input selectpicker btn-text-2">
+                        </select>
+                    </div>
+                    <div id="file_box" class="split">
+                        <label class="text-modal-body-1">文件</label>
+                        <input type="file" id="file" name="file"/>
+                    </div>
+                    <div id="resourceName_box" class="split">
+                        <label class="text-modal-body-1">资源名称</label>
+                        <input id="dlg_resourceName" name="dlg_resourceName" maxlength="32" type="text"
+                               class="form-control common-text common-input">
+                    </div>
+                </form>
+                <div class="common-btn-area upfile-btn-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-upfile-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--详情   对话框-->
+<div class="modal fade optdialog-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog optdialog-modal-dialog" role="document">
+        <div class="modal-content common-modal-content optdialog-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span id="common-modal-title-text" class="common-modal-title-text">通用对话框</span>
+                </h4>
+            </div>
+            <div class="modal-body common-modal-body optdialog-modal-body">
+                <div class="split">
+                    <label class="text-modal-body-1">名称</label>
+                    <div id="dlgResourceDetail_name" type="text"
+                         class="optdialog-input common-text "></div>
+                </div>
+                <div class="split">
+                    <label class="text-modal-body-1">时长</label>
+                    <div id="dlgResourceDetail_times" type="text"
+                         class="optdialog-input common-text "></div>
+                </div>
+                <div class="split">
+                    <label class="text-modal-body-1">播放地址</label>
+                    <div id="dlgResourceDetail_urls" class="desc common-input common-text"></div>
+                </div>
+                <div class="split">
+                    <label class="text-modal-body-1">上传时间</label>
+                    <div id="dlgResourceDetail_createTime" type="text"
+                         class="optdialog-input common-text "></div>
+                </div>
+                <div class="common-btn-area optdialog-btn-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal"
+                            data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-optdialog-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--删除确认对话框-->
+<div class="modal fade optdialog-delete-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog optdialog-delete-modal-dialog" role="document">
+        <div class="modal-content common-modal-content optdialog-delete-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span class="common-modal-title-text">确认删除</span></h4>
+            </div>
+            <div class="modal-body common-modal-body optdialog-delete-modal-body">
+                <div class="noticemsg-delete">
+                    您确定要删除吗？
+                </div>
+                <div class="common-btn-area btn-optdialog-delete-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-optdialog-delete-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--增加  编辑  分组对话框-->
+<div class="modal fade vgr-opt-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog vgr-opt-modal-dialog" role="document">
+        <div class="modal-content common-modal-content vgr-opt-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span id="vgr-opt-text-modal-title"
+                                              class="common-modal-title-text">分组操作公用对话框</span>
+                </h4>
+            </div>
+            <div class="modal-body common-modal-body vgr-opt-modal-body">
+                <input type="hidden" id="dlgResourceGroup_id">
+                <input type="hidden" id="dlgResourceGroup_opType">
+
+                <div id="Name_box" class="split">
+                    <label class="text-modal-body-1">分组名称</label>
+                    <input type="text" class="common-input common-text optdialog-input form-control"
+                           id="dlgResourceGroup_name">
+                </div>
+                <div id="Number_box" class="split">
+                    <label class="text-modal-body-1">排序值</label>
+                    <input type="text" class="common-input common-text optdialog-input form-control"
+                           onkeyup="this.value=this.value.replace(/\D/g,'')"
+                           id="dlgResourceGroup_sortValue">
+                </div>
+                <div class="common-btn-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-vgr-opt-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--================= FTP上传控件（仅支持IE）================== -->
+<div
+        style="position: absolute; top: -1000px; left: -1000px; height: 0px; width: 0px;">
+    <OBJECT id="ftphelp" height="0" width="0" classid="clsid:06759A4C-4002-425A-B257-EC6EB7F3CA46"
+            codeBase="../files/ftphelp.ocx"></OBJECT>
+    <script language="javascript" type="text/javascript" for="ftphelp" event="Event(json)">
+        onObjectEvent(json);
+    </script>
+</div>
+</body>
+</html>

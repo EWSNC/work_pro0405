@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>宣教计划</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap.min.css">
+    <link rel="stylesheet" href="../../datagrid/dist/bootstrap-table.css">
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../../css/common/selectime.css">
+    <!--    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap-datetimepicker.min2.css">-->
+    <link rel="stylesheet" href="../../css/common/bootstrap-3.3.7/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/xjjh.css">
+    <script src="../../js/common/jquery/jquery.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap.min.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-select.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-datetimepicker.min.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-datepicker.min.js"></script>
+    <script src="../../datagrid/dist/bootstrap-table.js"></script>
+    <script src="../../datagrid/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/bootstrap-table-jumpto.js"></script>
+    <script src="../../js/common/bootstrap-3.3.7/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script src="../../js/common/selectime.js"></script>
+    <script src="../../layui/layui.all.js"></script>
+    <script src="../../js/utils/commonutil.js"></script>
+    <script src="../../js/utils/timeutils.js"></script>
+    <script src="../../js/common/remote/CommonRemote.js"></script>
+    <script src="../../js/contentjs/xjjh.js"></script>
+    <script src="../../js/common/entry/JyEntry.js"></script>
+    <script src="../../js/common/entry/JqEntry.js"></script>
+    <script src="../../js/common/entry/DayBoxEntry.js"></script>
+    <script src="../../js/common/entry/PlanEntry.js"></script>
+</head>
+<body>
+<div id="xjjhcontainer" class="container">
+    <div class="row">
+        <div class="col-md-2 column menu">
+            <div id="menu-top" class="menu-top">
+                <input type="text" class="daytime-input common-text common-input form-control" id="daytime">
+                <!-- 单位选择 -->
+                <select id="dw" class="selectpicker btn-text-2">
+                </select>
+            </div>
+            <div id="menu-bot" class="menu-bot">
+            </div>
+        </div>
+        <div id="plan-main" class="col-md-10 column main">
+        </div>
+    </div>
+</div>
+<!--增加  编辑   通用对话框-->
+<div class="modal fade optdialog-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog optdialog-modal-dialog" role="document">
+        <div class="modal-content common-modal-content optdialog-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span id="common-modal-title-text" class="common-modal-title-text">通用对话框</span>
+                </h4>
+            </div>
+            <div class="modal-body common-modal-body optdialog-modal-body">
+                <input type="hidden" id="day">
+                <input type="hidden" id="programIndex">
+                <input type="hidden" id="opType">
+                <input type="hidden" id="vodResourceGroupId">
+                <input type="hidden" id="vodResourceId">
+                <input type="hidden" id="vodResourceName">
+                <input type="hidden" id="groupId">
+                <input type="hidden" id="roomId">
+                <div class="split">
+                    <label class="text-modal-body-1">开始时间</label>
+                    <input type="text" class="selecttime optdialog-input common-text common-input form-control"
+                           id="starttime">
+                </div>
+                <div class="split">
+                    <label class="text-modal-body-1">结束时间</label>
+                    <input type="text" class="selecttime optdialog-input common-text common-input form-control"
+                           id="endtime">
+                </div>
+                <div id="ptype_box" class="split">
+                    <label class="text-modal-body-1">节目类型</label>
+                    <select id="ptype" class="selectpicker btn-text-2">
+                        <option value="0" class="btn-text-3">请选择</option>
+                        <option value="1" class="btn-text-3">视频直播(电视直播)</option>
+                        <option value="2" class="btn-text-3">视频点播</option>
+                        <option value="3" class="btn-text-3">广播</option>
+                    </select>
+                </div>
+                <div id="pchanellist_box" class="split" style="display: none;">
+                    <label class="text-modal-body-1">电视频道</label>
+                    <select id="channelList" class="selectpicker btn-text-2">
+                    </select>
+                </div>
+                <div id="pmodle_box" class="split" style="display: none;">
+                    <label class="text-modal-body-1">播放模式</label>
+                    <select id="playtype" class="selectpicker btn-text-2">
+                        <option value="0" class="btn-text-3">顺序播放</option>
+                        <option value="2" class="btn-text-3">指定播放</option>
+                    </select>
+                </div>
+                <div id="plist_box" class="split" style="display: none;">
+                    <label class="text-modal-body-1">点播列表</label>
+                    <select id="vodPlayList" class="selectpicker btn-text-2">
+                    </select>
+                </div>
+                <div id="pvodResource_box" class="split" style="display: none">
+                    <span class="text-modal-body-1">指定视频</span>
+                    <input id="vodResourceName_alias" type="text"
+                           class="form-control vodselect common-text common-input">
+                    <a id="select-video" class="btn btn-link text-modal-body-1">选择</a>
+                </div>
+                <div id="pgblist_box" class="split" style="display: none;">
+                    <label class="text-modal-body-1">广播节目</label>
+                    <select id="broadcastResourceList" class="selectpicker btn-text-2">
+                    </select>
+                </div>
+                <div id="pdesc_box" class="split">
+                    <label class="text-modal-body-1">节目描述</label>
+                    <input id="programDesc" type="text" class="form-control optdialog-input common-text common-input">
+                </div>
+                <div class="split">
+                    <label class="text-modal-body-1">音&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</label>
+                    <input id="volume"
+                           onkeyup="this.value=this.value.replace(/\D/g,'')"
+                           type="text"
+                           class="form-control optdialog-input common-text common-input">
+                </div>
+                <div class="common-btn-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-optdialog-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--选择视频-->
+<div id="xzsp-modal-lg" class="modal fade xzsp-modal-lg" tabindex="-1" role="dialog">
+    <div class="modal-dialog xzsp-modal-dialog" role="document">
+        <div class="modal-content common-modal-content xzsp-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span class="common-modal-title-text">选择节目</span></h4>
+            </div>
+            <div class="modal-body">
+                <div class="body-left">
+                    <div class="title-left">
+                        <span class="title-left-text">分组</span>
+                    </div>
+                    <div id="vodresourcegroup-list" class="body-left-list">
+                    </div>
+                </div>
+                <div class="body-right">
+                    <div class="title-right">
+                        <span class="title-right-text">视频</span>
+                    </div>
+                    <div class="searchbox">
+                        <input type="text" id="searchName"
+                               class="form-control searchInput common-text common-input"><span><button
+                            id="searchbtn" class="btn btn-default-common searchbtn"><span
+                            class="btn-text-1">搜索</span></button></span>
+                    </div>
+                    <table id="vodresource" class="vodresource">
+
+                    </table>
+                    <div class="common-btn-area xzsp-btn-area">
+                        <button type="button" class="btn btn-default-common btn-default-modal"
+                                data-dismiss="modal"><span
+                                class="btn-text">取消</span></button>
+                        <button id="btn-xzsp-confirm" type="button"
+                                class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                                class="btn-text">确认</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--删除确认对话框-->
+<div class="modal fade optdialog-delete-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog optdialog-delete-modal-dialog" role="document">
+        <div class="modal-content common-modal-content optdialog-delete-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span class="common-modal-title-text">确认删除</span></h4>
+            </div>
+            <div class="modal-body common-modal-body optdialog-delete-modal-body">
+                <div class="noticemsg-delete">
+                    您确定要删除吗？
+                </div>
+                <div class="common-btn-area btn-optdialog-delete-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-optdialog-delete-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--复制模板对话框-->
+<div class="modal fade optdialog-copy-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog optdialog-copy-modal-dialog" role="document">
+        <div class="modal-content common-modal-content optdialog-copy-modal-content">
+            <div class="modal-header common-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close"
+                                                                                                  aria-hidden="true"><img
+                        src="../../resource/icon/close.png" alt=""></span>
+                </button>
+                <h4 class="modal-title"><span class="common-modal-title-text">复制到</span></h4>
+            </div>
+            <div class="modal-body common-modal-body optdialog-copy-modal-body">
+                <input type="hidden" id="copyProgramDialog_groupId">
+                <input type="hidden" id="copyProgramDialog_roomId">
+                <input type="hidden" id="copyProgramDialog_day">
+                <input type="hidden" id="copyProgramDialog_programIndex">
+                <div class="eachcheck">
+                    <input name="copyProgramDialog_day" type="checkbox" value="1"><span class="btn-text-1">星期一</span>
+                </div>
+                <div class="eachcheck">
+                    <input name="copyProgramDialog_day" type="checkbox" value="2"><span class="btn-text-1">星期二</span>
+                </div>
+                <div class="eachcheck">
+                    <input name="copyProgramDialog_day" type="checkbox" value="3"><span class="btn-text-1">星期三</span>
+                </div>
+                <div class="eachcheck">
+                    <input name="copyProgramDialog_day" type="checkbox" value="4"><span class="btn-text-1">星期四</span>
+                </div>
+                <div class="eachcheck">
+                    <input name="copyProgramDialog_day" type="checkbox" value="5"><span class="btn-text-1">星期五</span>
+                </div>
+                <div class="eachcheck">
+                    <input name="copyProgramDialog_day" type="checkbox" value="6"><span class="btn-text-1">星期六</span>
+                </div>
+                <div class="eachcheck">
+                    <input name="copyProgramDialog_day" type="checkbox" value="7"><span class="btn-text-1">星期日</span>
+                </div>
+                <div class="common-btn-area btn-optdialog-copy-area">
+                    <button type="button" class="btn btn-default-common btn-default-modal" data-dismiss="modal"><span
+                            class="btn-text">取消</span></button>
+                    <button type="button" id="btn-optdialog-copy-confirm"
+                            class="btn btn-default-modal-confirm btn-default-common btn-default-modal"><span
+                            class="btn-text">确认</span>
+                    </button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+</html>
