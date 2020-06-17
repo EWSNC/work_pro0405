@@ -219,8 +219,8 @@ var CustumCommonUtil = {
     },
     getScreenParam: function () {
         var param = {};
-        param.width = window.screen.width;
-        param.height = window.screen.height;
+        param.width = document.documentElement.clientWidth;
+        param.height = document.documentElement.clientHeight;
         return param;
     },
 

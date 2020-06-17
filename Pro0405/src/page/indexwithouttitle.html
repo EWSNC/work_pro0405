@@ -18,12 +18,9 @@
         $(function () {
             debugger;
             var screenParam = CustumCommonUtil.getScreenParam();
-            var height = screenParam.height - 40;
-            var sfbl = CustumCommonUtil.detectZoom()/100;
-            height = height / sfbl;
+            var height = screenParam.height;
             $("#tabContent").css("height", height);
             $(".mainbody").css("height", height);
-            // $("#tabContent > div").css("height", height);
 
             //无页面头首页  加载一次用户信息，如果没有成功，则跳到登录页
             CommonRemote.login.userInfo();
