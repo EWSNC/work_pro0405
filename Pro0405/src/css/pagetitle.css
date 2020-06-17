@@ -4,7 +4,7 @@
 
 /*  页签按钮等   样式    */
 .tabs {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
 }
@@ -37,7 +37,7 @@
 
 /*  页签按钮和页签间分割  样式*/
 .tab-panel-cut {
-    position: absolute;
+    position: fixed;
     top: 5.3%;
     margin-left: 26px;
     width: 1280px;
@@ -221,7 +221,9 @@
 }
 
 #tabContent {
-    margin-top: 20px;
+    position: fixed;
+    top: 2.5%;
+    width: 100%;
 }
 
 #tabContent > div {
