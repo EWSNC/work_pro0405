@@ -89,7 +89,7 @@ function bindEvent(domainlist, channelList, vodresourcegrouplist, broadcastResou
             };
             CommonRemote.xjya.deleteTemplate(templateid, cbSuccess);
         });
-        $('.optdialog-delete-modal-sm').modal("show");
+        $('.optdialog-delete-modal-sm').modal("show",{backdrop:'static',keyboard:false});
     });
     //复制模板
     $("#template-copy").bind("click", function () {
@@ -117,7 +117,7 @@ function bindEvent(domainlist, channelList, vodresourcegrouplist, broadcastResou
             };
             CommonRemote.xjya.submitCopy(id, name, cbSuccess);
         });
-        $('.tmplt-opt-modal-sm').modal("show");
+        $('.tmplt-opt-modal-sm').modal("show",{backdrop:'static',keyboard:false});
     });
     //应用模板
     $("#template-apply").bind("click", function () {
@@ -134,7 +134,7 @@ function bindEvent(domainlist, channelList, vodresourcegrouplist, broadcastResou
             $("input[type=radio][name='dlg_apply_type'][value='0']").prop("checked", true);
         }
         changeApplyType(templateid);
-        $('.optdialog-apply-modal-sm').modal("show");
+        $('.optdialog-apply-modal-sm').modal("show",{backdrop:'static',keyboard:false});
     });
     //应用模板对话框切换单位
     $("#dw").bind("change", function () {
@@ -180,7 +180,7 @@ function bindEvent(domainlist, channelList, vodresourcegrouplist, broadcastResou
         var vodresourcegrouplist = CommonRemote.getVodResourceGroup();
         initVodResourceGroup(vodresourcegrouplist);
         initVodResource();
-        $("#xzsp-modal-lg").modal("show")
+        $("#xzsp-modal-lg").modal("show",{backdrop:'static',keyboard:false})
     });
     //点击搜索按钮时
     $("#searchbtn").bind("click", function () {
@@ -190,7 +190,7 @@ function bindEvent(domainlist, channelList, vodresourcegrouplist, broadcastResou
             query: {
                 groupId: 0,
                 name: name,
-                pageSize: 10,
+                pageSize: 20,
                 pageNumber: 1
             }
         };
@@ -450,7 +450,7 @@ function initVodResourceGroup(vodresourcegrouplist) {
             query: {
                 groupId: groupsid,
                 name: "",
-                pageSize: 10,
+                pageSize: 20,
                 pageNumber: 1
             }
         };
@@ -503,8 +503,8 @@ function initVodResource() {
         onLoadSuccess: function (data) {
         },
         onClickRow: function (row, obj) {
-            $(obj).parent().children().removeClass("selected");
-            $(obj).addClass("selected");
+            $(obj).parent().children().removeClass("row-selected");
+            $(obj).addClass("row-selected");
             $("#vodResourceId").val(row.id);
             $("#vodResourceName").val(row.name);
             $("#vodResourceName_alias").val(row.name);
@@ -680,7 +680,7 @@ function showTmltOptDlg(title, optype, templateid, type, templateName) {
     $("#tmplt_templateId").val(templateid);
     $("#templateType").val(type);
     $("#templateName").val(templateName);
-    $('.tmplt-opt-modal-sm').modal("show");
+    $('.tmplt-opt-modal-sm').modal("show",{backdrop:'static',keyboard:false});
 }
 
 //加载指定的节目
@@ -747,7 +747,7 @@ function showCopyProgramModal(templateId, weekday, programIndex) {
         CommonRemote.xjya.submitCopyTmplateProgram(templateId, sourceWeekday, targetWeekdays, cbSuccess);
         $(".optdialog-copy-modal-sm").modal("hide");
     });
-    $(".optdialog-copy-modal-sm").modal("show");
+    $(".optdialog-copy-modal-sm").modal("show",{backdrop:'static',keyboard:false});
 }
 
 /*

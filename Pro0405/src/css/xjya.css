@@ -5,7 +5,7 @@ xjya.html页面CSS
 #xjyatabContent {
     width: 96%;
     min-height: 698px;
-    margin: 10px auto;
+    margin: 3% auto;
 }
 
 .xjjhcontent {
@@ -19,9 +19,16 @@ xjya.html页面CSS
     line-height: 35px;
 }
 
+#xjyatoolbar{
+    position: absolute;
+    top: 1%;
+    width: 100%;
+}
+
 #xjyatoolbar > .btn > .active {
     height: 40px;
-    background: rgba(14, 128, 216, 1);
+    /*background: rgba(14, 128, 216, 1);*/
+    background: #189aff;
     box-shadow: 0px 1px 1px 0px rgba(35, 31, 31, 0.56), 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
     border-radius: 5px;
 }

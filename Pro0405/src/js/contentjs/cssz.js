@@ -60,8 +60,8 @@ function loadPropertyListTable() {
         onLoadSuccess: function (data) {
         },
         onClickRow: function (row, obj) {
-            $(obj).parent().children().removeClass("selected");
-            $(obj).addClass("selected");
+            $(obj).parent().children().removeClass("row-selected");
+            $(obj).addClass("row-selected");
         },
         onDblClickRow: function (row, $element, field) {
             var index = $element.data('index');
@@ -87,7 +87,7 @@ function loadPropertyListTable() {
             title: '描述'
         }, {
             title: '操作',
-            width: 300,
+            width: 100,
             formatter: function (value, row, index) {
                 var btnhtml = "<span onclick='editData(" + index + ")' style='cursor: pointer' title='修改'><span class='icon-edit'></span><a  style=' vertical-align: super; color: white; font-size: 18px; text-decoration: none;'>编辑</a></span>";
                 return btnhtml;
@@ -131,7 +131,7 @@ function editData(index) {
     $('#dlg_value').val(data.value);
     $('#dlg_desc').html(data.description);
     $("#common-modal-title-text").html("编辑");
-    $(".optdialog-modal-sm").modal("show");
+    $(".optdialog-modal-sm").modal("show",{backdrop:'static',keyboard:false});
 }
 
 //清除所有填空内容

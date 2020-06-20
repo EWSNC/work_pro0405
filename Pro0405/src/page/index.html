@@ -4,9 +4,10 @@
 <!-- 页面头 -->
 <head>
     <title>首页</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
     <link rel="stylesheet" href="../css/common/bootstrap-3.3.7/bootstrap.css">
     <link rel="stylesheet" href="../layui/css/layui.css">
     <link rel="stylesheet" href="../css/common/common.css">
@@ -21,20 +22,38 @@
 </head>
 <script>
     $(function () {
+        //首页头部  登录下拉隐藏
+        $(document).bind('click', function (e) {
+            var e = e || window.event; //浏览器兼容性
+            var elem = e.target || e.srcElement;
+            while (elem) { //循环判断至跟节点，防止点击的是div子元素
+                if (elem.className && elem.className == 'loginmsg') {
+                    $("#opt_dropmenu").fadeIn(100);
+                    return;
+                }
+                if (elem.className && elem.className == 'dropmenu') {
+                    $("#opt_dropmenu", window.top.document).fadeOut(100);
+                    return;
+                }
+                elem = elem.parentNode;
+            }
+            $("#opt_dropmenu", window.top.document).fadeOut(100); //点击的不是div或其子元素
+        });
+
+
         var screenParam = CustumCommonUtil.getScreenParam();
-        var iTop = screenParam.height ; //获得窗口的垂直位置;
+        var iTop = screenParam.height; //获得窗口的垂直位置;
         var sfbl = CustumCommonUtil.detectZoom();
         $(".xjkzcontent, .xjyacontent, .xtpzcontent").css("height", iTop);
         $("#xjkzpanelbox").css("height", iTop);
+
     });
 </script>
 <body>
 <div class="pagetitle">
     <div class="titlelogo">
-        <div>
-            <span class="policebadge"></span>
-            <span id="SysTitle" class="titletext"></span>
-        </div>
+        <span class="policebadge"></span>
+        <span id="SysTitle" class="titletext">默认系统名称默认系统名称默认系统名称</span>
     </div>
     <div id="timemsg" class="timemsg"></div>
     <div id="about" class="about" onclick="about()"></div>
@@ -58,7 +77,7 @@
     <iframe frameborder="no" src="indexwithouttitle.html"></iframe>
 </div>
 <!--修改密码-->
-<div class="modal fade changepwd-modal-sm" tabindex="-1" role="dialog">
+<div class="modal fade changepwd-modal-sm" data-backdrop="static" tabindex="-1" role="dialog">
     <div class="modal-dialog changepwd-modal-dialog" role="document">
         <div class="modal-content common-modal-content changepwd-modal-content">
             <div class="modal-header common-modal-header">

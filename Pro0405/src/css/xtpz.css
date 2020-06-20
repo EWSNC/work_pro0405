@@ -5,7 +5,7 @@ xtpz.html页面CSS
 #xtpztabContent {
     width: 96%;
     min-height: 698px;
-    margin: 10px auto;
+    margin: 3% auto;
 }
 
 .dwpzcontent, .yhglcontent, .jspzcontent, .dspdcontent, .dbspcontent, .gbjmcontent, .lmtfwcontent, .csszcontent, .sbsscontent {
@@ -18,6 +18,12 @@ xtpz.html页面CSS
 /*按钮样式*/
 .btn-text-1 {
     line-height: 35px;
+}
+
+#xtpztoolbar {
+    position: absolute;
+    top: 1%;
+    width: 100%;
 }
 
 #xtpztoolbar > .btn > .active {
@@ -59,5 +65,5 @@ xtpz.html页面CSS
 }
 
 .btn-dwpz {
-    margin-left: 76px!important;
+    margin-left: 76px !important;
 }

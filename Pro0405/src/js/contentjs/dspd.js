@@ -18,16 +18,20 @@ function initbtn(vodserverList) {
     //IE下兼容  不可省略
     $('.selectpicker').selectpicker('refresh');
     $('.selectpicker').selectpicker('render');
+    //业务需求  隐藏
+    $("#ChannelVodserver").selectpicker("hide");
 }
 
 function bindEvent() {
+    //新建
     $("#btn-ds-add").bind("click", function () {
+        $("#btn-ds-opt-confirm").unbind();
         $("#btn-ds-opt-confirm").bind("click", function () {
             modifyChannel(1)
         });
         clearAll();
         $("#ds-opt-text-modal-title").html("增加");
-        $(".ds-opt-modal-sm").modal("show");
+        $(".ds-opt-modal-sm").modal("show",{backdrop:'static',keyboard:false});
     });
     //删除
     $("#btn-optdialog-delete-confirm").bind("click", function () {
@@ -76,8 +80,8 @@ function loadChannelListTable() {
         onLoadSuccess: function (data) {
         },
         onClickRow: function (row, obj) {
-            $(obj).parent().children().removeClass("selected");
-            $(obj).addClass("selected");
+            $(obj).parent().children().removeClass("row-selected");
+            $(obj).addClass("row-selected");
         },
         onDblClickRow: function (row, $element, field) {
             var index = $element.data('index');
@@ -94,7 +98,7 @@ function loadChannelListTable() {
             visible: false
         }, {
             field: 'number',
-            width: 30,
+            width: 50,
             title: '通道编号'
         }, {
             field: 'name',
@@ -146,7 +150,7 @@ function loadChannelListTable() {
             }
         }, {
             title: '操作',
-            width: 200,
+            width: 100,
             formatter: function (value, row, index) {
                 var btnhtml = "<span onclick='updateChannel(" + index + ")' style='cursor: pointer' title='修改'><span class='icon-edit'></span><a  style=' vertical-align: super; color: white; font-size: 18px; text-decoration: none;'>编辑</a></span>";
                 btnhtml += "<span onclick='deleteChannel(" + index + ")' style='cursor: pointer;margin-left: 8px;' title='修改'><span class='icon-del'></span><a  style=' vertical-align: super; color: white; font-size: 18px; text-decoration: none;'>删除</a></span>";
@@ -190,7 +194,7 @@ function reloadTalbe() {
             'chl.name': ChannelName,
             'chl.type': ChannelType,
             'chl.vodserver.id': ChannelVodserver,
-            pageSize: 10,
+            pageSize: 20,
             pageNumber: 1
         }
     };
@@ -211,18 +215,19 @@ function updateChannel(index) {
     if ((row.vodserverid) != null) {
         $("#Dialog-Vodserver").selectpicker("val", row.vodserverid);
     }
+    $("#btn-ds-opt-confirm").unbind();
     $("#btn-ds-opt-confirm").bind("click", function () {
         modifyChannel(2)
     });
     $("#ds-opt-text-modal-title").html("修改");
-    $(".ds-opt-modal-sm").modal("show");
+    $(".ds-opt-modal-sm").modal("show",{backdrop:'static',keyboard:false});
 }
 
 //删除
 function deleteChannel(index) {
     $("#table_dspd").bootstrapTable('uncheckAll');
     $("#table_dspd").bootstrapTable('check', index);
-    $(".optdialog-delete-modal-sm").modal("show");
+    $(".optdialog-delete-modal-sm").modal("show",{backdrop:'static',keyboard:false});
 }
 
 /*
@@ -241,18 +246,21 @@ function modifyChannel(mod) {
         name = $('#Dialog-Name').val();
         if (name == null || name == "") {
             CustumCommonUtil.showMsg("请输入名称！");
-            return false;
+            return;
+        }else if(name.length > 64){
+            CustumCommonUtil.showMsg("名称最多为64个字符！");
+            return;
         }
         number = $('#Dialog-Number').val();
         if (number == null || number == "") {
             CustumCommonUtil.showMsg("请输入通道编号！");
-            return false;
+            return;
         }
         type = $('#Dialog-Type').val();
         url = $('#Dialog-Url').val();
         if (url == null || url == "") {
             CustumCommonUtil.showMsg("请输入视频源地址！");
-            return false;
+            return;
         }
         vodServer_id = $('#Dialog-Vodserver').val();
         if (vodServer_id == -1) {
@@ -265,12 +273,12 @@ function modifyChannel(mod) {
         name = $('#Dialog-Name').val();
         if (name == null || name == "") {
             CustumCommonUtil.showMsg("请输入名称！");
-            return false;
+            return;
         }
         number = $('#Dialog-Number').val();
         if (number == null || number == "") {
             CustumCommonUtil.showMsg("请输入通道编号！");
-            return false;
+            return;
         }
         type = $('#Dialog-Type').val();
         url = $('#Dialog-Url').val();

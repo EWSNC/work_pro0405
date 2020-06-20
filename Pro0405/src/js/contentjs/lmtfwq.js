@@ -25,7 +25,7 @@ function bindEvent() {
         clearAll();
         $("#common-modal-title-text").html("增加");
         $("#opType").val(0);//0表示添加
-        $(".optdialog-modal-sm").modal("show");
+        $(".optdialog-modal-sm").modal("show",{backdrop:'static',keyboard:false});
     });
     $("#btn-optdialog-confirm").bind("click", function () {
         dlg_submit();
@@ -70,8 +70,8 @@ function loadLmtfwqListTable() {
         onLoadSuccess: function (data) {
         },
         onClickRow: function (row, obj) {
-            $(obj).parent().children().removeClass("selected");
-            $(obj).addClass("selected");
+            $(obj).parent().children().removeClass("row-selected");
+            $(obj).addClass("row-selected");
         },
         onDblClickRow: function (row, $element, field) {
             var index = $element.data('index');
@@ -108,7 +108,7 @@ function loadLmtfwqListTable() {
             }
         }, {
             title: '操作',
-            width: 300,
+            width: 100,
             formatter: function (value, row, index) {
                 var btnhtml = "<span onclick='editData(" + index + ")' style='cursor: pointer' title='修改'><span class='icon-edit'></span><a  style=' vertical-align: super; color: white; font-size: 18px; text-decoration: none;'>编辑</a></span>";
                 btnhtml += "<span onclick='deleteLmtfwqData(" + index + ")' style='cursor: pointer;margin-left: 8px;' title='修改'><span class='icon-del'></span><a  style=' vertical-align: super; color: white; font-size: 18px; text-decoration: none;'>删除</a></span>";
@@ -174,7 +174,7 @@ function editData(index) {
     $('#mssVersion').selectpicker("val", mss.version);
 
     $("#common-modal-title-text").html("编辑");
-    $(".optdialog-modal-sm").modal("show");
+    $(".optdialog-modal-sm").modal("show",{backdrop:'static',keyboard:false});
 }
 
 //向服务器删除指定行
@@ -182,7 +182,7 @@ function deleteLmtfwqData(index) {
     $("#table_lmtfwq").bootstrapTable('uncheckAll');
     $("#table_lmtfwq").bootstrapTable('check', index);
 
-    $(".optdialog-delete-modal-sm").modal("show");
+    $(".optdialog-delete-modal-sm").modal("show",{backdrop:'static',keyboard:false});
 }
 
 function doDeleteLmtfwqData() {

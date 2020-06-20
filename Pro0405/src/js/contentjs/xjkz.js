@@ -134,7 +134,7 @@ function bindEvent(groups, domainlist, chanellist) {
     $("#btn-volume").bind("click", function () {
         var SelectedJyContent = getSelectedjyContent();
         if (SelectedJyContent.RoomIds.length == 0) return;
-        $(".volume-modal-sm").modal("show");
+        $(".volume-modal-sm").modal("show",{backdrop:'static',keyboard:false});
     });
 
     $("#btn-volume-confirm").bind("click", function () {
@@ -145,7 +145,7 @@ function bindEvent(groups, domainlist, chanellist) {
     $("#btn-gonggao").bind("click", function () {
         var SelectedJyContent = getSelectedjyContent();
         if (SelectedJyContent.RoomIds.length == 0) return;
-        $(".gonggao-modal-sm").modal("show");
+        $(".gonggao-modal-sm").modal("show",{backdrop:'static',keyboard:false});
     });
     $("#btn-gonggao-confirm").bind("click", function () {
         var SelectedJyContent = getSelectedjyContent();
@@ -155,11 +155,12 @@ function bindEvent(groups, domainlist, chanellist) {
     $("#btn-chabo").bind("click", function () {
         var SelectedJyContent = getSelectedjyContent();
         if (SelectedJyContent.RoomIds.length == 0) return;
-        $(".chabo-modal-sm").modal("show");
+        $(".chabo-modal-sm").modal("show",{backdrop:'static',keyboard:false});
     });
     //插播直播
     $("#chabo_zhibo").bind("click", function () {
-        $('#chabo-zhibo-modal-lg').modal("show");
+        $("#zhibo_endtime").val(CustumTimeUtil.convertTimeIntToString2(new Date().getTime() + 30 * 60 * 1000));
+        $('#chabo-zhibo-modal-lg').modal("show",{backdrop:'static',keyboard:false});
         initZhiBoTalbe();
     });
     //插播直播确认按钮
@@ -174,13 +175,15 @@ function bindEvent(groups, domainlist, chanellist) {
         for (let i in vodresourcegrouplist) {
             $('#vodPlayModel').append("<option value=\"" + vodresourcegrouplist[i].id + "\" class=\"btn-text-3\">" + vodresourcegrouplist[i].name + "</option>");
         }
+        $("#vodResourceGroupId").val($("#vodPlayModel").val());
         $('#vodPlayModel').bind("change", function () {
             $("#vodResourceGroupId").val($(this).val());
         });
         //IE下兼容  不可省略
         $('.selectpicker').selectpicker('refresh');
         $('.selectpicker').selectpicker('render');
-        $('#chabo-dianbo-s1-modal-sm').modal("show");
+        $("#dianbo_endtime").val(CustumTimeUtil.convertTimeIntToString2(new Date().getTime() + 30 * 60 * 1000));
+        $('#chabo-dianbo-s1-modal-sm').modal("show",{backdrop:'static',keyboard:false});
     });
 
     //插播点播时 切换播放模式
@@ -194,7 +197,7 @@ function bindEvent(groups, domainlist, chanellist) {
         var vodresourcegrouplist = CommonRemote.getVodResourceGroup();
         initVodResourceGroup(vodresourcegrouplist);
         initVodResource();
-        $("#xzsp-modal-lg").modal("show");
+        $("#xzsp-modal-lg").modal("show",{backdrop:'static',keyboard:false});
     });
     //点击搜索按钮时
     $("#searchbtn").bind("click", function () {
@@ -205,7 +208,7 @@ function bindEvent(groups, domainlist, chanellist) {
             query: {
                 groupId: 0,
                 name: name,
-                pageSize: 10,
+                pageSize: 20,
                 pageNumber: 1
             }
         };
@@ -232,7 +235,7 @@ function bindEvent(groups, domainlist, chanellist) {
     $("#btn-yakz").bind("click", function () {
         var SelectedJyContent = getSelectedjyContent();
         if (SelectedJyContent.RoomIds.length == 0) return;
-        $("#yakz-modal-sm").modal("show");
+        $("#yakz-modal-sm").modal("show",{backdrop:'static',keyboard:false});
     });
     //停止预案
     $("#btn-yakz-stop").bind("click", function () {
@@ -306,7 +309,7 @@ function initVodResourceGroup(vodresourcegrouplist) {
             query: {
                 groupId: groupsid,
                 name: "",
-                pageSize: 10,
+                pageSize: 20,
                 pageNumber: 1
             }
         };
@@ -357,8 +360,8 @@ function initZhiBoTalbe() {
             debugger;
         },
         onClickRow: function (row, obj) {
-            $(obj).parent().children().removeClass("selected");
-            $(obj).addClass("selected");
+            $(obj).parent().children().removeClass("row-selected");
+            $(obj).addClass("row-selected");
             $("#channelId").val(row.id);
         },
         columns: [{
@@ -434,8 +437,8 @@ function initVodResource() {
             debugger;
         },
         onClickRow: function (row, obj) {
-            $(obj).parent().children().removeClass("selected");
-            $(obj).addClass("selected");
+            $(obj).parent().children().removeClass("row-selected");
+            $(obj).addClass("row-selected");
             $("#vodResourceId").val(row.id);
             $("#vodResourceName").val(row.name);
             $("#vodResourceName_alias").val(row.name);
@@ -643,11 +646,10 @@ function insertPlayDlg(roomIds) {
         CustumCommonUtil.showMsg("请选择频道");
         return;
     }
-
     var endtime = $("#zhibo_endtime").val();
-    if (endtime == null || endtime.length < 0) {
+    if (endtime == "" || endtime == null || endtime.length < 0) {
         CustumCommonUtil.showMsg("必须指定结束时间");
-        return null;
+        return;
     }
     var st_array = null;
     var endHH = 0;
@@ -710,7 +712,7 @@ function insertPlayVodDlg(roomIds) {
         var successCount = res.data.successCount;
         var fail = roomIds.length - successCount;
         if (fail > 0) {
-            CustumCommonUtil.showMsg("部分插播失败，总数[" + roomIds.length + "], 失败[" + fail + "]，原因：" + res.result, "400px", "50px");
+            CustumCommonUtil.showMsg("部分插播失败，总数[" + roomIds.length + "], 失败[" + fail + "]，原因：" + res.result, "400px", "100px");
         }
         updateRoomStatus(CommonRemote.getGroupsAndRoom());
     };

@@ -54,8 +54,8 @@ function loaddeviceListTable() {
         onLoadSuccess: function (data) {
         },
         onClickRow: function (row, obj) {
-            $(obj).parent().children().removeClass("selected");
-            $(obj).addClass("selected");
+            $(obj).parent().children().removeClass("row-selected");
+            $(obj).addClass("row-selected");
         },
         onDblClickRow: function (row, $element, field) {
             var index = $element.data('index');
@@ -88,7 +88,7 @@ function loaddeviceListTable() {
             width: 200,
             title: '设备类型'
         }, {
-            width: 200,
+            width: 100,
             title: '参数配置',
             formatter: function (value, row, index) {
                 var btnhtml = "<span onclick='editData(" + index + ")' style='cursor: pointer' title='配置'><span class='icon-edit'></span><a  style=' vertical-align: super; color: white; font-size: 18px; text-decoration: none;'>编辑</a></span>";

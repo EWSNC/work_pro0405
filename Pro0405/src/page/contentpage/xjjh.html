@@ -53,7 +53,7 @@
     </div>
 </div>
 <!--增加  编辑   通用对话框-->
-<div class="modal fade optdialog-modal-sm" tabindex="-1" role="dialog">
+<div class="modal fade optdialog-modal-sm" data-backdrop="static" tabindex="-1" role="dialog">
     <div class="modal-dialog optdialog-modal-dialog" role="document">
         <div class="modal-content common-modal-content optdialog-modal-content">
             <div class="modal-header common-modal-header">
@@ -75,12 +75,12 @@
                 <input type="hidden" id="roomId">
                 <div class="split">
                     <label class="text-modal-body-1">开始时间</label>
-                    <input type="text" class="selecttime optdialog-input common-text common-input form-control"
+                    <input type="text" readonly="readonly" class="selecttime optdialog-input common-text common-input form-control"
                            id="starttime">
                 </div>
                 <div class="split">
                     <label class="text-modal-body-1">结束时间</label>
-                    <input type="text" class="selecttime optdialog-input common-text common-input form-control"
+                    <input type="text" readonly="readonly" class="selecttime optdialog-input common-text common-input form-control"
                            id="endtime">
                 </div>
                 <div id="ptype_box" class="split">
@@ -144,7 +144,7 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!--选择视频-->
-<div id="xzsp-modal-lg" class="modal fade xzsp-modal-lg" tabindex="-1" role="dialog">
+<div id="xzsp-modal-lg" class="modal fade xzsp-modal-lg" data-backdrop="static" tabindex="-1" role="dialog">
     <div class="modal-dialog xzsp-modal-dialog" role="document">
         <div class="modal-content common-modal-content xzsp-modal-content">
             <div class="modal-header common-modal-header">
@@ -190,7 +190,7 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!--删除确认对话框-->
-<div class="modal fade optdialog-delete-modal-sm" tabindex="-1" role="dialog">
+<div class="modal fade optdialog-delete-modal-sm" data-backdrop="static" tabindex="-1" role="dialog">
     <div class="modal-dialog optdialog-delete-modal-dialog" role="document">
         <div class="modal-content common-modal-content optdialog-delete-modal-content">
             <div class="modal-header common-modal-header">
@@ -217,7 +217,7 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!--复制模板对话框-->
-<div class="modal fade optdialog-copy-modal-sm" tabindex="-1" role="dialog">
+<div class="modal fade optdialog-copy-modal-sm" data-backdrop="static" tabindex="-1" role="dialog">
     <div class="modal-dialog optdialog-copy-modal-dialog" role="document">
         <div class="modal-content common-modal-content optdialog-copy-modal-content">
             <div class="modal-header common-modal-header">

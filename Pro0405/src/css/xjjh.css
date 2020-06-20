@@ -134,8 +134,16 @@ xjjh.html页面CSS
 #plan-main {
     height: 696px;
     overflow-y: auto;
+    padding-bottom: 2%;
 }
-
+.title-template{
+    display: none;
+    float: right;
+    width:27px;
+    height:26px;
+    background-image: url("../resource/icon/subscript.png");
+    background-size: 100% 100%;
+}
 .daybox {
     width: 14%;
     min-height: 60px;

@@ -67,5 +67,16 @@ var CustumTimeUtil = {
         ss = ss < 10 ? "0" + ss : ss;
         var str = hh + ":" + mm + ":" + ss;
         return str;
+    },
+    convertTimeIntToString2: function (value) {
+        var targetTime = new Date(value);
+        var hh = targetTime.getHours();
+        hh = hh < 10 ? "0" + hh : hh;
+        var mm = targetTime.getMinutes();
+        mm = mm < 10 ? "0" + mm : mm;
+        var ss = targetTime.getSeconds();
+        ss = ss < 10 ? "0" + ss : ss;
+        var str = hh + ":" + mm + ":" + ss;
+        return str;
     }
 }

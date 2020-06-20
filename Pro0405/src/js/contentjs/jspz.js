@@ -55,7 +55,7 @@ function bindEvent(domainlist) {
         });
         $("#jq-opt-text-modal-title").html("增加监区");
         $("#groupMod").val(1);
-        $('.jq-opt-modal-sm').modal("show");
+        $('.jq-opt-modal-sm').modal("show",{backdrop:'static',keyboard:false});
     });
     //编辑监区
     $("#jq-edit").bind("click", function () {
@@ -77,14 +77,14 @@ function bindEvent(domainlist) {
         $("#btn-jq-opt-confirm").bind("click", function () {
             modifyRoomGroup(2);
         });
-        $('.jq-opt-modal-sm').modal("show");
+        $('.jq-opt-modal-sm').modal("show",{backdrop:'static',keyboard:false});
     });
     //删除监区
     $("#jq-del").bind("click", function () {
         $("#groupMod").val(3);
         var $activeJq = $(".jq-jy-active");
         $('#jq_groupid').val($activeJq.attr("id").replace("jq-item-", ""));
-        $('.optdialog-delete-modal-sm').modal("show");
+        $('.optdialog-delete-modal-sm').modal("show",{backdrop:'static',keyboard:false});
         $('#btn-optdialog-delete-confirm').unbind();
         $('#btn-optdialog-delete-confirm').bind("click", function () {
             modifyRoomGroup(3);
@@ -93,6 +93,7 @@ function bindEvent(domainlist) {
     //增加监室
     $("#btn-jspz-add").bind("click", function () {
         addService();
+        $("#btn-jy-opt-confirm").unbind();
         $("#btn-jy-opt-confirm").bind("click", function () {
             modifyRoom(1);
         });
@@ -107,7 +108,7 @@ function bindEvent(domainlist) {
             query: {
                 'room.roomGroup.id': groupId,
                 'room.name': name,
-                pageSize: 10,
+                pageSize: 20,
                 pageNumber: 1
             }
         };
@@ -155,7 +156,7 @@ function changeSelectCss(obj) {
         query: {
             'room.roomGroup.id': groupId,
             'room.name': name,
-            pageSize: 10,
+            pageSize: 20,
             pageNumber: 1
         }
     };
@@ -215,8 +216,8 @@ function loadJsTalbe() {
         onLoadSuccess: function (data) {
         },
         onClickRow: function (row, obj) {
-            $(obj).parent().children().removeClass("selected");
-            $(obj).addClass("selected");
+            $(obj).parent().children().removeClass("row-selected");
+            $(obj).addClass("row-selected");
         },
         onDblClickRow: function (row, $element, field) {
             var index = $element.data('index');
@@ -234,7 +235,7 @@ function loadJsTalbe() {
         }, {
             field: 'number',
             title: '编号',
-            width: 50
+            width: 60
         }, {
             field: 'name',
             title: '名称',
@@ -245,11 +246,12 @@ function loadJsTalbe() {
             width: 200
         }, {
             field: 'mssIP',
-            title: '流媒体服务器'
+            title: '流媒体服务器',
+            width: 200
         }, {
             field: 'bctID',
             title: '广播终端编号',
-            width: 20
+            width: 100
         }, {
             field: 'status',
             title: '状态',
@@ -257,10 +259,10 @@ function loadJsTalbe() {
                 var text = value == 1 ? "没人" : "正常";
                 return text;
             },
-            width: 20
+            width: 60
         }, {
             title: '操作',
-            width: 300,
+            width: 100,
             formatter: function (value, row, index) {
                 var btnhtml = "<span onclick='updateService(" + index + ")' style='cursor: pointer' title='修改'><span class='icon-edit'></span><a  style=' vertical-align: super; color: white; font-size: 18px; text-decoration: none;'>编辑</a></span>";
                 btnhtml += "<span onclick='deleteService(" + index + ")' style='cursor: pointer;margin-left: 8px;' title='修改'><span class='icon-del'></span><a  style=' vertical-align: super; color: white; font-size: 18px; text-decoration: none;'>删除</a></span>";
@@ -318,7 +320,7 @@ function addService() {
     $('#mssIP').val("");
     $('#status0').prop("checked", true);
     $('#jy-opt-text-modal-title').html("增加监室");
-    $('.jy-opt-modal-sm').modal("show");
+    $('.jy-opt-modal-sm').modal("show",{backdrop:'static',keyboard:false});
 }
 
 //修改房间
@@ -339,11 +341,12 @@ function updateService(index) {
     } else {
         $('#status1').attr("checked", "checked");
     }
+    $("#btn-jy-opt-confirm").unbind();
     $("#btn-jy-opt-confirm").bind("click", function () {
         modifyRoom(2);
     });
     $('#jy-opt-text-modal-title').html("修改监室");
-    $('.jy-opt-modal-sm').modal("show");
+    $('.jy-opt-modal-sm').modal("show",{backdrop:'static',keyboard:false});
 }
 
 function modifyRoom(mod) {
@@ -356,6 +359,7 @@ function modifyRoom(mod) {
     var bctID = null;
     var mssIP = null;
     var status = 0;
+    var roomGroupId = null;
 
     if (mod == null) {
         mod = $("#roomDialog_Mod").val();
@@ -370,73 +374,75 @@ function modifyRoom(mod) {
         id = room != null ? room.id : 0;
     }
     number = $('#roomNumber').val();
-    if (number == "房间编号为数字且最长6位" || number == null || number == "") {
+    if (number == null || number == "") {
         CustumCommonUtil.showMsg("请输入房间编号!");
-        $("#roomNumber").focus();
-        return false;
+        return;
+    } else if (number.length > 6) {
+        CustumCommonUtil.showMsg("房间编号为数字且最长6位");
+        return;
     }
 
     if ($(".jq-jy-active").length == 1) {
         roomGroupId = $(".jq-jy-active").attr("id").replace("jq-item-", "");
     } else {
         CustumCommonUtil.showMsg("请先选择监区");
-        return false;
+        return;
     }
 
     name = $('#roomName').val();
-    if (name == "名称最多为6个字符" || name == null || name == "") {
+    if (name == null || name == "") {
         CustumCommonUtil.showMsg("请输入名称！");
-        $("#roomName").focus();
-        return false;
+        return;
+    } else if (name.length > 32) {
+        CustumCommonUtil.showMsg("名称最多为32个字符");
+        return;
     }
     powerIP = $("#powerIP").val();
-    var match = /^(\d+)\.(\d+)\.(\d+)\.(\d+)$/;
+    // var match = /^(\d+)\.(\d+)\.(\d+)\.(\d+)$/;
+    var match = /^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/;
     if (!match.test(powerIP)) {
         CustumCommonUtil.showMsg("电源控制器IP地址不正确!");
-        $("#powerIP").focus();
-        return false;
+        return;
     }
 
 
     powerPort = $("#powerPort").val();
     if (!(/^\+?[1-9][0-9]*$/.test(powerPort))) {
         CustumCommonUtil.showMsg("端口号只能是数字");
-        $("#powerPort").focus();
         return;
     }
     powerNumber = $("#powerNumber").val();
     if (!(/^\+?[1-9][0-9]*$/.test(powerNumber))) {
         CustumCommonUtil.showMsg("电源开关编号只能是数字");
-        $("#powerNumber").focus();
         return;
     }
 
     bctID = $('#bctID').val();
     if (!(/^\+?[1-9][0-9]*$/.test(bctID))) {
         CustumCommonUtil.showMsg("广播终端编号只能是数字!");
-        $("#bctID").focus();
-        return false;
+        return;
     }
 
     mssIP = $("#mssIP").val();
     if (mssIP != null && $.trim(mssIP).length > 0) {
-        var match = /^(\d+)\.(\d+)\.(\d+)\.(\d+)$/;
+        // var match = /^(\d+)\.(\d+)\.(\d+)\.(\d+)$/;
+        var match = /^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/;
         if (!match.test(mssIP)) {
             CustumCommonUtil.showMsg("流媒体服务器IP地址格式不正确!");
-            $("#mssIP").focus();
-            return false;
+            return;
         }
     }
     status = $("input[name='status']:checked").val();
     if (number != null && number != '' && isNaN(number)) {
         CustumCommonUtil.showMsg("请输入正确格式的编号!", "250px");
-        return false;
+        return;
     }
     if (roomGroupId == -1) {
         CustumCommonUtil.showMsg("请选择房间分组！");
-        return false;
+        return;
     }
     var param = {
+        roomGroupId: roomGroupId,
         id: id,
         number: number,
         name: name,
@@ -446,21 +452,22 @@ function modifyRoom(mod) {
         bctID: bctID,
         mssIP: mssIP,
         status: status,
+        mod: mod
     };
     var cbSuccess = function (res) {
         $("#table_jspz").bootstrapTable("refresh");
         $('.jy-opt-modal-sm').modal("hide");
     };
-    CommonRemote.xtpz.modifyRoom(param)
+    CommonRemote.xtpz.modifyRoom(param, cbSuccess)
 }
 
 //删除房间
-function deleteService(rowIndex) {
+function deleteService(index) {
     $("#table_jspz").bootstrapTable('uncheckAll');
     $("#table_jspz").bootstrapTable('check', index);
     var row = $("#table_jspz").bootstrapTable('getSelections')[0];
     var id = row.id;
-    $('.optdialog-delete-modal-sm').modal("show");
+    $('.optdialog-delete-modal-sm').modal("show",{backdrop:'static',keyboard:false});
     $('#btn-optdialog-delete-confirm').unbind();
     $('#btn-optdialog-delete-confirm').bind("click", function () {
         var cbSuccess = function (res) {

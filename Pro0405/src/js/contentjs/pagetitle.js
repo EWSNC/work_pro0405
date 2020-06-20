@@ -11,6 +11,15 @@ $(function () {
     } else {
         $("#SysTitle").html("默认系统名称");
     }
+    var titleBox = $("#SysTitle");
+    var str = titleBox.html();
+    var rfont;//重设字体大小为rfont
+    if (str.length <= 12) {
+        rfont = 30
+    } else {
+        rfont = 20
+    }
+    titleBox.css("font-size", rfont + "px");
 
     /*$(".user-icon ,.more-icon").click(function () {
         if ($("#opt_dropmenu").is(':hidden')) {
@@ -30,7 +39,7 @@ function bindEvent() {
         $("#oldPassword").val("");
         $("#password1").val("");
         $("#password2").val("");
-        $(".changepwd-modal-sm").modal("show");
+        $(".changepwd-modal-sm").modal("show",{backdrop:'static',keyboard:false});
     });
     $("#btn-changepwd-confirm").bind("click", function () {
         updatePassword();

@@ -45,7 +45,7 @@ function bindEvent() {
         clearAll();
         $("#common-modal-title-text").html("增加用户");
         $("#dlg_opType").val(1);//1表示添加
-        $(".optdialog-modal-sm").modal("show");
+        $(".optdialog-modal-sm").modal("show",{backdrop:'static',keyboard:false});
     });
     $("#btn-optdialog-confirm").bind("click", function () {
         dlg_submit();
@@ -90,8 +90,8 @@ function loadUserListTable() {
         onLoadSuccess: function (data) {
         },
         onClickRow: function (row, obj) {
-            $(obj).parent().children().removeClass("selected");
-            $(obj).addClass("selected");
+            $(obj).parent().children().removeClass("row-selected");
+            $(obj).addClass("row-selected");
         },
         onDblClickRow: function (row, $element, field) {
             var index = $element.data('index');
@@ -120,7 +120,7 @@ function loadUserListTable() {
             }
         }, {
             title: '操作',
-            width: 300,
+            width: 100,
             formatter: function (value, row, index) {
                 var btnhtml = "<span onclick='editUser(" + index + ")' style='cursor: pointer' title='修改'><span class='icon-edit'></span><a  style=' vertical-align: super; color: white; font-size: 18px; text-decoration: none;'>编辑</a></span>";
                 btnhtml += "<span onclick='deleteUser(" + index + ")' style='cursor: pointer;margin-left: 8px;' title='修改'><span class='icon-del'></span><a  style=' vertical-align: super; color: white; font-size: 18px; text-decoration: none;'>删除</a></span>";
@@ -232,7 +232,7 @@ function editUser(index) {
     $("#dlg_username").val(user.username);
     $("#dlg_opType").val(2);//opType:1增加、2修改
     $("#common-modal-title-text").html("编辑用户");
-    $(".optdialog-modal-sm").modal("show");
+    $(".optdialog-modal-sm").modal("show",{backdrop:'static',keyboard:false});
 }
 
 //向服务器删除指定行
@@ -246,7 +246,7 @@ function deleteUser(index) {
         return;
     }
     $("#noticemsg-delete-user").html("您确认想要删除帐户<br>[" + user.fullname + "]吗？");
-    $(".optdialog-delete-modal-sm").modal("show");
+    $(".optdialog-delete-modal-sm").modal("show",{backdrop:'static',keyboard:false});
 }
 
 function doDeleteUser() {

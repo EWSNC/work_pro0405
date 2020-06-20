@@ -66,6 +66,7 @@ xjmb.html页面CSS
 #plan-main {
     height: 696px;
     overflow-y: auto;
+    padding-bottom: 2%;
 }
 
 .daybox {
@@ -385,8 +386,9 @@ xjmb.html页面CSS
     text-align: left;
     line-height: 50px;
     display: inline-block;
-    width: 33%;
+    width: 28%;
     height: 50px;
+    margin-left: 5%;
 }
 
 .apply-active {

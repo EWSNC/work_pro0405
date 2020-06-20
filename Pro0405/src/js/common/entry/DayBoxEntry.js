@@ -5,6 +5,7 @@ function DayBoxEntry(options) {
 
     this.defaluthtmlstr1 = "<ul id='ul_" + options.weekulid + "' class=\"daybox\">\n" +
         "                <li class=\"daytitle\">\n" +
+        "                    <div class='title-template'></div>"+
         "                    <div class=\"dayname\"><span class=\"dayname-text\">" + options.weekalias + "</span></div>\n" +
         "                    <div class=\"daynum\">" + options.resultDayTime + "</div>\n" +
         "                </li>\n" +
@@ -27,6 +28,7 @@ DayBoxEntry.prototype.init1 = function (dayPlanObj, weekObj, isShowModal, weekin
     var weekday = weekindex * 1 + 1;
     var selector = "#ul_" + dayid;
     var mode = dayPlanObj.mode;
+    $("#plan-main").append(this.defaluthtmlstr1);
     if (mode == 1 || mode == 4) {
         //1表示应用 模板，4表示与监区保持一致
         var t = dayPlanObj.programTemplate;
@@ -36,17 +38,12 @@ DayBoxEntry.prototype.init1 = function (dayPlanObj, weekObj, isShowModal, weekin
         } else {
             title = "执行监区节目计划";
         }
-        /*$($id + " > .title")
-            .removeClass("title-normal")
-            .addClass("title-template")
-            .attr("title", title);*/
+        $(selector).find(".daytitle").find(".title-template").show();
+        $(selector).find(".daytitle").attr("title", title);
     } else {
-        /*$($id + " > .title")
-            .removeClass("title-template")
-            .addClass("title-normal")
-            .attr("title", "");*/
+
     }
-    $("#plan-main").append(this.defaluthtmlstr1);
+
     $(selector).find(".daytitle").attr("day", daynum);
     $(selector).find(".daytitle").attr("mode", mode);
     $(selector).find(".daytitle").attr("weekday", weekday);

@@ -3,6 +3,7 @@
     height: 719px;
     background: rgba(7, 46, 116, 1);
     border: 1px solid rgba(102, 178, 255, 1);
+    padding-bottom: 2%;
 }
 
 .bootstrap-table > .fixed-table-container {

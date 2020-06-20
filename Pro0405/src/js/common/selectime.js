@@ -109,6 +109,13 @@ $(function () {
         } else if ($(this).hasClass("o")) {
             //console.log($(this).parents(".select_time").attr("data"));
             $("#" + $(this).parents(".select_time").attr("data")).val($("#select_time_hms input.h").val() + ":" + $("#select_time_hms input.m").val() + ":" + $("#select_time_hms input.s").val());
+            if($(this).parents(".select_time").attr("data") == "starttime"){
+                var starttime = new Date();
+                starttime.setHours($("#select_time_hms input.h").val());
+                starttime.setMinutes($("#select_time_hms input.m").val());
+                starttime.setSeconds($("#select_time_hms input.s").val());
+                $('#endtime').val(CustumTimeUtil.convertTimeIntToString2(starttime.getTime() + 30*60*1000));
+            }
             $(".select_time").hide();
             $(".select_time .box .hours").hide();
         }

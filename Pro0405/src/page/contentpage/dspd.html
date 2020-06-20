@@ -42,7 +42,7 @@
                 <option class="btn-text-3" value="3">宣讲</option>
                 <option class="btn-text-3" value="4">DVD</option>
             </select>
-            <input id="ChannelName" placeholder="输入文字" type="text"
+            <input id="ChannelName" placeholder="输入名称" type="text"
                    class="form-control searchInput common-input common-text">
         </div>
     </div>
@@ -50,7 +50,7 @@
     </table>
 </div>
 <!--增加  编辑   通用对话框-->
-<div class="modal fade ds-opt-modal-sm" tabindex="-1" role="dialog">
+<div class="modal fade ds-opt-modal-sm" data-backdrop="static" tabindex="-1" role="dialog">
     <div class="modal-dialog ds-opt-modal-dialog" role="document">
         <div class="modal-content common-modal-content ds-opt-modal-content">
             <div class="modal-header common-modal-header">
@@ -73,8 +73,8 @@
                 <div id="Name_box" class="split">
                     <label class="text-modal-body-1">名称&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     <input type="text" class="common-input common-text ds-optdialog-input optdialog-input form-control"
-                           placeholder="名称最多为6个字符"
-                           maxlength="6"
+                           placeholder="名称最多为64个字符"
+                           maxlength="64"
                            id="Dialog-Name">
                 </div>
                 <div id="URL_box" class="split">
@@ -111,7 +111,7 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!--删除确认对话框-->
-<div class="modal fade optdialog-delete-modal-sm" tabindex="-1" role="dialog">
+<div class="modal fade optdialog-delete-modal-sm" data-backdrop="static" tabindex="-1" role="dialog">
     <div class="modal-dialog optdialog-delete-modal-dialog" role="document">
         <div class="modal-content common-modal-content optdialog-delete-modal-content">
             <div class="modal-header common-modal-header">

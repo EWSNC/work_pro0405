@@ -67,10 +67,11 @@ PlanEntry.prototype.init1 = function (obj, isShowModal) {
             groupId = "";
             $("#roomId").val($checkedObj.attr("id").replace("jy-item", ""));
         }
+        $("#starttime").val(self_.options.starttime);
         $("#day").val($(this).parent().parent().parent().parent().find(".daytitle").attr("day"));
         $("#opType").val("1");//操作类型为1 代表添加
         $("#common-modal-title-text").html("添加");
-        $(".optdialog-modal-sm").modal("show");
+        $(".optdialog-modal-sm").modal("show",{backdrop:'static',keyboard:false});
     });
     //编辑
     var editSelector = "#icon-edit-" + this.index;
@@ -88,7 +89,7 @@ PlanEntry.prototype.init1 = function (obj, isShowModal) {
         $("#day").val($(this).parent().parent().parent().parent().find(".daytitle").attr("day"));
         $("#opType").val("3");//操作类型为3 代表编辑
         $("#common-modal-title-text").html("编辑");
-        $(".optdialog-modal-sm").modal("show");
+        $(".optdialog-modal-sm").modal("show",{backdrop:'static',keyboard:false});
     });
     //删除
     var deleteSelector = "#icon-del-" + this.index;
@@ -113,7 +114,7 @@ PlanEntry.prototype.init1 = function (obj, isShowModal) {
                 CommonRemote.xjya.deleteProgram(groupId, roomId, day, programIndex, cbSuccess);
 
             });
-            $(".optdialog-delete-modal-sm").modal("show");
+            $(".optdialog-delete-modal-sm").modal("show",{backdrop:'static',keyboard:false});
         }
     });
     //复制
@@ -158,11 +159,12 @@ PlanEntry.prototype.init2 = function (obj, isShowModal) {
     $(addSelector).bind("click", function () {
         clearDlgData();
         var $checkedObj = $(".tmplt-active");
+        $("#starttime").val(self_.options.starttime);
         $("#templateId").val($checkedObj.attr("templateid"));
         $("#weekday").val($(this).parent().parent().parent().parent().find(".daytitle").attr("day"));
         $("#opType").val("1");//操作类型为1 代表添加
         $("#common-modal-title-text").html("添加");
-        $(".optdialog-modal-sm").modal("show");
+        $(".optdialog-modal-sm").modal("show",{backdrop:'static',keyboard:false});
     });
     //编辑
     var editSelector = "#icon-edit-" + this.index;
@@ -174,7 +176,7 @@ PlanEntry.prototype.init2 = function (obj, isShowModal) {
         $("#weekday").val($(this).parent().parent().parent().parent().find(".daytitle").attr("day"));
         $("#opType").val("3");//操作类型为3 代表编辑
         $("#common-modal-title-text").html("编辑");
-        $(".optdialog-modal-sm").modal("show");
+        $(".optdialog-modal-sm").modal("show",{backdrop:'static',keyboard:false});
     });
     //删除
     var deleteSelector = "#icon-del-" + this.index;
@@ -192,7 +194,7 @@ PlanEntry.prototype.init2 = function (obj, isShowModal) {
             CommonRemote.xjya.deleteTemplateProgram(templateid, day, programIndex, cbSuccess);
             $(".optdialog-delete-modal-sm").modal("hide");
         });
-        $(".optdialog-delete-modal-sm").modal("show");
+        $(".optdialog-delete-modal-sm").modal("show",{backdrop:'static',keyboard:false});
     });
     //复制
     var copySelector = "#icon-copy-" + this.index;

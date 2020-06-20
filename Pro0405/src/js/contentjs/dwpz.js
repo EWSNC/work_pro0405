@@ -12,7 +12,7 @@ function bindEvent() {
         clearAll();
         $("#dwpz-opt-text-modal-title").html("增加单位信息");
         $("#opType").val(1);//1表示添加
-        $(".dwpz-opt-modal-sm").modal("show");
+        $(".dwpz-opt-modal-sm").modal("show",{backdrop:'static',keyboard:false});
     });
     //增加 编辑 对话框确认按钮
     $("#btn-dwpz-opt-confirm").bind("click", function () {
@@ -31,7 +31,7 @@ function bindEvent() {
             query: {
                 groupId: 0,
                 "domain.name": name,
-                pageSize: 10,
+                pageSize: 20,
                 pageNumber: 1
             }
         };
@@ -74,8 +74,8 @@ function loadDomainListTable() {
         onLoadSuccess: function (data) {
         },
         onClickRow: function (row, obj) {
-            $(obj).parent().children().removeClass("selected");
-            $(obj).addClass("selected");
+            $(obj).parent().children().removeClass("row-selected");
+            $(obj).addClass("row-selected");
         },
         onDblClickRow: function (row, $element, field) {
             var index = $element.data('index');
@@ -98,11 +98,11 @@ function loadDomainListTable() {
             visible: false
         }, {
             field: 'name',
-            width: 1600,
+            width: 500,
             title: '名称'
         }, {
             title: '操作',
-            width: 300,
+            width: 100,
             formatter: function (value, row, index) {
                 var btnhtml = "<span onclick='editDomain(" + index + ")' style='cursor: pointer' title='修改'><span class='icon-edit'></span><a  style=' vertical-align: super; color: white; font-size: 18px; text-decoration: none;'>编辑</a></span>";
                 btnhtml += "<span onclick='deleteDomain(" + index + ")' style='cursor: pointer;margin-left: 8px;' title='修改'><span class='icon-del'></span><a  style=' vertical-align: super; color: white; font-size: 18px; text-decoration: none;'>删除</a></span>";
@@ -152,7 +152,7 @@ function editDomain(index) {
     $("#domainId").val(domain.id);
     $("#domainName").val(domain.name);
     $("#dwpz-opt-text-modal-title").html("编辑单位信息");
-    $(".dwpz-opt-modal-sm").modal("show");
+    $(".dwpz-opt-modal-sm").modal("show",{backdrop:'static',keyboard:false});
 }
 
 //删除
@@ -162,7 +162,7 @@ function deleteDomain(index) {
     var domain = $("#table_dwpz").bootstrapTable('getSelections')[0];
 
     $("#noticemsg-delete-domain").html("您确认想要删除记录<br>[" + domain.name + "]吗？");
-    $(".optdialog-delete-modal-sm").modal("show");
+    $(".optdialog-delete-modal-sm").modal("show",{backdrop:'static',keyboard:false});
 }
 
 /*

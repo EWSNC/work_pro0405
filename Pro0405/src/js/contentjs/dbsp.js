@@ -74,7 +74,7 @@ function bindEvent(domainlist) {
             modifyvodGroup(1);
         });
         $("#vgr-opt-text-modal-title").html("增加分组");
-        $('.vgr-opt-modal-sm').modal("show");
+        $('.vgr-opt-modal-sm').modal("show",{backdrop:'static',keyboard:false});
     });
     //编辑视频分组
     $("#vgr-edit").bind("click", function () {
@@ -89,7 +89,7 @@ function bindEvent(domainlist) {
             modifyvodGroup(2);
         });
         $("#vgr-opt-text-modal-title").html("编辑分组");
-        $('.vgr-opt-modal-sm').modal("show");
+        $('.vgr-opt-modal-sm').modal("show",{backdrop:'static',keyboard:false});
     });
     //删除视频分组
     $("#vgr-del").bind("click", function () {
@@ -100,7 +100,7 @@ function bindEvent(domainlist) {
         $('#btn-optdialog-delete-confirm').bind("click", function () {
             modifyvodGroup(3);
         });
-        $('.optdialog-delete-modal-sm').modal("show");
+        $('.optdialog-delete-modal-sm').modal("show",{backdrop:'static',keyboard:false});
     });
     //上传视频
     $("#btn-vod-add").bind("click", function () {
@@ -121,7 +121,7 @@ function bindEvent(domainlist) {
             query: {
                 'groupId': vgroupId,
                 'name': name,
-                pageSize: 10,
+                pageSize: 20,
                 pageNumber: 1
             }
         };
@@ -137,7 +137,7 @@ function initvodresourcegroup() {
     var vodresourcegrouplist = CommonRemote.getVodResourceGroup();
     $("#menu-bot").empty();
     if (vodresourcegrouplist.length > 0) {
-        for (let i in vodresourcegrouplist) {
+        for (var i = 0; i < vodresourcegrouplist.length; i++) {
             var vgroupobj = new VideoEntry(vodresourcegrouplist[i]);
             vgroupobj.init();
             if (0 == i) {
@@ -177,7 +177,7 @@ function changeSelectCss(obj) {
         query: {
             'groupId': vgroupId,
             'name': name,
-            pageSize: 10,
+            pageSize: 20,
             pageNumber: 1
         }
     };
@@ -240,8 +240,8 @@ function loadVodResourceTalbe() {
         onLoadSuccess: function (data) {
         },
         onClickRow: function (row, obj) {
-            $(obj).parent().children().removeClass("selected");
-            $(obj).addClass("selected");
+            $(obj).parent().children().removeClass("row-selected");
+            $(obj).addClass("row-selected");
         },
         onDblClickRow: function (row, $element, field) {
             showDlgResourceDetail(row);
@@ -295,7 +295,7 @@ function loadVodResourceTalbe() {
             width: 200
         }, {
             title: '操作',
-            width: 300,
+            width: 100,
             formatter: function (value, row, index) {
                 var btnhtml = "<span onclick='updateData(" + index + ")' style='cursor: pointer' title='修改'><span class='icon-edit'></span><a  style=' vertical-align: super; color: white; font-size: 18px; text-decoration: none;'>编辑</a></span>";
                 btnhtml += "<span onclick='deleteData(" + index + ")' style='cursor: pointer;margin-left: 8px;' title='修改'><span class='icon-del'></span><a  style=' vertical-align: super; color: white; font-size: 18px; text-decoration: none;'>删除</a></span>";
@@ -352,7 +352,7 @@ function addVodResource() {
     $("#upfile-modal-title-text").html("上传视频");
     $(".upfile-modal-content").removeClass("upfile-modal-content-short").addClass("upfile-modal-content-normal");
     $(".upfile-modal-body").removeClass("upfile-modal-body-short").addClass("upfile-modal-body-normal");
-    $(".upfile-modal-sm").modal("show");
+    $(".upfile-modal-sm").modal("show",{backdrop:'static',keyboard:false});
 }
 
 //上传视频
@@ -392,7 +392,7 @@ function updateData(index) {
     $("#upfile-modal-title-text").html("修改视频描述");
     $(".upfile-modal-content").removeClass("upfile-modal-content-normal").addClass("upfile-modal-content-short");
     $(".upfile-modal-body").removeClass("upfile-modal-body-normal").addClass("upfile-modal-body-short");
-    $(".upfile-modal-sm").modal("show");
+    $(".upfile-modal-sm").modal("show",{backdrop:'static',keyboard:false});
 }
 
 //修改数据
@@ -442,7 +442,7 @@ function showDlgResourceDetail(rowData) {
     $("#dlgResourceDetail_urls").html(urls);
     $("#dlgResourceDetail_createTime").html(rowData.createTimeString);
     $("#common-modal-title-text").html("详情");
-    $('.optdialog-modal-sm').modal("show");
+    $('.optdialog-modal-sm').modal("show",{backdrop:'static',keyboard:false});
 }
 
 //删除视频
@@ -450,7 +450,7 @@ function deleteData(index) {
     $("#table_dbsp").bootstrapTable('uncheckAll');
     $("#table_dbsp").bootstrapTable('check', index);
     var id = row.id;
-    $('.optdialog-delete-modal-sm').modal("show");
+    $('.optdialog-delete-modal-sm').modal("show",{backdrop:'static',keyboard:false});
     $('#btn-optdialog-delete-confirm').unbind();
     $('#btn-optdialog-delete-confirm').bind("click", function () {
         var cbSuccess = function (res) {

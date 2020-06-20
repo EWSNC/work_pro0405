@@ -20,6 +20,7 @@
     <script src="../../js/common/selectime.js"></script>
     <script src="../../layui/layui.all.js"></script>
     <script src="../../js/utils/commonutil.js"></script>
+    <script src="../../js/utils/timeutils.js"></script>
     <script src="../../js/common/remote/CommonRemote.js"></script>
     <script src="../../js/contentjs/xjkz.js"></script>
     <script src="../../js/common/entry/JyEntry.js"></script>
@@ -88,7 +89,7 @@
 
 </div>
 <!--设置音量-->
-<div class="modal fade volume-modal-sm" tabindex="-1" role="dialog">
+<div class="modal fade volume-modal-sm" data-backdrop="static" tabindex="-1" role="dialog">
     <div class="modal-dialog volume-modal-dialog" role="document">
         <div class="modal-content common-modal-content volume-modal-content">
             <div class="modal-header common-modal-header">
@@ -117,7 +118,7 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!--发布公告-->
-<div class="modal fade gonggao-modal-sm" tabindex="-1" role="dialog">
+<div class="modal fade gonggao-modal-sm" data-backdrop="static" tabindex="-1" role="dialog">
     <div class="modal-dialog gonggao-modal-dialog" role="document">
         <div class="modal-content common-modal-content gonggao-modal-content">
             <div class="modal-header common-modal-header">
@@ -134,6 +135,7 @@
                 <br>
                 <div><span class="text-modal-body-1">显示时长</span><input id="gonggaotime" type="text"
                                                                        onkeyup="this.value=this.value.replace(/\D/g,'')"
+                                                                       value="5"
                                                                        class="form-control showtime-input common-text common-input"><span
                         class="text-modal-body-1">分钟</span>
                 </div>
@@ -150,7 +152,7 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!--插播-->
-<div class="modal fade chabo-modal-sm" tabindex="-1" role="dialog">
+<div class="modal fade chabo-modal-sm" data-backdrop="static" tabindex="-1" role="dialog">
     <div class="modal-dialog chabo-modal-dialog" role="document">
         <div class="modal-content common-modal-content chabo-modal-content">
             <div class="modal-header common-modal-header">
@@ -179,7 +181,7 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!--插播直播-->
-<div id="chabo-zhibo-modal-lg" class="modal fade chabo-zhibo-modal-lg" tabindex="-1" role="dialog">
+<div id="chabo-zhibo-modal-lg" class="modal fade chabo-zhibo-modal-lg" data-backdrop="static" tabindex="-1" role="dialog">
     <div class="modal-dialog chabo-zhibo-modal-dialog" role="document">
         <div class="modal-content common-modal-content chabo-zhibo-modal-content">
             <div class="modal-header common-modal-header">
@@ -210,7 +212,7 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!--插播点播 顺序播放-->
-<div id="chabo-dianbo-s1-modal-sm" class="modal fade chabo-dianbo-s1-modal-sm" tabindex="-1" role="dialog">
+<div id="chabo-dianbo-s1-modal-sm" class="modal fade chabo-dianbo-s1-modal-sm" data-backdrop="static" tabindex="-1" role="dialog">
     <div class="modal-dialog chabo-dianbo-s1-modal-dialog" role="document">
         <div class="modal-content chabo-dianbo-s1-modal-content">
             <div class="modal-header common-modal-header">
@@ -233,7 +235,7 @@
                 </div>
                 <div class="select-split changearea playtype-0">
                     <span class="text-modal-body-1">点播列表</span>
-                    <select id="vodPlayModel" class="selectpicker btn-text-2">
+                    <select id="vodPlayModel" title="" class="selectpicker btn-text-2">
                     </select>
                 </div>
                 <div class="select-split changearea playtype-2" style="display: none">
@@ -260,7 +262,7 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!--插播点播 选择视频-->
-<div id="xzsp-modal-lg" class="modal fade xzsp-modal-lg" tabindex="-1" role="dialog">
+<div id="xzsp-modal-lg" class="modal fade xzsp-modal-lg" data-backdrop="static" tabindex="-1" role="dialog">
     <div class="modal-dialog xzsp-modal-dialog" role="document">
         <div class="modal-content common-modal-content xzsp-modal-content">
             <div class="modal-header common-modal-header">
@@ -305,7 +307,7 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!--预案控制-->
-<div id="yakz-modal-sm" class="modal fade yakz-modal-sm" tabindex="-1" role="dialog">
+<div id="yakz-modal-sm" class="modal fade yakz-modal-sm" data-backdrop="static" tabindex="-1" role="dialog">
     <div class="modal-dialog yakz-modal-dialog" role="document">
         <div class="modal-content common-modal-content yakz-modal-content">
             <div class="modal-header common-modal-header">

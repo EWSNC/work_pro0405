@@ -188,7 +188,8 @@ body {
     width: 40px;
     height: 40px;
     display: inline-block;
-    background-image: url("../../resource/icon/dibbling.png");
+
+    background-image: url("../../resource/icon/live_broadcast.png");
 }
 
 /*  插播 直播  */
@@ -196,7 +197,7 @@ body {
     width: 40px;
     height: 40px;
     display: inline-block;
-    background-image: url("../../resource/icon/live_broadcast.png");
+    background-image: url("../../resource/icon/dibbling.png");
 }
 
 .jq-tip {
@@ -564,8 +565,9 @@ body {
 
 /* 输入框 样式*/
 .common-input {
-    background: rgba(7, 46, 116, 1);
-    border: 1px solid rgba(102, 178, 255, 1);
+    background: rgba(7, 46, 116, 1)!important;
+    border: 1px solid rgba(102, 178, 255, 1)!important;
+
 }
 
 .optdialog-input {
@@ -866,7 +868,11 @@ input[type=radio]:checked::after {
     background-color: #072E74;
 }
 
-.selected {
+/*.selected {
+    background-color: rgba(14, 128, 216, 1) !important;
+}*/
+
+.row-selected {
     background-color: rgba(14, 128, 216, 1) !important;
 }
 
@@ -889,20 +895,17 @@ input[type=radio]:checked::after {
     padding-bottom: 0 !important;
 }
 
+.bootstrap-table .fixed-table-container.fixed-height:not(.has-footer) {
+    border: 0 !important;
+}
+
 .bootstrap-table > .fixed-table-container > .fixed-table-header thead {
     background-color: #007EFF;
 }
 
-.bootstrap-table > .fixed-table-container > .fixed-table-body > table > thead {
-    background-color: #007EFF !important;
-}
 
 .bootstrap-table > .fixed-table-container > .fixed-table-body > .fixed-table-border {
     height: 0 !important;
-}
-
-.bootstrap-table .fixed-table-container.fixed-height:not(.has-footer) {
-    border: 0 !important;
 }
 
 .bootstrap-table > .fixed-table-container > .fixed-table-body {
@@ -911,14 +914,30 @@ input[type=radio]:checked::after {
     font-size: 18px;
 }
 
-.bootstrap-table > .fixed-table-container > .fixed-table-body > table > thead, table > thead > tr, table > thead > tr > th, table > tbody, table > tbody > tr, table > tbody > tr > td {
-    border: 1px solid rgba(102, 178, 255, 1) !important;
-    color: white !important;
+.bootstrap-table > .fixed-table-container > .fixed-table-body > table {
+    table-layout: fixed;
+}
+
+.bootstrap-table > .fixed-table-container > .fixed-table-body > table > thead {
+    background-color: #007EFF !important;
 }
 
 .bootstrap-table > .fixed-table-container > .fixed-table-body > table > tbody :hover {
     background-color: rgba(14, 128, 216, 1) !important;
 }
+
+.bootstrap-table > .fixed-table-container > .fixed-table-body > table > tbody > tr > td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.bootstrap-table > .fixed-table-container > .fixed-table-body > table > thead, table > thead > tr, table > thead > tr > th, table > tbody, table > tbody > tr, table > tbody > tr > td {
+    border: 1px solid rgba(102, 178, 255, 1) !important;
+    color: white !important;
+}
+
 
 /*
 滚动条的设置
@@ -936,7 +955,7 @@ input[type=radio]:checked::after {
 .menu-bot, #plan-main,
 .body-left-list,
 .bootstrap-table > .fixed-table-container > .fixed-table-body {
-    scrollbar-arrow-color: #072E74 !important; /**//*三角箭头的颜色*/
+    scrollbar-arrow-color: #0E80D8 !important; /**//*三角箭头的颜色*/
     scrollbar-face-color: #0E80D8 !important; /**//*立体滚动条的颜色*/
     scrollbar-3dlight-color: #072E74 !important; /**//*立体滚动条亮边的颜色*/
     scrollbar-highlight-color: #072E74 !important; /**//*滚动条空白部分的颜色*/

@@ -160,13 +160,13 @@ function convertRoomUIStatus(room) {
         var powerDown = false;
         if (mcStatus.powerStatusValue == 1) {
             tips += "\n    电源：开";
-            cls = CustumCommonUtil.manualControlRoomStatus[4].CSSname;
-            statusTxt = CustumCommonUtil.manualControlRoomStatus[4].Alias;
+            //cls = CustumCommonUtil.manualControlRoomStatus[4].CSSname;
+            //statusTxt = CustumCommonUtil.manualControlRoomStatus[4].Alias;
         } else if (mcStatus.powerStatusValue == -1) {
             tips += "\n    电源：关";
             powerDown = true;
-            cls = CustumCommonUtil.manualControlRoomStatus[5].CSSname;
-            statusTxt = CustumCommonUtil.manualControlRoomStatus[5].Alias;
+            //cls = CustumCommonUtil.manualControlRoomStatus[5].CSSname;
+            //statusTxt = CustumCommonUtil.manualControlRoomStatus[5].Alias;
         }
 
 

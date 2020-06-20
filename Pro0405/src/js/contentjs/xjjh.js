@@ -21,13 +21,7 @@ function initpage() {
         autoclose: true,//选中自动关闭
         todayBtn: true//显示今日按钮
     });
-    /*$('#starttime,#endtime').datetimepicker({
-        forceParse: 0,//设置为0，时间不会跳转1899，会显示当前时间。
-        language: 'zh-CN',//显示中文
-        format: 'hh:ii:ss',//显示格式
-        autoclose: true,//选中自动关闭
-        todayBtn: true//显示今日按钮
-    });*/
+
     $("#daytime").datetimepicker("setDate", new Date());  //设置显示默认当天的时间
     dayString = $("#daytime").val();
     //$("#starttime").datetimepicker("setDate", new Date(dayString));  //设置显示默认选中日期的时间
@@ -116,7 +110,7 @@ function bindEvent(domainlist, channelList, vodresourcegrouplist, broadcastResou
         var vodresourcegrouplist = CommonRemote.getVodResourceGroup();
         initVodResourceGroup(vodresourcegrouplist);
         initVodResource();
-        $("#xzsp-modal-lg").modal("show")
+        $("#xzsp-modal-lg").modal("show",{backdrop:'static',keyboard:false})
     });
     //点击搜索按钮时
     $("#searchbtn").bind("click", function () {
@@ -126,7 +120,7 @@ function bindEvent(domainlist, channelList, vodresourcegrouplist, broadcastResou
             query: {
                 groupId: 0,
                 name: name,
-                pageSize: 10,
+                pageSize: 20,
                 pageNumber: 1
             }
         };
@@ -206,7 +200,7 @@ function initVodResourceGroup(vodresourcegrouplist) {
             query: {
                 groupId: groupsid,
                 name: "",
-                pageSize: 10,
+                pageSize: 20,
                 pageNumber: 1
             }
         };
@@ -259,8 +253,8 @@ function initVodResource() {
         onLoadSuccess: function (data) {
         },
         onClickRow: function (row, obj) {
-            $(obj).parent().children().removeClass("selected");
-            $(obj).addClass("selected");
+            $(obj).parent().children().removeClass("row-selected");
+            $(obj).addClass("row-selected");
             $("#vodResourceId").val(row.id);
             $("#vodResourceName").val(row.name);
             $("#vodResourceName_alias").val(row.name);
@@ -584,5 +578,5 @@ function showCopyProgramModal(groupId, roomId, day, weekday, programIndex) {
         };
         CommonRemote.xjya.submitCopyProgram(groupId, roomId, day, programIndex, sourceWeekday, targetWeekdays, cbSuccess);
     });
-    $(".optdialog-copy-modal-sm").modal("show");
+    $(".optdialog-copy-modal-sm").modal("show",{backdrop:'static',keyboard:false});
 }

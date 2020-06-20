@@ -1,21 +1,3 @@
-//首页头部  登录下拉隐藏
-$(document).bind('click', function (e) {
-    var e = e || window.event; //浏览器兼容性
-    var elem = e.target || e.srcElement;
-    while (elem) { //循环判断至跟节点，防止点击的是div子元素
-        if (elem.className && elem.className == 'loginmsg') {
-            $("#opt_dropmenu").fadeIn(100);
-            return;
-        }
-        if (elem.className && elem.className == 'dropmenu') {
-            $("#opt_dropmenu", window.top.document).fadeOut(100);
-            return;
-        }
-        elem = elem.parentNode;
-    }
-    $("#opt_dropmenu", window.top.document).fadeOut(100); //点击的不是div或其子元素
-});
-
 var CustumCommonUtil = {
     //基路径
     basePath: "http://47.100.77.209/es-s100-web",

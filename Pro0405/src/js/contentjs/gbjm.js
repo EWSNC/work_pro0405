@@ -62,7 +62,7 @@ function bindEvent() {
         $("#upfile-modal-title-text").html("上传");
         $(".upfile-modal-content").removeClass("upfile-modal-content-short").addClass("upfile-modal-content-normal");
         $(".upfile-modal-body").removeClass("upfile-modal-body-short").addClass("upfile-modal-body-normal");
-        $(".upfile-modal-sm").modal("show");
+        $(".upfile-modal-sm").modal("show",{backdrop:'static',keyboard:false});
     });
 
     $("#btn-optdialog-delete-confirm").bind("click", function () {
@@ -105,8 +105,8 @@ function loadbroadcastresourceTable() {
         onLoadSuccess: function (data) {
         },
         onClickRow: function (row, obj) {
-            $(obj).parent().children().removeClass("selected");
-            $(obj).addClass("selected");
+            $(obj).parent().children().removeClass("row-selected");
+            $(obj).addClass("row-selected");
         },
         onDblClickRow: function (row, $element, field) {
             var index = $element.data('index');
@@ -132,7 +132,7 @@ function loadbroadcastresourceTable() {
             title: '上传时间'
         }, {
             title: '操作',
-            width: 300,
+            width: 100,
             formatter: function (value, row, index) {
                 var btnhtml = "<span onclick='editData(" + index + ")' style='cursor: pointer' title='修改'><span class='icon-edit'></span><a  style=' vertical-align: super; color: white; font-size: 18px; text-decoration: none;'>编辑</a></span>";
                 btnhtml += "<span onclick='deleteData(" + index + ")' style='cursor: pointer;margin-left: 8px;' title='修改'><span class='icon-del'></span><a  style=' vertical-align: super; color: white; font-size: 18px; text-decoration: none;'>删除</a></span>";
@@ -172,6 +172,7 @@ function dlg_submit() {
         var cbSuccess = function (res) {
             $("#table_gbjm").bootstrapTable("refresh");
             $(".upfile-modal-sm").modal("hide");
+            clearAll();
         };
         CommonRemote.xtpz.request_Add_broadcastresource(filename, cbSuccess);
     } else if (opType == 2) {
@@ -179,6 +180,7 @@ function dlg_submit() {
         var cbSuccess = function (res) {
             $("#table_gbjm").bootstrapTable("refresh");
             $(".upfile-modal-sm").modal("hide");
+            clearAll();
         };
         CommonRemote.xtpz.request_Update_broadcastresource_name(id, filename, cbSuccess);
     }
@@ -203,13 +205,13 @@ function editData(index) {
         dlg_submit();
     });
     $("#upfile-modal-title-text").html("编辑");
-    $(".upfile-modal-sm").modal("show");
+    $(".upfile-modal-sm").modal("show",{backdrop:'static',keyboard:false});
 }
 
 function deleteData(index) {
     $("#table_gbjm").bootstrapTable('uncheckAll');
     $("#table_gbjm").bootstrapTable('check', index);
-    $(".optdialog-delete-modal-sm").modal("show");
+    $(".optdialog-delete-modal-sm").modal("show",{backdrop:'static',keyboard:false});
 }
 
 function doDeleteData() {
