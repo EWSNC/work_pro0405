@@ -18,9 +18,9 @@ $(document).bind('click', function (e) {
 
 var CustumCommonUtil = {
     //基路径
-    basePath: "",
+    basePath: "http://47.100.77.209/es-s100-web",
     //ctrl.js中的基路径
-    basectrlPath: "",
+    basectrlPath: "http://47.100.77.209/es-s100-web/ctrl/",
     //监室状态定义
     manualControlRoomStatus: [
         {//0

@@ -89,7 +89,7 @@ function startShowTime() {
     CustumTimeUtil.showTime("#timemsg");
     CommonRemote.getServerTime();
     window.setInterval("autoShowTime()", 1000); //时间秒表
-    window.setInterval("getServerTime()", 60 * 1000); //每隔60秒重新向服务器同步一次时间
+    window.setInterval("CommonRemote.getServerTime()", 60 * 1000); //每隔60秒重新向服务器同步一次时间
 };
 
 //自动显示时间
