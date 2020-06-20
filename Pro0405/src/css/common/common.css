@@ -949,6 +949,7 @@ input[type=radio]:checked::after {
 6. ::-webkit-scrollbar-corner 边角
 7. ::-webkit-resizer 定义右下角拖动块的样式
 */
+#gonggaoConten,
 #dlgResourceDetail_urls,
 #jy-main,
 .jq-jy-area,
@@ -964,7 +965,7 @@ input[type=radio]:checked::after {
     scrollbar-track-color: #072E74 !important; /**//*立体滚动条背景颜色*/
     scrollbar-base-color: #0E80D8 !important; /**//*滚动条的基本颜色*/
 }
-
+#gonggaoConten::-webkit-scrollbar,
 #dlgResourceDetail_urls::-webkit-scrollbar,
 #jy-main::-webkit-scrollbar,
 .jq-jy-area::-webkit-scrollbar,
@@ -974,7 +975,7 @@ input[type=radio]:checked::after {
 .bootstrap-table > .fixed-table-container > .fixed-table-body::-webkit-scrollbar {
     border: 0;
 }
-
+#gonggaoConten::-webkit-scrollbar-thumb,
 #dlgResourceDetail_urls::-webkit-scrollbar-thumb,
 #jy-main::-webkit-scrollbar-thumb,
 .jq-jy-area::-webkit-scrollbar-thumb,
@@ -984,7 +985,7 @@ input[type=radio]:checked::after {
 .bootstrap-table > .fixed-table-container > .fixed-table-body::-webkit-scrollbar-thumb {
     background: #0E80D8;
 }
-
+#gonggaoConten::-webkit-scrollbar-track,
 #dlgResourceDetail_urls::-webkit-scrollbar-track,
 #jy-main::-webkit-scrollbar-track,
 .jq-jy-area::-webkit-scrollbar-track,

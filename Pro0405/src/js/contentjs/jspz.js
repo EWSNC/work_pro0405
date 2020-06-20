@@ -471,6 +471,7 @@ function deleteService(index) {
     $('#btn-optdialog-delete-confirm').unbind();
     $('#btn-optdialog-delete-confirm').bind("click", function () {
         var cbSuccess = function (res) {
+            $("#table_jspz").bootstrapTable("refresh");
             $('.optdialog-delete-modal-sm').modal("hide");
         };
         CommonRemote.xtpz.deleteRoom(id, cbSuccess);

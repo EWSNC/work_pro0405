@@ -145,6 +145,10 @@ function bindEvent(groups, domainlist, chanellist) {
     $("#btn-gonggao").bind("click", function () {
         var SelectedJyContent = getSelectedjyContent();
         if (SelectedJyContent.RoomIds.length == 0) return;
+        $("#gonggaoConten").val("");
+        $("#gonggaotime").val(5)
+
+
         $(".gonggao-modal-sm").modal("show",{backdrop:'static',keyboard:false});
     });
     $("#btn-gonggao-confirm").bind("click", function () {
